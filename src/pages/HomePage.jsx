@@ -4,7 +4,7 @@ import { Icon } from "../components/Icon.jsx";
 import { ProductCarousel } from "../components/ProductCarousel.jsx";
 import { useProducts } from "../hooks/useProducts.js";
 import { useConfig } from "../hooks/useConfig.js";
-import { formatBRL } from "../lib/utils.js";
+import { formatBRL, publicUrl } from "../lib/utils.js";
 import { gsap } from "../lib/gsapSetup.js";
 
 const HERO_SLIDES = [
@@ -14,7 +14,7 @@ const HERO_SLIDES = [
     script: "traduz sua essência",
     price: null,
     offer: "Peças exclusivas em alfaiataria leve e caimento perfeito",
-    image: "/assets/banner-hero-1.png",
+    image: publicUrl("assets/banner-hero-1.png"),
     href: "/catalogo?categoria=feminino",
   },
   {
@@ -23,7 +23,7 @@ const HERO_SLIDES = [
     script: "veste confiança",
     price: null,
     offer: "Camisaria masculina premium com acabamento impecável",
-    image: "/assets/banner-hero-2.png",
+    image: publicUrl("assets/banner-hero-2.png"),
     href: "/catalogo?categoria=masculino",
   },
   {
@@ -32,7 +32,7 @@ const HERO_SLIDES = [
     script: "até 30% off",
     price: null,
     offer: "Aproveite peças selecionadas por tempo limitado",
-    image: "/assets/banner-hero-3.png",
+    image: publicUrl("assets/banner-hero-3.png"),
     href: "/catalogo?availability=sale",
   },
 ];
@@ -42,25 +42,25 @@ const FEATURES = [
     icon: "shield",
     title: "Compra Segura",
     text: "Atendimento assistido via WhatsApp do início ao fim, sem burocracia.",
-    bg: "/assets/trust-compra-segura.png",
+    bg: publicUrl("assets/trust-compra-segura.png"),
   },
   {
     icon: "truck",
     title: "Entrega Rápida",
     text: "Envio para todo o Brasil com prazos claros e rastreio completo.",
-    bg: "/assets/trust-entrega-rapida.png",
+    bg: publicUrl("assets/trust-entrega-rapida.png"),
   },
   {
     icon: "refresh",
     title: "Troca Facilitada",
     text: "Até 7 dias para trocar sem complicação, com etiquetas originais.",
-    bg: "/assets/trust-troca-facilitada.png",
+    bg: publicUrl("assets/trust-troca-facilitada.png"),
   },
   {
     icon: "chat",
     title: "Atendimento VIP",
     text: "Consultoria de estilo personalizada para cada cliente DG Modas.",
-    bg: "/assets/trust-atendimento-vip.png",
+    bg: publicUrl("assets/trust-atendimento-vip.png"),
   },
 ];
 
@@ -68,24 +68,24 @@ const TESTIMONIALS = [
   {
     name: "Ana Clara",
     text: "Peças impecáveis, tecido premium e caimento perfeito. Já é minha loja de confiança.",
-    avatar: "/assets/review-ana-clara.png",
+    avatar: publicUrl("assets/review-ana-clara.png"),
   },
   {
     name: "Mariana Lopes",
     text: "Atendimento pelo WhatsApp super atencioso, me ajudaram a escolher o tamanho ideal.",
-    avatar: "/assets/review-mariana-lopes.png",
+    avatar: publicUrl("assets/review-mariana-lopes.png"),
   },
   {
     name: "Rafael Souza",
     text: "Camisaria de altíssima qualidade e entrega rápida. Recomendo demais a DG Modas.",
-    avatar: "/assets/review-rafael-souza.png",
+    avatar: publicUrl("assets/review-rafael-souza.png"),
   },
 ];
 
 const CATEGORIES = [
-  { key: "feminino", title: "Feminino", desc: "Vestidos, conjuntos e alfaiataria leve", image: "/assets/fem-vestido-floral.jpg" },
-  { key: "masculino", title: "Masculino", desc: "Camisaria premium e polos exclusivas", image: "/assets/masc-camisa-branca.jpg" },
-  { key: "infantil", title: "Infantil", desc: "Conforto e estilo para os pequenos", image: "/assets/inf-vestido-floral.jpg" },
+  { key: "feminino", title: "Feminino", desc: "Vestidos, conjuntos e alfaiataria leve", image: publicUrl("assets/fem-vestido-floral.jpg") },
+  { key: "masculino", title: "Masculino", desc: "Camisaria premium e polos exclusivas", image: publicUrl("assets/masc-camisa-branca.jpg") },
+  { key: "infantil", title: "Infantil", desc: "Conforto e estilo para os pequenos", image: publicUrl("assets/inf-vestido-floral.jpg") },
 ];
 
 function useHeroCarousel(length) {
@@ -317,7 +317,7 @@ export function HomePage() {
       {/* SOBRE */}
       <section className="section section--soft" id="sobre">
         <div className="container about-grid">
-          <img src="/assets/sobre-loja.png" alt="Ateliê DG Modas" className="reveal-lux" />
+          <img src={publicUrl("assets/sobre-loja.png")} alt="Ateliê DG Modas" className="reveal-lux" />
           <div className="reveal-lux">
             <div className="section-label">
               <Icon name="info" /> Nossa história
@@ -423,7 +423,7 @@ export function HomePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="cta-band" style={{ "--cta-bg": "url(/assets/hero-loja.png)" }}>
+      <section className="cta-band" style={{ "--cta-bg": `url(${publicUrl("assets/hero-loja.png")})` }}>
         <div className="cta-band__overlay" />
         <div className="container cta-band__content reveal-lux">
           <div className="section-label">

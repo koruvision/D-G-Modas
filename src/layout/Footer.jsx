@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Icon } from "../components/Icon.jsx";
 import { useConfig } from "../hooks/useConfig.js";
-import { formatBRL } from "../lib/utils.js";
+import { formatBRL, publicUrl } from "../lib/utils.js";
 
 export function Footer() {
   const cfg = useConfig();
@@ -14,13 +14,13 @@ export function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <img
-            src="/assets/logo-header.png"
+            src={publicUrl("assets/logo-header.png")}
             alt="DG Modas"
             width="120"
             height="120"
             onError={(e) => {
               e.currentTarget.onerror = null;
-              e.currentTarget.src = "/assets/logo-dg-modas.png";
+              e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
             }}
           />
           <p className="footer__tagline">

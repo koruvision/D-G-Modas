@@ -5,7 +5,7 @@ import { useUi } from "../hooks/useUi.jsx";
 import { useProducts } from "../hooks/useProducts.js";
 import { filterProducts } from "../services/api.js";
 import { store } from "../store/storage.js";
-import { formatBRL, debounce } from "../lib/utils.js";
+import { formatBRL, debounce, publicUrl } from "../lib/utils.js";
 
 const HISTORY_KEY = "dg_search_history";
 
@@ -125,7 +125,7 @@ export function SearchModal() {
                           goToProduct(p.slug);
                         }}
                       >
-                        <img src={img ? `/${img}` : "/assets/logo-dg-modas.png"} alt="" width="48" height="64" />
+                        <img src={img ? publicUrl(String(img).replace(/^\//, "")) : publicUrl("assets/logo-dg-modas.png")} alt="" width="48" height="64" />
                         <span>
                           <strong>{p.name}</strong>
                           <small>{formatBRL(price)}</small>

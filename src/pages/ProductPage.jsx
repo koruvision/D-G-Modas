@@ -5,19 +5,11 @@ import { ProductCard } from "../components/ProductCard.jsx";
 import { useProducts } from "../hooks/useProducts.js";
 import { useCart } from "../hooks/useCart.jsx";
 import { useUi } from "../hooks/useUi.jsx";
-import {
-  formatBRL,
-  installments,
-  stockIcon,
-  stockLabel,
-  totalStock,
-  productPrice,
-  starsText,
-} from "../lib/utils.js";
+import { formatBRL, installments, stockIcon, stockLabel, totalStock, productPrice, starsText, publicUrl } from "../lib/utils.js";
 
 function assetUrl(src) {
-  if (!src) return "/assets/logo-dg-modas.png";
-  return src.startsWith("/") ? src : `/${src}`;
+  if (!src) return publicUrl("assets/logo-dg-modas.png");
+  return publicUrl(String(src).replace(/^\//, ""));
 }
 
 export function ProductPage() {
@@ -123,7 +115,7 @@ export function ProductPage() {
               style={zoomStyle}
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = "/assets/logo-dg-modas.png";
+                e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
               }}
             />
           </div>
@@ -140,7 +132,7 @@ export function ProductPage() {
                   alt=""
                   onError={(e) => {
                     e.currentTarget.onerror = null;
-                    e.currentTarget.src = "/assets/logo-dg-modas.png";
+                    e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
                   }}
                 />
               </button>

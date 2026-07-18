@@ -1,6 +1,13 @@
 export const formatBRL = (value) =>
   Number(value || 0).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
+/** Prefixa paths públicos com o base do Vite (ex.: /D-G-Modas/ no GitHub Pages). */
+export function publicUrl(path = "") {
+  const base = import.meta.env.BASE_URL || "/";
+  const clean = String(path || "").replace(/^\/+/, "");
+  return `${base}${clean}`;
+}
+
 export const debounce = (fn, ms = 220) => {
   let t;
   return (...args) => {

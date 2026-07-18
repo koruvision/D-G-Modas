@@ -6,7 +6,7 @@ import { useCart } from "../hooks/useCart.jsx";
 import { useUi } from "../hooks/useUi.jsx";
 import { loadShipping, loadConfig, findCoupon } from "../services/api.js";
 import { openWhatsAppOrder } from "../services/whatsapp.js";
-import { formatBRL } from "../lib/utils.js";
+import { formatBRL, publicUrl } from "../lib/utils.js";
 
 const STEPS = [
   { n: 1, label: "Dados", icon: "user" },
@@ -417,7 +417,7 @@ export function CheckoutPage() {
               <ul className="summary-items">
                 {cart.items.map((i) => (
                   <li key={`${i.productId}|${i.variantId}|${i.size}`}>
-                    <img src={i.image?.startsWith("/") ? i.image : `/${i.image}`} alt="" />
+                    <img src={publicUrl(String(i.image || "assets/logo-dg-modas.png").replace(/^\//, ""))} alt="" />
                     <span>
                       <strong>{i.name}</strong>
                       <small>

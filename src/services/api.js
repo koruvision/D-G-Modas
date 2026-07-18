@@ -1,3 +1,5 @@
+import { publicUrl } from "../lib/utils.js";
+
 let coupons = null;
 let shipping = null;
 let config = null;
@@ -5,28 +7,28 @@ let productsCache = null;
 
 export async function loadConfig() {
   if (config) return config;
-  const res = await fetch("/data/config.json");
+  const res = await fetch(publicUrl("data/config.json"));
   config = await res.json();
   return config;
 }
 
 export async function loadCoupons() {
   if (coupons) return coupons;
-  const res = await fetch("/data/coupons.json");
+  const res = await fetch(publicUrl("data/coupons.json"));
   coupons = await res.json();
   return coupons;
 }
 
 export async function loadShipping() {
   if (shipping) return shipping;
-  const res = await fetch("/data/shipping.json");
+  const res = await fetch(publicUrl("data/shipping.json"));
   shipping = await res.json();
   return shipping;
 }
 
 export async function loadProducts() {
   if (productsCache) return productsCache;
-  const res = await fetch("/data/products.json");
+  const res = await fetch(publicUrl("data/products.json"));
   productsCache = await res.json();
   return productsCache;
 }

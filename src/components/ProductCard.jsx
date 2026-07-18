@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { Icon } from "./Icon.jsx";
 import { useUi } from "../hooks/useUi.jsx";
-import { formatBRL, installments } from "../lib/utils.js";
+import { formatBRL, installments, publicUrl } from "../lib/utils.js";
 
 export function ProductCard({ product }) {
   const ui = useUi();
   const price = product.salePrice ?? product.price;
-  const raw = product.variants[0]?.images?.[0] || "/assets/logo-dg-modas.png";
-  const img = raw.startsWith("/") ? raw : `/${raw}`;
+  const raw = product.variants[0]?.images?.[0] || "assets/logo-dg-modas.png";
+  const img = publicUrl(String(raw).replace(/^\//, ""));
   const isFav = ui.hasFav(product.id);
   const isCmp = ui.hasCmp(product.id);
   const href = `/produto/${product.slug}`;
@@ -43,7 +43,7 @@ export function ProductCard({ product }) {
             height="800"
             onError={(e) => {
               e.currentTarget.onerror = null;
-              e.currentTarget.src = "/assets/logo-dg-modas.png";
+              e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
             }}
           />
         </Link>
