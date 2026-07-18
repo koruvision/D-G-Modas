@@ -1,0 +1,3566 @@
+[
+  {
+    "id": "fem-conjunto-marrom",
+    "slug": "colete-short-marrom",
+    "skuBase": "DG-FEM-001",
+    "name": "Colete & Short Marrom",
+    "category": "feminino",
+    "price": 249.9,
+    "salePrice": null,
+    "badge": "bestseller",
+    "description": "Conjunto sofisticado em alfaiataria leve, ideal para o dia a dia com presença.",
+    "longDescription": "Conjunto sofisticado em alfaiataria leve, ideal para o dia a dia com presença. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Caimento estruturado",
+      "Tecido respirável",
+      "Versátil dia/noite"
+    ],
+    "specs": {
+      "material": "Linho misto",
+      "cuidado": "Lavar a seco",
+      "origem": "Brasil"
+    },
+    "dimensions": "Colete 55cm / Short 38cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-conjunto-marrom-0",
+        "color": "Marrom",
+        "hex": "#8B5E3C",
+        "sku": "DG-FEM-001-MAR",
+        "sizes": {
+          "PP": 3,
+          "P": 7,
+          "M": 2,
+          "G": 1,
+          "GG": 1
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-conjunto-marrom.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-conjunto-marrom-1",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-FEM-001-PRE",
+        "sizes": {
+          "PP": 4,
+          "P": 8,
+          "M": 3,
+          "G": 2,
+          "GG": 2
+        },
+        "stockStatus": "made_to_order",
+        "images": [
+          "assets/fem-conjunto-marrom-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-conjunto-marrom-var-1.jpg",
+        "priceDelta": 5
+      },
+      {
+        "id": "fem-conjunto-marrom-2",
+        "color": "Bege",
+        "hex": "#D4C4A8",
+        "sku": "DG-FEM-001-BEG",
+        "sizes": {
+          "PP": 5,
+          "P": 0,
+          "M": 4,
+          "G": 3,
+          "GG": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-conjunto-marrom-var-2.jpg"
+        ],
+        "imageHint": "assets/fem-conjunto-marrom-var-2.jpg",
+        "priceDelta": 10
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "fem-conjunto-marrom-r0"
+      },
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "fem-conjunto-marrom-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk",
+      "fem-crop-azul"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-01-15"
+  },
+  {
+    "id": "fem-vestido-vermelho",
+    "slug": "vestido-vermelho-canelado",
+    "skuBase": "DG-FEM-002",
+    "name": "Vestido Vermelho Canelado",
+    "category": "feminino",
+    "price": 219.9,
+    "salePrice": 189.9,
+    "badge": "sale",
+    "description": "Vestido canelado com modelagem que valoriza a silhueta e conforto o dia todo.",
+    "longDescription": "Vestido canelado com modelagem que valoriza a silhueta e conforto o dia todo. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Elastano premium",
+      "Não marca",
+      "Cor intensa"
+    ],
+    "specs": {
+      "material": "Malha canelada",
+      "cuidado": "Lavar à mão",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 95cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-vestido-vermelho-0",
+        "color": "Vermelho",
+        "hex": "#c41e2a",
+        "sku": "DG-FEM-002-VER",
+        "sizes": {
+          "PP": 4,
+          "P": 8,
+          "M": 3,
+          "G": 2,
+          "GG": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-vestido-vermelho.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-vestido-vermelho-1",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-FEM-002-PRE",
+        "sizes": {
+          "PP": 5,
+          "P": 0,
+          "M": 4,
+          "G": 3,
+          "GG": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-vestido-vermelho-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-vestido-vermelho-var-1.jpg",
+        "priceDelta": 5
+      },
+      {
+        "id": "fem-vestido-vermelho-2",
+        "color": "Vinho",
+        "hex": "#6e0e16",
+        "sku": "DG-FEM-002-VIN",
+        "sizes": {
+          "PP": 6,
+          "P": 1,
+          "M": 5,
+          "G": 4,
+          "GG": 4
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-vestido-vermelho-var-2.jpg"
+        ],
+        "imageHint": "assets/fem-vestido-vermelho-var-2.jpg",
+        "priceDelta": 10
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "fem-vestido-vermelho-r0"
+      },
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "fem-vestido-vermelho-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-jaguar",
+      "fem-vestido-folk",
+      "fem-crop-azul"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-02-15"
+  },
+  {
+    "id": "fem-jaguar",
+    "slug": "camiseta-jaguar-feline",
+    "skuBase": "DG-FEM-003",
+    "name": "Jaguar Feline",
+    "category": "feminino",
+    "price": 129.9,
+    "salePrice": null,
+    "badge": "new",
+    "description": "Camiseta com estampa feline exclusiva DG — street chic com atitude.",
+    "longDescription": "Camiseta com estampa feline exclusiva DG — street chic com atitude. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Estampa exclusiva",
+      "Algodão macio",
+      "Caimento oversized"
+    ],
+    "specs": {
+      "material": "Algodão 100%",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Manga 22cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-jaguar-0",
+        "color": "Off-white",
+        "hex": "#f6f2ee",
+        "sku": "DG-FEM-003-OFF",
+        "sizes": {
+          "PP": 5,
+          "P": 0,
+          "M": 4,
+          "G": 3,
+          "GG": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-jaguar.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-jaguar-1",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-FEM-003-PRE",
+        "sizes": {
+          "PP": 6,
+          "P": 1,
+          "M": 5,
+          "G": 4,
+          "GG": 4
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-jaguar-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-jaguar-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "fem-jaguar-r0"
+      },
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "fem-jaguar-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-vestido-folk",
+      "fem-crop-azul"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-03-15"
+  },
+  {
+    "id": "fem-vestido-folk",
+    "slug": "vestido-folk-floral",
+    "skuBase": "DG-FEM-004",
+    "name": "Vestido Folk",
+    "category": "feminino",
+    "price": 239.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Vestido folk com estampa delicada e movimento fluido.",
+    "longDescription": "Vestido folk com estampa delicada e movimento fluido. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Babados leves",
+      "Forro interno",
+      "Cintura marcada"
+    ],
+    "specs": {
+      "material": "Viscose",
+      "cuidado": "Lavar à mão",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 110cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-vestido-folk-0",
+        "color": "Floral",
+        "hex": "#c9a76a",
+        "sku": "DG-FEM-004-FLO",
+        "sizes": {
+          "PP": 6,
+          "P": 1,
+          "M": 5,
+          "G": 4,
+          "GG": 4
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-vestido-folk.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-vestido-folk-1",
+        "color": "Terracota",
+        "hex": "#C45C26",
+        "sku": "DG-FEM-004-TER",
+        "sizes": {
+          "PP": 7,
+          "P": 2,
+          "M": 6,
+          "G": 5,
+          "GG": 5
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-vestido-folk-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-vestido-folk-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "fem-vestido-folk-r0"
+      },
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "fem-vestido-folk-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-crop-azul"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-04-15"
+  },
+  {
+    "id": "fem-crop-azul",
+    "slug": "crop-azul-babado",
+    "skuBase": "DG-FEM-005",
+    "name": "Crop Azul Babado",
+    "category": "feminino",
+    "price": 119.9,
+    "salePrice": null,
+    "badge": "new",
+    "description": "Crop com babados suaves — peça-chave para looks de verão.",
+    "longDescription": "Crop com babados suaves — peça-chave para looks de verão. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Leveza",
+      "Combina com jeans",
+      "Acabamento delicado"
+    ],
+    "specs": {
+      "material": "Crepe",
+      "cuidado": "Lavar à mão",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 38cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-crop-azul-0",
+        "color": "Azul",
+        "hex": "#4A6FA5",
+        "sku": "DG-FEM-005-AZU",
+        "sizes": {
+          "PP": 7,
+          "P": 2,
+          "M": 6,
+          "G": 5,
+          "GG": 5
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-crop-azul.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-crop-azul-1",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-FEM-005-BRA",
+        "sizes": {
+          "PP": 8,
+          "P": 3,
+          "M": 7,
+          "G": 6,
+          "GG": 6
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-crop-azul-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-crop-azul-var-1.jpg",
+        "priceDelta": 5
+      },
+      {
+        "id": "fem-crop-azul-2",
+        "color": "Rosa",
+        "hex": "#E8A0BF",
+        "sku": "DG-FEM-005-ROS",
+        "sizes": {
+          "PP": 0,
+          "P": 4,
+          "M": 8,
+          "G": 7,
+          "GG": 7
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-crop-azul-var-2.jpg"
+        ],
+        "imageHint": "assets/fem-crop-azul-var-2.jpg",
+        "priceDelta": 10
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "fem-crop-azul-r0"
+      },
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "fem-crop-azul-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-05-15"
+  },
+  {
+    "id": "fem-short-terracota",
+    "slug": "short-terracota-destroyed",
+    "skuBase": "DG-FEM-006",
+    "name": "Short Terracota",
+    "category": "feminino",
+    "price": 139.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Short destroyed em tom terracota com vibe contemporânea.",
+    "longDescription": "Short destroyed em tom terracota com vibe contemporânea. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Cintura alta",
+      "Destroyed artesanal",
+      "Conforto"
+    ],
+    "specs": {
+      "material": "Jeans stretch",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 36cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-short-terracota-0",
+        "color": "Terracota",
+        "hex": "#C45C26",
+        "sku": "DG-FEM-006-TER",
+        "sizes": {
+          "PP": 8,
+          "P": 3,
+          "M": 7,
+          "G": 6,
+          "GG": 6
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-short-terracota.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-short-terracota-1",
+        "color": "Jeans",
+        "hex": "#5B7C99",
+        "sku": "DG-FEM-006-JEA",
+        "sizes": {
+          "PP": 0,
+          "P": 4,
+          "M": 8,
+          "G": 7,
+          "GG": 7
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-short-terracota-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-short-terracota-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "fem-short-terracota-r0"
+      },
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "fem-short-terracota-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-06-15"
+  },
+  {
+    "id": "fem-deer-print",
+    "slug": "camiseta-deer-print",
+    "skuBase": "DG-FEM-007",
+    "name": "Deer Print",
+    "category": "feminino",
+    "price": 129.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Camiseta com print artístico deer — peça de assinatura.",
+    "longDescription": "Camiseta com print artístico deer — peça de assinatura. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Print exclusivo",
+      "Malha premium",
+      "Versátil"
+    ],
+    "specs": {
+      "material": "Algodão penteado",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Manga 20cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-deer-print-0",
+        "color": "Creme",
+        "hex": "#f6f2ee",
+        "sku": "DG-FEM-007-CRE",
+        "sizes": {
+          "PP": 0,
+          "P": 4,
+          "M": 8,
+          "G": 7,
+          "GG": 7
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-deer-print.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-deer-print-1",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-FEM-007-PRE",
+        "sizes": {
+          "PP": 1,
+          "P": 5,
+          "M": 0,
+          "G": 8,
+          "GG": 8
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-deer-print-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-deer-print-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "fem-deer-print-r0"
+      },
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "fem-deer-print-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-01-15"
+  },
+  {
+    "id": "fem-camisa-listra",
+    "slug": "camisa-listrada-feminina",
+    "skuBase": "DG-FEM-008",
+    "name": "Camisa Listrada",
+    "category": "feminino",
+    "price": 159.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Camisa listrada clássica com toque contemporâneo.",
+    "longDescription": "Camisa listrada clássica com toque contemporâneo. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Corte alfaiataria",
+      "Botões dourados",
+      "Leve"
+    ],
+    "specs": {
+      "material": "Tricoline",
+      "cuidado": "Máquina 40°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 68cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-camisa-listra-0",
+        "color": "Listra navy",
+        "hex": "#1e3a5f",
+        "sku": "DG-FEM-008-LIS",
+        "sizes": {
+          "PP": 1,
+          "P": 5,
+          "M": 0,
+          "G": 8,
+          "GG": 8
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-camisa-listra.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-camisa-listra-1",
+        "color": "Listra vinho",
+        "hex": "#8a1018",
+        "sku": "DG-FEM-008-LIS",
+        "sizes": {
+          "PP": 2,
+          "P": 6,
+          "M": 1,
+          "G": 0,
+          "GG": 0
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-camisa-listra-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-camisa-listra-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "fem-camisa-listra-r0"
+      },
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "fem-camisa-listra-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-02-15"
+  },
+  {
+    "id": "fem-top-menta",
+    "slug": "top-menta-canelado",
+    "skuBase": "DG-FEM-009",
+    "name": "Top Menta",
+    "category": "feminino",
+    "price": 99.9,
+    "salePrice": 79.9,
+    "badge": "sale",
+    "description": "Top canelado na cor menta — essencial do guarda-roupa.",
+    "longDescription": "Top canelado na cor menta — essencial do guarda-roupa. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Canelado stretch",
+      "Segura bem",
+      "Cores vibrantes"
+    ],
+    "specs": {
+      "material": "Poliamida",
+      "cuidado": "Lavar à mão",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 42cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-top-menta-0",
+        "color": "Menta",
+        "hex": "#7BC4A8",
+        "sku": "DG-FEM-009-MEN",
+        "sizes": {
+          "PP": 2,
+          "P": 6,
+          "M": 1,
+          "G": 0,
+          "GG": 0
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-top-menta.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-top-menta-1",
+        "color": "Lilás",
+        "hex": "#B8A0D0",
+        "sku": "DG-FEM-009-LIL",
+        "sizes": {
+          "PP": 3,
+          "P": 7,
+          "M": 2,
+          "G": 1,
+          "GG": 1
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-top-menta-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-top-menta-var-1.jpg",
+        "priceDelta": 5
+      },
+      {
+        "id": "fem-top-menta-2",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-FEM-009-PRE",
+        "sizes": {
+          "PP": 4,
+          "P": 8,
+          "M": 3,
+          "G": 2,
+          "GG": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-top-menta-var-2.jpg"
+        ],
+        "imageHint": "assets/fem-top-menta-var-2.jpg",
+        "priceDelta": 10
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "fem-top-menta-r0"
+      },
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "fem-top-menta-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-03-15"
+  },
+  {
+    "id": "fem-top-lilas",
+    "slug": "top-lilas-canelado",
+    "skuBase": "DG-FEM-010",
+    "name": "Top Lilás",
+    "category": "feminino",
+    "price": 99.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Top canelado lilás com caimento elegante.",
+    "longDescription": "Top canelado lilás com caimento elegante. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Conforto total",
+      "Não transparente",
+      "Combina fácil"
+    ],
+    "specs": {
+      "material": "Poliamida",
+      "cuidado": "Lavar à mão",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 42cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-top-lilas-0",
+        "color": "Lilás",
+        "hex": "#B8A0D0",
+        "sku": "DG-FEM-010-LIL",
+        "sizes": {
+          "PP": 3,
+          "P": 7,
+          "M": 2,
+          "G": 1,
+          "GG": 1
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-top-lilas.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-top-lilas-1",
+        "color": "Menta",
+        "hex": "#7BC4A8",
+        "sku": "DG-FEM-010-MEN",
+        "sizes": {
+          "PP": 4,
+          "P": 8,
+          "M": 3,
+          "G": 2,
+          "GG": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-top-lilas-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-top-lilas-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "fem-top-lilas-r0"
+      },
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "fem-top-lilas-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-04-15"
+  },
+  {
+    "id": "fem-conjunto-azul",
+    "slug": "conjunto-azul-tropical",
+    "skuBase": "DG-FEM-011",
+    "name": "Conjunto Azul Tropical",
+    "category": "feminino",
+    "price": 269.9,
+    "salePrice": null,
+    "badge": "bestseller",
+    "description": "Conjunto tropical em azul intenso — presença garantida.",
+    "longDescription": "Conjunto tropical em azul intenso — presença garantida. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Conjunto coordenado",
+      "Estampa exclusiva",
+      "Caimento fluido"
+    ],
+    "specs": {
+      "material": "Viscose premium",
+      "cuidado": "Lavar à mão",
+      "origem": "Brasil"
+    },
+    "dimensions": "Top 45cm / Calça 100cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-conjunto-azul-0",
+        "color": "Azul tropical",
+        "hex": "#2E6B8A",
+        "sku": "DG-FEM-011-AZU",
+        "sizes": {
+          "PP": 4,
+          "P": 8,
+          "M": 3,
+          "G": 2,
+          "GG": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-conjunto-azul.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-conjunto-azul-1",
+        "color": "Verde folha",
+        "hex": "#3D6B4F",
+        "sku": "DG-FEM-011-VER",
+        "sizes": {
+          "PP": 5,
+          "P": 0,
+          "M": 4,
+          "G": 3,
+          "GG": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-conjunto-azul-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-conjunto-azul-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "fem-conjunto-azul-r0"
+      },
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "fem-conjunto-azul-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-05-15"
+  },
+  {
+    "id": "fem-macaquinho-preto",
+    "slug": "macaquinho-preto-ombro",
+    "skuBase": "DG-FEM-012",
+    "name": "Macaquinho Preto",
+    "category": "feminino",
+    "price": 229.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Macaquinho ombro só em preto sofisticado.",
+    "longDescription": "Macaquinho ombro só em preto sofisticado. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Decote assimétrico",
+      "Cinto incluso",
+      "Noite & evento"
+    ],
+    "specs": {
+      "material": "Crepe",
+      "cuidado": "Lavar a seco",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 85cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-macaquinho-preto-0",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-FEM-012-PRE",
+        "sizes": {
+          "PP": 5,
+          "P": 0,
+          "M": 4,
+          "G": 3,
+          "GG": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-macaquinho-preto.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-macaquinho-preto-1",
+        "color": "Vinho",
+        "hex": "#8a1018",
+        "sku": "DG-FEM-012-VIN",
+        "sizes": {
+          "PP": 6,
+          "P": 1,
+          "M": 5,
+          "G": 4,
+          "GG": 4
+        },
+        "stockStatus": "made_to_order",
+        "images": [
+          "assets/fem-macaquinho-preto-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-macaquinho-preto-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "fem-macaquinho-preto-r0"
+      },
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "fem-macaquinho-preto-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-06-15"
+  },
+  {
+    "id": "fem-vestido-floral",
+    "slug": "vestido-floral-terracota",
+    "skuBase": "DG-FEM-013",
+    "name": "Vestido Floral",
+    "category": "feminino",
+    "price": 239.9,
+    "salePrice": null,
+    "badge": "new",
+    "description": "Vestido floral em tons terracota com caimento romântico.",
+    "longDescription": "Vestido floral em tons terracota com caimento romântico. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Estampa delicada",
+      "Cintura ajustável",
+      "Forrado"
+    ],
+    "specs": {
+      "material": "Viscose",
+      "cuidado": "Lavar à mão",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 105cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-vestido-floral-0",
+        "color": "Floral terracota",
+        "hex": "#C45C26",
+        "sku": "DG-FEM-013-FLO",
+        "sizes": {
+          "PP": 6,
+          "P": 1,
+          "M": 5,
+          "G": 4,
+          "GG": 4
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-vestido-floral.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-vestido-floral-1",
+        "color": "Floral azul",
+        "hex": "#4A6FA5",
+        "sku": "DG-FEM-013-FLO",
+        "sizes": {
+          "PP": 7,
+          "P": 2,
+          "M": 6,
+          "G": 5,
+          "GG": 5
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-vestido-floral-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-vestido-floral-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "fem-vestido-floral-r0"
+      },
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "fem-vestido-floral-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-01-15"
+  },
+  {
+    "id": "fem-macacao-bege",
+    "slug": "macacao-bege-envelope",
+    "skuBase": "DG-FEM-014",
+    "name": "Macacão Bege",
+    "category": "feminino",
+    "price": 259.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Macacão envelope bege — elegância atemporal.",
+    "longDescription": "Macacão envelope bege — elegância atemporal. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Envelope versátil",
+      "Cinto faixa",
+      "Tecido nobre"
+    ],
+    "specs": {
+      "material": "Linho misto",
+      "cuidado": "Lavar a seco",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 140cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-macacao-bege-0",
+        "color": "Bege",
+        "hex": "#D4C4A8",
+        "sku": "DG-FEM-014-BEG",
+        "sizes": {
+          "PP": 7,
+          "P": 2,
+          "M": 6,
+          "G": 5,
+          "GG": 5
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-macacao-bege.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-macacao-bege-1",
+        "color": "Off-white",
+        "hex": "#f6f2ee",
+        "sku": "DG-FEM-014-OFF",
+        "sizes": {
+          "PP": 8,
+          "P": 3,
+          "M": 7,
+          "G": 6,
+          "GG": 6
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-macacao-bege-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-macacao-bege-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "fem-macacao-bege-r0"
+      },
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "fem-macacao-bege-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-02-15"
+  },
+  {
+    "id": "fem-jaguar-2",
+    "slug": "camiseta-jaguar-instinct",
+    "skuBase": "DG-FEM-015",
+    "name": "Jaguar Instinct",
+    "category": "feminino",
+    "price": 129.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Segunda edição da linha Jaguar com print Instinct.",
+    "longDescription": "Segunda edição da linha Jaguar com print Instinct. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Edição limitada",
+      "Malha premium",
+      "Estampa arte"
+    ],
+    "specs": {
+      "material": "Algodão 100%",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Manga 22cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "fem-jaguar-2-0",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-FEM-015-PRE",
+        "sizes": {
+          "PP": 8,
+          "P": 3,
+          "M": 7,
+          "G": 6,
+          "GG": 6
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-jaguar-2.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "fem-jaguar-2-1",
+        "color": "Off-white",
+        "hex": "#f6f2ee",
+        "sku": "DG-FEM-015-OFF",
+        "sizes": {
+          "PP": 0,
+          "P": 4,
+          "M": 8,
+          "G": 7,
+          "GG": 7
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/fem-jaguar-2-var-1.jpg"
+        ],
+        "imageHint": "assets/fem-jaguar-2-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "fem-jaguar-2-r0"
+      },
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "fem-jaguar-2-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "fem-conjunto-marrom",
+      "fem-vestido-vermelho",
+      "fem-jaguar",
+      "fem-vestido-folk"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-03-15"
+  },
+  {
+    "id": "masc-polo-bordo",
+    "slug": "polo-bordo",
+    "skuBase": "DG-MAS-016",
+    "name": "Polo Bordô",
+    "category": "masculino",
+    "price": 169.9,
+    "salePrice": null,
+    "badge": "bestseller",
+    "description": "Polo piquet bordô com acabamento premium e presença discreta.",
+    "longDescription": "Polo piquet bordô com acabamento premium e presença discreta. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Piquet egípcio",
+      "Gola reforçada",
+      "Caimento regular"
+    ],
+    "specs": {
+      "material": "Algodão piquet",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Manga 22cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "masc-polo-bordo-0",
+        "color": "Bordô",
+        "hex": "#8a1018",
+        "sku": "DG-MAS-016-BOR",
+        "sizes": {
+          "PP": 0,
+          "P": 4,
+          "M": 8,
+          "G": 7,
+          "GG": 7
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-polo-bordo.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "masc-polo-bordo-1",
+        "color": "Verde",
+        "hex": "#3D6B4F",
+        "sku": "DG-MAS-016-VER",
+        "sizes": {
+          "PP": 1,
+          "P": 5,
+          "M": 0,
+          "G": 8,
+          "GG": 8
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-polo-bordo-var-1.jpg"
+        ],
+        "imageHint": "assets/masc-polo-bordo-var-1.jpg",
+        "priceDelta": 5
+      },
+      {
+        "id": "masc-polo-bordo-2",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-MAS-016-PRE",
+        "sizes": {
+          "PP": 2,
+          "P": 6,
+          "M": 1,
+          "G": 0,
+          "GG": 0
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-polo-bordo-var-2.jpg"
+        ],
+        "imageHint": "assets/masc-polo-bordo-var-2.jpg",
+        "priceDelta": 10
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "masc-polo-bordo-r0"
+      },
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "masc-polo-bordo-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "masc-polo-verde",
+      "masc-camisa-preta",
+      "masc-camisa-branca",
+      "masc-camisa-verde"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-04-15"
+  },
+  {
+    "id": "masc-polo-verde",
+    "slug": "polo-verde",
+    "skuBase": "DG-MAS-017",
+    "name": "Polo Verde",
+    "category": "masculino",
+    "price": 169.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Polo verde sofisticada para o dia a dia elegante.",
+    "longDescription": "Polo verde sofisticada para o dia a dia elegante. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Respirável",
+      "Cor viva",
+      "Acabamento fino"
+    ],
+    "specs": {
+      "material": "Algodão piquet",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Manga 22cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "masc-polo-verde-0",
+        "color": "Verde",
+        "hex": "#3D6B4F",
+        "sku": "DG-MAS-017-VER",
+        "sizes": {
+          "PP": 1,
+          "P": 5,
+          "M": 0,
+          "G": 8,
+          "GG": 8
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-polo-verde.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "masc-polo-verde-1",
+        "color": "Bordô",
+        "hex": "#8a1018",
+        "sku": "DG-MAS-017-BOR",
+        "sizes": {
+          "PP": 2,
+          "P": 6,
+          "M": 1,
+          "G": 0,
+          "GG": 0
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-polo-verde-var-1.jpg"
+        ],
+        "imageHint": "assets/masc-polo-verde-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "masc-polo-verde-r0"
+      },
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "masc-polo-verde-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "masc-polo-bordo",
+      "masc-camisa-preta",
+      "masc-camisa-branca",
+      "masc-camisa-verde"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-05-15"
+  },
+  {
+    "id": "masc-camisa-preta",
+    "slug": "camisa-social-preta",
+    "skuBase": "DG-MAS-018",
+    "name": "Camisa Preta",
+    "category": "masculino",
+    "price": 189.9,
+    "salePrice": null,
+    "badge": "new",
+    "description": "Camisa social preta com corte moderno e tecido leve.",
+    "longDescription": "Camisa social preta com corte moderno e tecido leve. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Anti-amassado",
+      "Botões reforçados",
+      "Manga longa"
+    ],
+    "specs": {
+      "material": "Tricoline premium",
+      "cuidado": "Máquina 40°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 74cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "masc-camisa-preta-0",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-MAS-018-PRE",
+        "sizes": {
+          "PP": 2,
+          "P": 6,
+          "M": 1,
+          "G": 0,
+          "GG": 0
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-camisa-preta.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "masc-camisa-preta-1",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-MAS-018-BRA",
+        "sizes": {
+          "PP": 3,
+          "P": 7,
+          "M": 2,
+          "G": 1,
+          "GG": 1
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-camisa-preta-var-1.jpg"
+        ],
+        "imageHint": "assets/masc-camisa-preta-var-1.jpg",
+        "priceDelta": 5
+      },
+      {
+        "id": "masc-camisa-preta-2",
+        "color": "Verde",
+        "hex": "#3D6B4F",
+        "sku": "DG-MAS-018-VER",
+        "sizes": {
+          "PP": 4,
+          "P": 8,
+          "M": 3,
+          "G": 2,
+          "GG": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-camisa-preta-var-2.jpg"
+        ],
+        "imageHint": "assets/masc-camisa-preta-var-2.jpg",
+        "priceDelta": 10
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "masc-camisa-preta-r0"
+      },
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "masc-camisa-preta-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "masc-polo-bordo",
+      "masc-polo-verde",
+      "masc-camisa-branca",
+      "masc-camisa-verde"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-06-15"
+  },
+  {
+    "id": "masc-camisa-branca",
+    "slug": "camisa-social-branca",
+    "skuBase": "DG-MAS-019",
+    "name": "Camisa Branca",
+    "category": "masculino",
+    "price": 189.9,
+    "salePrice": null,
+    "badge": "bestseller",
+    "description": "Camisa branca clássica — essencial do guarda-roupa masculino.",
+    "longDescription": "Camisa branca clássica — essencial do guarda-roupa masculino. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Branco óptico",
+      "Colarinho estruturado",
+      "Versátil"
+    ],
+    "specs": {
+      "material": "Tricoline",
+      "cuidado": "Máquina 40°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 74cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "masc-camisa-branca-0",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-MAS-019-BRA",
+        "sizes": {
+          "PP": 3,
+          "P": 7,
+          "M": 2,
+          "G": 1,
+          "GG": 1
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-camisa-branca.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "masc-camisa-branca-1",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-MAS-019-PRE",
+        "sizes": {
+          "PP": 4,
+          "P": 8,
+          "M": 3,
+          "G": 2,
+          "GG": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-camisa-branca-var-1.jpg"
+        ],
+        "imageHint": "assets/masc-camisa-branca-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "masc-camisa-branca-r0"
+      },
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "masc-camisa-branca-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "masc-polo-bordo",
+      "masc-polo-verde",
+      "masc-camisa-preta",
+      "masc-camisa-verde"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-01-15"
+  },
+  {
+    "id": "masc-camisa-verde",
+    "slug": "camisa-social-verde",
+    "skuBase": "DG-MAS-020",
+    "name": "Camisa Verde",
+    "category": "masculino",
+    "price": 189.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Camisa social verde com presença sofisticada.",
+    "longDescription": "Camisa social verde com presença sofisticada. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Tom exclusivo",
+      "Caimento slim",
+      "Conforto"
+    ],
+    "specs": {
+      "material": "Tricoline",
+      "cuidado": "Máquina 40°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 74cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "masc-camisa-verde-0",
+        "color": "Verde",
+        "hex": "#3D6B4F",
+        "sku": "DG-MAS-020-VER",
+        "sizes": {
+          "PP": 4,
+          "P": 8,
+          "M": 3,
+          "G": 2,
+          "GG": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-camisa-verde.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "masc-camisa-verde-1",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-MAS-020-BRA",
+        "sizes": {
+          "PP": 5,
+          "P": 0,
+          "M": 4,
+          "G": 3,
+          "GG": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-camisa-verde-var-1.jpg"
+        ],
+        "imageHint": "assets/masc-camisa-verde-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "masc-camisa-verde-r0"
+      },
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "masc-camisa-verde-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "masc-polo-bordo",
+      "masc-polo-verde",
+      "masc-camisa-preta",
+      "masc-camisa-branca"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-02-15"
+  },
+  {
+    "id": "masc-short-bege",
+    "slug": "short-bege-masculino",
+    "skuBase": "DG-MAS-021",
+    "name": "Short Bege",
+    "category": "masculino",
+    "price": 149.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Short bege em tecido leve para o verão urbano.",
+    "longDescription": "Short bege em tecido leve para o verão urbano. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Cintura elástica",
+      "Bolsos laterais",
+      "Leve"
+    ],
+    "specs": {
+      "material": "Sarja leve",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento 42cm",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "masc-short-bege-0",
+        "color": "Bege",
+        "hex": "#D4C4A8",
+        "sku": "DG-MAS-021-BEG",
+        "sizes": {
+          "PP": 5,
+          "P": 0,
+          "M": 4,
+          "G": 3,
+          "GG": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-short-bege.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "masc-short-bege-1",
+        "color": "Marinho",
+        "hex": "#1e3a5f",
+        "sku": "DG-MAS-021-MAR",
+        "sizes": {
+          "PP": 6,
+          "P": 1,
+          "M": 5,
+          "G": 4,
+          "GG": 4
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/masc-short-bege-var-1.jpg"
+        ],
+        "imageHint": "assets/masc-short-bege-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "masc-short-bege-r0"
+      },
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "masc-short-bege-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "masc-polo-bordo",
+      "masc-polo-verde",
+      "masc-camisa-preta",
+      "masc-camisa-branca"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-03-15"
+  },
+  {
+    "id": "inf-vestido-floral",
+    "slug": "vestido-floral-infantil",
+    "skuBase": "DG-INF-022",
+    "name": "Vestido Floral Infantil",
+    "category": "infantil",
+    "price": 149.9,
+    "salePrice": null,
+    "badge": "new",
+    "description": "Vestido floral infantil com leveza e charme DG.",
+    "longDescription": "Vestido floral infantil com leveza e charme DG. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Tecido macio",
+      "Fácil de vestir",
+      "Estampa delicada"
+    ],
+    "specs": {
+      "material": "Algodão",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Comprimento variável por tamanho",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-vestido-floral-0",
+        "color": "Floral rosa",
+        "hex": "#E8A0BF",
+        "sku": "DG-INF-022-FLO",
+        "sizes": {
+          "2": 1,
+          "4": 2,
+          "6": 3,
+          "8": 4,
+          "10": 5
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-vestido-floral.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-vestido-floral-1",
+        "color": "Floral azul",
+        "hex": "#4A6FA5",
+        "sku": "DG-INF-022-FLO",
+        "sizes": {
+          "2": 2,
+          "4": 3,
+          "6": 4,
+          "8": 5,
+          "10": 6
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-vestido-floral-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-vestido-floral-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "inf-vestido-floral-r0"
+      },
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "inf-vestido-floral-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-polo-menino",
+      "inf-conjunto-rosa",
+      "inf-stylish-boy",
+      "inf-sunshine"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-04-15"
+  },
+  {
+    "id": "inf-polo-menino",
+    "slug": "polo-short-infantil",
+    "skuBase": "DG-INF-023",
+    "name": "Polo & Short",
+    "category": "infantil",
+    "price": 159.9,
+    "salePrice": null,
+    "badge": "bestseller",
+    "description": "Conjunto polo e short para meninos — conforto com estilo.",
+    "longDescription": "Conjunto polo e short para meninos — conforto com estilo. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Conjunto completo",
+      "Elástico confortável",
+      "Durável"
+    ],
+    "specs": {
+      "material": "Algodão",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Conforme tabela infantil",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-polo-menino-0",
+        "color": "Azul",
+        "hex": "#4A6FA5",
+        "sku": "DG-INF-023-AZU",
+        "sizes": {
+          "2": 2,
+          "4": 3,
+          "6": 4,
+          "8": 5,
+          "10": 6
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-polo-menino.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-polo-menino-1",
+        "color": "Verde",
+        "hex": "#3D6B4F",
+        "sku": "DG-INF-023-VER",
+        "sizes": {
+          "2": 3,
+          "4": 4,
+          "6": 5,
+          "8": 6,
+          "10": 7
+        },
+        "stockStatus": "made_to_order",
+        "images": [
+          "assets/inf-polo-menino-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-polo-menino-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "inf-polo-menino-r0"
+      },
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "inf-polo-menino-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-vestido-floral",
+      "inf-conjunto-rosa",
+      "inf-stylish-boy",
+      "inf-sunshine"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-05-15"
+  },
+  {
+    "id": "inf-conjunto-rosa",
+    "slug": "conjunto-rosa-infantil",
+    "skuBase": "DG-INF-024",
+    "name": "Conjunto Rosa",
+    "category": "infantil",
+    "price": 169.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Conjunto rosa delicado para ocasiões especiais.",
+    "longDescription": "Conjunto rosa delicado para ocasiões especiais. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Doce e confortável",
+      "Acabamento fino",
+      "Presenteável"
+    ],
+    "specs": {
+      "material": "Malha algodão",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Conforme tabela infantil",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-conjunto-rosa-0",
+        "color": "Rosa",
+        "hex": "#E8A0BF",
+        "sku": "DG-INF-024-ROS",
+        "sizes": {
+          "2": 3,
+          "4": 4,
+          "6": 5,
+          "8": 6,
+          "10": 7
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-conjunto-rosa.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-conjunto-rosa-1",
+        "color": "Lilás",
+        "hex": "#B8A0D0",
+        "sku": "DG-INF-024-LIL",
+        "sizes": {
+          "2": 4,
+          "4": 5,
+          "6": 6,
+          "8": 7,
+          "10": 0
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-conjunto-rosa-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-conjunto-rosa-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "inf-conjunto-rosa-r0"
+      },
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "inf-conjunto-rosa-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-vestido-floral",
+      "inf-polo-menino",
+      "inf-stylish-boy",
+      "inf-sunshine"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-06-15"
+  },
+  {
+    "id": "inf-stylish-boy",
+    "slug": "camiseta-stylish-boy",
+    "skuBase": "DG-INF-025",
+    "name": "Stylish Boy",
+    "category": "infantil",
+    "price": 89.9,
+    "salePrice": 69.9,
+    "badge": "sale",
+    "description": "Camiseta Stylish Boy com print divertido.",
+    "longDescription": "Camiseta Stylish Boy com print divertido. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Print exclusivo",
+      "Malha macia",
+      "Dia a dia"
+    ],
+    "specs": {
+      "material": "Algodão",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Manga curta",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-stylish-boy-0",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-INF-025-BRA",
+        "sizes": {
+          "2": 4,
+          "4": 5,
+          "6": 6,
+          "8": 7,
+          "10": 0
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-stylish-boy.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-stylish-boy-1",
+        "color": "Preto",
+        "hex": "#1a1a1a",
+        "sku": "DG-INF-025-PRE",
+        "sizes": {
+          "2": 5,
+          "4": 6,
+          "6": 7,
+          "8": 0,
+          "10": 1
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-stylish-boy-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-stylish-boy-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "inf-stylish-boy-r0"
+      },
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "inf-stylish-boy-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-vestido-floral",
+      "inf-polo-menino",
+      "inf-conjunto-rosa",
+      "inf-sunshine"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-01-15"
+  },
+  {
+    "id": "inf-sunshine",
+    "slug": "conjunto-daddy-sunshine",
+    "skuBase": "DG-INF-026",
+    "name": "Daddy's Sunshine",
+    "category": "infantil",
+    "price": 159.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Conjunto Daddy's Sunshine — alegria em cada detalhe.",
+    "longDescription": "Conjunto Daddy's Sunshine — alegria em cada detalhe. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Cores alegres",
+      "Conjunto 2 peças",
+      "Conforto"
+    ],
+    "specs": {
+      "material": "Algodão",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Conforme tabela infantil",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-sunshine-0",
+        "color": "Amarelo",
+        "hex": "#E8C547",
+        "sku": "DG-INF-026-AMA",
+        "sizes": {
+          "2": 5,
+          "4": 6,
+          "6": 7,
+          "8": 0,
+          "10": 1
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-sunshine.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-sunshine-1",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-INF-026-BRA",
+        "sizes": {
+          "2": 6,
+          "4": 7,
+          "6": 0,
+          "8": 1,
+          "10": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-sunshine-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-sunshine-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "inf-sunshine-r0"
+      },
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "inf-sunshine-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-vestido-floral",
+      "inf-polo-menino",
+      "inf-conjunto-rosa",
+      "inf-stylish-boy"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-02-15"
+  },
+  {
+    "id": "inf-regata-vermelha",
+    "slug": "regata-vermelha-infantil",
+    "skuBase": "DG-INF-027",
+    "name": "Regata Vermelha",
+    "category": "infantil",
+    "price": 79.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Regata vermelha infantil para brincar com estilo.",
+    "longDescription": "Regata vermelha infantil para brincar com estilo. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Leve",
+      "Não aperta",
+      "Cor viva"
+    ],
+    "specs": {
+      "material": "Algodão",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Regata",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-regata-vermelha-0",
+        "color": "Vermelho",
+        "hex": "#c41e2a",
+        "sku": "DG-INF-027-VER",
+        "sizes": {
+          "2": 6,
+          "4": 7,
+          "6": 0,
+          "8": 1,
+          "10": 2
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-regata-vermelha.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-regata-vermelha-1",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-INF-027-BRA",
+        "sizes": {
+          "2": 7,
+          "4": 0,
+          "6": 1,
+          "8": 2,
+          "10": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-regata-vermelha-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-regata-vermelha-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "inf-regata-vermelha-r0"
+      },
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "inf-regata-vermelha-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-vestido-floral",
+      "inf-polo-menino",
+      "inf-conjunto-rosa",
+      "inf-stylish-boy"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-03-15"
+  },
+  {
+    "id": "inf-camiseta-barbie",
+    "slug": "camiseta-barbie",
+    "skuBase": "DG-INF-028",
+    "name": "Camiseta Barbie",
+    "category": "infantil",
+    "price": 89.9,
+    "salePrice": null,
+    "badge": "bestseller",
+    "description": "Camiseta temática Barbie com malha macia.",
+    "longDescription": "Camiseta temática Barbie com malha macia. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Licenciada vibe",
+      "Malha premium",
+      "Presente perfeito"
+    ],
+    "specs": {
+      "material": "Algodão",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Manga curta",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-camiseta-barbie-0",
+        "color": "Rosa",
+        "hex": "#E8A0BF",
+        "sku": "DG-INF-028-ROS",
+        "sizes": {
+          "2": 7,
+          "4": 0,
+          "6": 1,
+          "8": 2,
+          "10": 3
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-camiseta-barbie.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-camiseta-barbie-1",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-INF-028-BRA",
+        "sizes": {
+          "2": 0,
+          "4": 1,
+          "6": 2,
+          "8": 3,
+          "10": 4
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-camiseta-barbie-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-camiseta-barbie-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Camila Ferreira",
+        "rating": 4,
+        "text": "Linda e confortável. Voltarei a comprar.",
+        "verified": true,
+        "date": "2026-03-18",
+        "photos": [],
+        "id": "inf-camiseta-barbie-r0"
+      },
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "inf-camiseta-barbie-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-vestido-floral",
+      "inf-polo-menino",
+      "inf-conjunto-rosa",
+      "inf-stylish-boy"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-04-15"
+  },
+  {
+    "id": "inf-vestido-bebe",
+    "slug": "vestido-perolas-bebe",
+    "skuBase": "DG-INF-029",
+    "name": "Vestido Pérolas",
+    "category": "infantil",
+    "price": 139.9,
+    "salePrice": null,
+    "badge": "new",
+    "description": "Vestido bebê com detalhes de pérolas — ocasiões especiais.",
+    "longDescription": "Vestido bebê com detalhes de pérolas — ocasiões especiais. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Detalhes delicados",
+      "Forro macio",
+      "Fácil vestir"
+    ],
+    "specs": {
+      "material": "Algodão + tule",
+      "cuidado": "Lavar à mão",
+      "origem": "Brasil"
+    },
+    "dimensions": "Conforme tabela bebê",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-vestido-bebe-0",
+        "color": "Rosa bebê",
+        "hex": "#F5D0D8",
+        "sku": "DG-INF-029-ROS",
+        "sizes": {
+          "2": 0,
+          "4": 1,
+          "6": 2,
+          "8": 3,
+          "10": 4
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-vestido-bebe.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-vestido-bebe-1",
+        "color": "Branco",
+        "hex": "#ffffff",
+        "sku": "DG-INF-029-BRA",
+        "sizes": {
+          "2": 1,
+          "4": 2,
+          "6": 3,
+          "8": 4,
+          "10": 5
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-vestido-bebe-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-vestido-bebe-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Rafael Souza",
+        "rating": 5,
+        "text": "Qualidade DG Modas de verdade. Recomendo.",
+        "verified": true,
+        "date": "2026-06-01",
+        "photos": [],
+        "id": "inf-vestido-bebe-r0"
+      },
+      {
+        "name": "Ana Clara",
+        "rating": 5,
+        "text": "Peça impecável, tecido premium e caimento perfeito.",
+        "verified": true,
+        "date": "2026-05-12",
+        "photos": [],
+        "id": "inf-vestido-bebe-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-vestido-floral",
+      "inf-polo-menino",
+      "inf-conjunto-rosa",
+      "inf-stylish-boy"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": true,
+    "createdAt": "2026-05-15"
+  },
+  {
+    "id": "inf-camisa-menino",
+    "slug": "camisa-listrada-infantil",
+    "skuBase": "DG-INF-030",
+    "name": "Camisa Listrada Infantil",
+    "category": "infantil",
+    "price": 119.9,
+    "salePrice": null,
+    "badge": null,
+    "description": "Camisa listrada infantil com ar clássico.",
+    "longDescription": "Camisa listrada infantil com ar clássico. Cada peça DG Modas é selecionada com critério de acabamento, caimento e presença — para vestir com elegância no dia a dia e em ocasiões especiais.",
+    "benefits": [
+      "Estilo clássico",
+      "Conforto",
+      "Versátil"
+    ],
+    "specs": {
+      "material": "Algodão",
+      "cuidado": "Máquina 30°C",
+      "origem": "Brasil"
+    },
+    "dimensions": "Manga longa",
+    "guarantee": "90 dias de garantia contra defeitos de fabricação.",
+    "deliveryDays": [
+      3,
+      8
+    ],
+    "variants": [
+      {
+        "id": "inf-camisa-menino-0",
+        "color": "Listra azul",
+        "hex": "#4A6FA5",
+        "sku": "DG-INF-030-LIS",
+        "sizes": {
+          "2": 1,
+          "4": 2,
+          "6": 3,
+          "8": 4,
+          "10": 5
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-camisa-menino.jpg"
+        ],
+        "imageHint": null,
+        "priceDelta": 0
+      },
+      {
+        "id": "inf-camisa-menino-1",
+        "color": "Listra verde",
+        "hex": "#3D6B4F",
+        "sku": "DG-INF-030-LIS",
+        "sizes": {
+          "2": 2,
+          "4": 3,
+          "6": 4,
+          "8": 5,
+          "10": 6
+        },
+        "stockStatus": "in_stock",
+        "images": [
+          "assets/inf-camisa-menino-var-1.jpg"
+        ],
+        "imageHint": "assets/inf-camisa-menino-var-1.jpg",
+        "priceDelta": 5
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Juliana Menezes",
+        "rating": 5,
+        "text": "Chegou rápido e exatamente como nas fotos.",
+        "verified": true,
+        "date": "2026-02-22",
+        "photos": [],
+        "id": "inf-camisa-menino-r0"
+      },
+      {
+        "name": "Mariana Lopes",
+        "rating": 5,
+        "text": "Superou expectativas. Atendimento nota 10.",
+        "verified": true,
+        "date": "2026-04-03",
+        "photos": [],
+        "id": "inf-camisa-menino-r1"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qual o prazo de entrega?",
+        "a": "De 2 a 12 dias úteis conforme a modalidade de frete escolhida."
+      },
+      {
+        "q": "Posso trocar o tamanho?",
+        "a": "Sim. Trocas em até 7 dias após o recebimento, com etiquetas."
+      },
+      {
+        "q": "Como faço o pedido?",
+        "a": "Monte o carrinho e finalize pelo WhatsApp com atendimento personalizado."
+      }
+    ],
+    "related": [
+      "inf-vestido-floral",
+      "inf-polo-menino",
+      "inf-conjunto-rosa",
+      "inf-stylish-boy"
+    ],
+    "features": [
+      "Acabamento premium",
+      "Embalagem cuidadosa",
+      "Atendimento especializado"
+    ],
+    "popular": false,
+    "createdAt": "2026-06-15"
+  }
+]

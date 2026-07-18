@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo — DG Modas</title>
+  <meta name="description" content="Catálogo completo DG Modas com filtros, busca e variações." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=1" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=1" />
+  <link rel="stylesheet" href="styles.css?v=shop-15" />
+</head>
+<body class="page-inner">
+  <header class="site-header is-solid" id="siteHeader"></header>
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <div class="section-label">Loja</div>
+        <h1>Catálogo <span class="script">completo</span></h1>
+        <p id="catalogCount">Carregando…</p>
+      </div>
+    </div>
+    <div class="container catalog-layout">
+      <aside class="filters" aria-label="Filtros">
+        <h3>Filtros</h3>
+        <label class="field"><span>Busca</span><input id="filterQ" type="search" placeholder="Nome, SKU…" /></label>
+        <label class="field"><span>Categoria</span>
+          <select id="filterCategory">
+            <option value="all">Todas</option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="infantil">Infantil</option>
+          </select>
+        </label>
+        <label class="field"><span>Cor</span><select id="filterColor"><option value="">Todas</option></select></label>
+        <label class="field"><span>Tamanho</span><select id="filterSize"><option value="">Todos</option></select></label>
+        <label class="field"><span>Disponibilidade</span>
+          <select id="filterAvail">
+            <option value="">Todas</option>
+            <option value="in_stock">Em estoque</option>
+            <option value="new">Novidades</option>
+            <option value="sale">Promoções</option>
+          </select>
+        </label>
+        <label class="field"><span>Preço mín.</span><input id="filterMin" type="number" min="0" step="10" /></label>
+        <label class="field"><span>Preço máx.</span><input id="filterMax" type="number" min="0" step="10" /></label>
+        <label class="field"><span>Ordenar</span>
+          <select id="filterSort">
+            <option value="popular">Populares</option>
+            <option value="newest">Mais novos</option>
+            <option value="price-asc">Menor preço</option>
+            <option value="price-desc">Maior preço</option>
+          </select>
+        </label>
+      </aside>
+      <div class="product-grid" id="catalogGrid"></div>
+    </div>
+  </main>
+  <footer class="footer" id="siteFooter"></footer>
+  <a class="whatsapp-float" id="whatsappFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6A11.9 11.9 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5zM12 22a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 1 1 12 22z"/></svg>
+  </a>
+  <!-- legacy entry removed: use Vite React app -->
+</body>
+</html>

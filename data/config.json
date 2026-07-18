@@ -1,0 +1,25 @@
+{
+  "brand": "DG Modas",
+  "tagline": "Elegância que traduz sua essência",
+  "whatsapp": "5511987654321",
+  "instagram": "https://instagram.com",
+  "address": "Rua das Flores, 120 — Centro",
+  "city": "São Paulo — SP",
+  "email": "atendimento@dgmodas.com.br",
+  "currency": "BRL",
+  "installments": 3,
+  "freeShippingMin": 299,
+  "giftWrapPrice": 19.9,
+  "stats": {
+    "customers": 4820,
+    "orders": 12640,
+    "rating": 4.9,
+    "reviews": 1872
+  },
+  "trust": [
+    { "icon": "shield", "label": "Compra segura" },
+    { "icon": "truck", "label": "Entrega rápida" },
+    { "icon": "chat", "label": "Atendimento VIP" },
+    { "icon": "refresh", "label": "Troca facilitada" }
+  ]
+}

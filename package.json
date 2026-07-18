@@ -1,0 +1,30 @@
+{
+  "name": "dg-modas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "build-catalog": "node scripts/build-catalog.mjs",
+    "generate-assets": "node --use-system-ca scripts/generate-assets.mjs",
+    "generate-mascot-video": "node --use-system-ca scripts/generate-mascot-video.mjs",
+    "generate-mascot-loop": "py -3.13 scripts/generate_mascot_loop_local.py",
+    "generate-hero": "node --use-system-ca scripts/generate-assets.mjs --hero",
+    "generate-variants": "node --use-system-ca scripts/generate-assets.mjs --variants",
+    "generate-variants-local": "py -3.13 scripts/generate_variants_local.py",
+    "vary-backgrounds": "py -3.13 scripts/vary_backgrounds.py",
+    "studio-bg": "py -3.13 scripts/studio_backgrounds.py",
+    "serve": "node ./node_modules/vite/bin/vite.js"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^6.3.5"
+  }
+}

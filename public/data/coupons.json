@@ -1,0 +1,52 @@
+[
+  {
+    "code": "PRIMEIRACOMPRA",
+    "type": "percent",
+    "value": 5,
+    "minSubtotal": 0,
+    "freeShipping": false,
+    "validUntil": "2027-12-31",
+    "usageLimit": 1,
+    "description": "5% off na primeira compra"
+  },
+  {
+    "code": "DESCONTO10",
+    "type": "percent",
+    "value": 10,
+    "minSubtotal": 150,
+    "freeShipping": false,
+    "validUntil": "2027-12-31",
+    "usageLimit": 100,
+    "description": "10% off acima de R$ 150"
+  },
+  {
+    "code": "CLIENTEVIP",
+    "type": "fixed",
+    "value": 40,
+    "minSubtotal": 200,
+    "freeShipping": false,
+    "validUntil": "2027-12-31",
+    "usageLimit": 50,
+    "description": "R$ 40 off para clientes VIP"
+  },
+  {
+    "code": "FRETEGRATIS",
+    "type": "percent",
+    "value": 0,
+    "minSubtotal": 100,
+    "freeShipping": true,
+    "validUntil": "2027-12-31",
+    "usageLimit": 200,
+    "description": "Frete grátis acima de R$ 100"
+  },
+  {
+    "code": "BEMVINDA5",
+    "type": "percent",
+    "value": 5,
+    "minSubtotal": 0,
+    "freeShipping": false,
+    "validUntil": "2027-12-31",
+    "usageLimit": 1,
+    "description": "Ganhe 5% off — bem-vinda"
+  }
+]
