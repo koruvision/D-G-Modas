@@ -44,7 +44,6 @@ function legacyHtmlRedirects() {
 }
 
 export default defineConfig({
-  base: process.env.VITE_BASE || "/",
   plugins: [react(), legacyHtmlRedirects()],
   resolve: {
     alias: {

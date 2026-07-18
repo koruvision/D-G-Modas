@@ -1,3 +1,3 @@
 - GSAP: animações de scroll, entrada, hover e seções
 - Google Studio / Gemini: use a chave no arquivo `.env` (nunca commitada)
-- Deploy: GitHub ou Vercel (se necessário)
+- Deploy: Vercel (conectado ao GitHub)
