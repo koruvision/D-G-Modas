@@ -25,6 +25,7 @@ const PATHS = {
   map: '<path d="M9 4l6 2 5-2v14l-5 2-6-2-5 2V6l5-2z"/><path d="M9 4v14M15 6v14"/>',
   phone: '<path d="M7 3h3l1 4-2 1a12 12 0 0 0 5 5l1-2 4 1v3a2 2 0 0 1-2 2A14 14 0 0 1 5 5a2 2 0 0 1 2-2z"/>',
   mail: '<rect x="3" y="6" width="18" height="12"/><path d="M3 7l9 7 9-7"/>',
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7h.01"/>',
   zap: '<path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/>',
   alert: '<path d="M12 4l9 16H3L12 4z"/><path d="M12 10v4M12 16.5h.01"/>',

@@ -51,7 +51,7 @@ export function Footer() {
           </a>
           {cfg && (
             <a href={cfg.instagram} target="_blank" rel="noopener noreferrer">
-              Instagram
+              <Icon name="instagram" /> Instagram
             </a>
           )}
           {cfg && (
