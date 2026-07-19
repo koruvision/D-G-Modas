@@ -5,31 +5,33 @@ let shipping = null;
 let config = null;
 let productsCache = null;
 
+async function fetchJson(path) {
+  const res = await fetch(publicUrl(path));
+  if (!res.ok) throw new Error(`Falha ao carregar ${path} (${res.status})`);
+  return res.json();
+}
+
 export async function loadConfig() {
   if (config) return config;
-  const res = await fetch(publicUrl("data/config.json"));
-  config = await res.json();
+  config = await fetchJson("data/config.json");
   return config;
 }
 
 export async function loadCoupons() {
   if (coupons) return coupons;
-  const res = await fetch(publicUrl("data/coupons.json"));
-  coupons = await res.json();
+  coupons = await fetchJson("data/coupons.json");
   return coupons;
 }
 
 export async function loadShipping() {
   if (shipping) return shipping;
-  const res = await fetch(publicUrl("data/shipping.json"));
-  shipping = await res.json();
+  shipping = await fetchJson("data/shipping.json");
   return shipping;
 }
 
 export async function loadProducts() {
   if (productsCache) return productsCache;
-  const res = await fetch(publicUrl("data/products.json"));
-  productsCache = await res.json();
+  productsCache = await fetchJson("data/products.json");
   return productsCache;
 }
 
@@ -48,7 +50,7 @@ export async function findCoupon(code) {
 
 export async function estimateShipping(cep, shippingId) {
   const options = await loadShipping();
-  const option = options.find((o) => o.id === shippingId) || options[1];
+  const option = options.find((o) => o.id === shippingId) || options[1] || options[0];
   const digits = String(cep || "").replace(/\D/g, "");
   let multiplier = 1;
   if (digits.length >= 8) {
@@ -81,10 +83,10 @@ export async function computeTotals(cartData) {
 
   if (subtotal >= cfg.freeShippingMin) freeShipping = true;
 
-  const shipOpt = options.find((o) => o.id === cartData.shippingId) || options[1];
-  let shippingPrice = freeShipping && shipOpt.id !== "retirada" ? 0 : shipOpt.price;
+  const shipOpt = options.find((o) => o.id === cartData.shippingId) || options[1] || options[0];
+  let shippingPrice = freeShipping && shipOpt?.id !== "retirada" ? 0 : shipOpt?.price || 0;
   const cep = cartData.address?.cep;
-  if (cep && shipOpt.id !== "retirada") {
+  if (cep && shipOpt?.id !== "retirada") {
     const est = await estimateShipping(cep, shipOpt.id);
     shippingPrice = freeShipping ? 0 : est.price;
   }
@@ -105,10 +107,16 @@ export function filterProducts(products, filters = {}) {
     const q = filters.q.toLowerCase();
     list = list.filter(
       (p) =>
-        p.name.toLowerCase().includes(q) ||
-        p.description.toLowerCase().includes(q) ||
-        p.category.includes(q) ||
-        p.skuBase.toLowerCase().includes(q)
+        String(p.name || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(p.description || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(p.category || "").includes(q) ||
+        String(p.skuBase || "")
+          .toLowerCase()
+          .includes(q)
     );
   }
   if (filters.color) {

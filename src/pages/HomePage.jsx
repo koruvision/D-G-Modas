@@ -132,15 +132,26 @@ export function HomePage() {
   }, [products]);
 
   const news = useMemo(() => {
-    const list = products
-      .filter((p) => p.badge === "new")
-      .concat(products.filter((p) => p.category === "feminino"))
-      .slice(0, 12);
+    const seen = new Set();
+    const list = [];
+    for (const p of products.filter((x) => x.badge === "new").concat(products.filter((x) => x.category === "feminino"))) {
+      if (seen.has(p.id)) continue;
+      seen.add(p.id);
+      list.push(p);
+      if (list.length >= 12) break;
+    }
     return list.length >= 4 ? list : products.slice(0, 12);
   }, [products]);
 
   const sale = useMemo(() => {
-    const list = products.filter((p) => p.salePrice || p.badge === "sale").concat(products).slice(0, 10);
+    const seen = new Set();
+    const list = [];
+    for (const p of products.filter((x) => x.salePrice || x.badge === "sale").concat(products)) {
+      if (seen.has(p.id)) continue;
+      seen.add(p.id);
+      list.push(p);
+      if (list.length >= 10) break;
+    }
     return list.length >= 4 ? list : products.slice(5, 15);
   }, [products]);
 
@@ -159,18 +170,19 @@ export function HomePage() {
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
+    if (reduce) return undefined;
     const content = hero.rootRef.current?.querySelector(".hero-banner.is-active .hero-banner__content");
-    if (!content) return;
+    if (!content) return undefined;
     if (hero.index === 0 && !content.dataset.heroCycled) {
       content.dataset.heroCycled = "1";
-      return;
+      return undefined;
     }
     content.dataset.heroCycled = "1";
     let cancelled = false;
+    let tween = null;
     import("../lib/gsapSetup.js").then(({ gsap }) => {
       if (cancelled) return;
-      gsap.fromTo(
+      tween = gsap.fromTo(
         content.children,
         { y: 28, autoAlpha: 0 },
         { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.09, ease: "power3.out" }
@@ -178,6 +190,12 @@ export function HomePage() {
     });
     return () => {
       cancelled = true;
+      tween?.kill?.();
+      [...content.children].forEach((el) => {
+        el.style.opacity = "";
+        el.style.visibility = "";
+        el.style.transform = "";
+      });
     };
   }, [hero.index]);
 

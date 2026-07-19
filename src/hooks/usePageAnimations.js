@@ -38,6 +38,8 @@ function collectTargets(scope) {
   AUTO_SELECTORS.forEach((sel) => {
     scope.querySelectorAll(sel).forEach((el) => {
       if (seen.has(el) || el.closest(".hero-banners")) return;
+      // Cards em carrossel horizontal somem se GSAP aplicar autoAlpha:0 fora do eixo Y
+      if (el.closest(".product-carousel")) return;
       seen.add(el);
       list.push(el);
     });

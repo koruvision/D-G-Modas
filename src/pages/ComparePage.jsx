@@ -46,7 +46,11 @@ export function ComparePage() {
     <>
       <PageHero label="Comparação" title="Comparar" script="produtos" />
       <div className="container" style={{ paddingBottom: "4rem" }}>
-        {loading ? null : list.length < 2 ? (
+        {loading ? (
+          <div className="empty-state" aria-busy="true">
+            <p>Carregando…</p>
+          </div>
+        ) : list.length < 2 ? (
           <div className="empty-state">
             <Icon name="compare" />
             <p>Selecione ao menos 2 produtos para comparar</p>

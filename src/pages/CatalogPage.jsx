@@ -7,7 +7,7 @@ import { useProducts } from "../hooks/useProducts.js";
 import { filterProducts, uniqueColors, uniqueSizes } from "../services/api.js";
 
 export function CatalogPage() {
-  const { products, loading } = useProducts();
+  const { products, loading, error } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const filters = {
@@ -125,7 +125,23 @@ export function CatalogPage() {
           </label>
         </aside>
 
-        {list.length ? (
+        {loading ? (
+          <div className="product-grid" aria-busy="true">
+            <div className="empty-state">
+              <p>Carregando produtos…</p>
+            </div>
+          </div>
+        ) : error ? (
+          <div className="product-grid">
+            <div className="empty-state">
+              <Icon name="alert" />
+              <p>{error}</p>
+              <button type="button" className="btn btn--wine" onClick={() => window.location.reload()}>
+                Tentar de novo
+              </button>
+            </div>
+          </div>
+        ) : list.length ? (
           <div className="product-grid reveal-stagger">
             {list.map((p) => (
               <ProductCard key={p.id} product={p} />

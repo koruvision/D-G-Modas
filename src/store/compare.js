@@ -3,9 +3,13 @@ import { store } from "./storage.js";
 const KEY = "dg_compare";
 const MAX = 4;
 
+function asArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
 export const compareApi = {
   get() {
-    return store.get(KEY, []);
+    return asArray(store.get(KEY, []));
   },
   has(id) {
     return this.get().includes(id);

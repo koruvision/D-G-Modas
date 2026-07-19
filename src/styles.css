@@ -464,7 +464,9 @@ h3 {
     border: none;
     background: transparent;
   }
-  --nav-h: 78px;
+  :root {
+    --nav-h: 78px;
+  }
 }
 
 /* Hero banners carousel */
@@ -1040,11 +1042,17 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  opacity: 0;
+  opacity: 1;
   transition: opacity var(--t);
 }
-.product-card:hover .product-card__quick {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .product-card__quick {
+    opacity: 0;
+  }
+  .product-card:hover .product-card__quick,
+  .product-card:focus-within .product-card__quick {
+    opacity: 1;
+  }
 }
 .badge {
   position: absolute;

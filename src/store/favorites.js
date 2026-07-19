@@ -2,9 +2,13 @@ import { store } from "./storage.js";
 
 const KEY = "dg_favorites";
 
+function asArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
 export const favoritesApi = {
   get() {
-    return store.get(KEY, []);
+    return asArray(store.get(KEY, []));
   },
   has(id) {
     return this.get().includes(id);
