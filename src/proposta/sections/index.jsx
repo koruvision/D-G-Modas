@@ -13,11 +13,14 @@ import {
   CLOSING,
   WA_LINK,
 } from "../data/proposalContent.js";
+import { Icon } from "../../components/Icon.jsx";
 import {
   Badge,
+  BrandLogos,
   DeviceFrame,
   FeatureChips,
   HorizontalCarousel,
+  IconTile,
   PlanCard,
   PropImage,
   SectionHead,
@@ -27,13 +30,10 @@ export function ProblemSection() {
   return (
     <section className="prop-section prop-problem" id="problema">
       <div className="prop-wrap">
-        <SectionHead title={PROBLEM.title} subtitle={PROBLEM.subtitle} />
+        <SectionHead icon="alert" title={PROBLEM.title} subtitle={PROBLEM.subtitle} />
         <div className="prop-grid prop-grid--4" data-stagger>
           {PROBLEM.points.map((p) => (
-            <article key={p.title} className="prop-glass" data-reveal>
-              <h3>{p.title}</h3>
-              <p>{p.text}</p>
-            </article>
+            <IconTile key={p.title} icon={p.icon} title={p.title} text={p.text} />
           ))}
         </div>
       </div>
@@ -45,14 +45,17 @@ export function EcosystemSection() {
   return (
     <section className="prop-section" id="ecossistema">
       <div className="prop-wrap">
-        <SectionHead title={ECOSYSTEM.title} subtitle={ECOSYSTEM.subtitle} />
+        <SectionHead icon="layers" title={ECOSYSTEM.title} subtitle={ECOSYSTEM.subtitle} />
         <div className="prop-eco">
           <div className="prop-eco__visual" data-reveal>
-            <PropImage src="/assets/proposta/ecosystem-map.webp" alt="Mapa do ecossistema" />
+            <PropImage src="/assets/proposta/ecosystem-map.webp" alt="Mapa do ecossistema D&G Modas" />
           </div>
           <div className="prop-eco__pillars" data-stagger>
             {ECOSYSTEM.pillars.map((p) => (
               <a key={p.id} className="prop-pillar" href={`#${p.id}`} data-reveal>
+                <span className="prop-icon-wrap prop-icon-wrap--sm" aria-hidden="true">
+                  <Icon name={p.icon} className="icon" />
+                </span>
                 <strong>{p.label}</strong>
                 <span>{p.desc}</span>
               </a>
@@ -68,7 +71,7 @@ export function EcommerceSection() {
   return (
     <section className="prop-section" id="ecommerce">
       <div className="prop-wrap">
-        <SectionHead eyebrow="01 · Vendas online" title={ECOMMERCE.title} subtitle={ECOMMERCE.subtitle} />
+        <SectionHead icon="store" eyebrow="01 · Vendas online" title={ECOMMERCE.title} subtitle={ECOMMERCE.subtitle} />
         <div className="prop-split">
           <DeviceFrame type="laptop" className="prop-split__media" data-reveal>
             <PropImage src={ECOMMERCE.image} alt="Mockup e-commerce" />
@@ -95,7 +98,7 @@ export function CatalogSection() {
   return (
     <section className="prop-section prop-section--alt" id="catalogo">
       <div className="prop-wrap">
-        <SectionHead eyebrow="02 · Vitrine rápida" title={CATALOG.title} subtitle={CATALOG.subtitle} />
+        <SectionHead icon="qr" eyebrow="02 · Vitrine rápida" title={CATALOG.title} subtitle={CATALOG.subtitle} />
         <div className="prop-split prop-split--reverse">
           <FeatureChips items={CATALOG.benefits} />
           <DeviceFrame type="phone" className="prop-split__media" data-reveal>
@@ -115,7 +118,7 @@ export function LandingSection() {
   return (
     <section className="prop-section" id="landing">
       <div className="prop-wrap">
-        <SectionHead eyebrow="03 · Conversão" title={LANDING.title} subtitle={LANDING.subtitle} />
+        <SectionHead icon="layout" eyebrow="03 · Conversão" title={LANDING.title} subtitle={LANDING.subtitle} />
         <div className="prop-split">
           <DeviceFrame type="tablet" className="prop-split__media" data-reveal>
             <PropImage src={LANDING.image} alt="Landing page" />
@@ -140,7 +143,7 @@ export function SocialSection() {
   return (
     <section className="prop-section prop-section--alt" id="social">
       <div className="prop-wrap">
-        <SectionHead eyebrow="04 · Marca viva" title={SOCIAL.title} subtitle={SOCIAL.subtitle} />
+        <SectionHead icon="instagram" eyebrow="04 · Marca viva" title={SOCIAL.title} subtitle={SOCIAL.subtitle} />
         <div className="prop-media-wide" data-reveal>
           <PropImage src={SOCIAL.image} alt="Grade de redes sociais" />
         </div>
@@ -158,18 +161,18 @@ export function PostsSection() {
   return (
     <section className="prop-section" id="posts">
       <div className="prop-wrap">
-        <SectionHead eyebrow="05 · Plataforma Koruvision" title={POSTS.title} subtitle={POSTS.subtitle} />
+        <SectionHead icon="calendar" eyebrow="05 · Plataforma Koruvision" title={POSTS.title} subtitle={POSTS.subtitle} />
         <div className="prop-split">
           <DeviceFrame type="laptop" data-reveal>
             <PropImage src={POSTS.image} alt="Calendário Koruvision Posts" />
           </DeviceFrame>
           <div>
             <h3 className="prop-subhead" data-reveal>
-              Recursos
+              <Icon name="grid" className="icon prop-subhead__ico" /> Recursos
             </h3>
             <FeatureChips items={POSTS.features} />
             <h3 className="prop-subhead" data-reveal>
-              Plataformas
+              <Icon name="share" className="icon prop-subhead__ico" /> Plataformas
             </h3>
             <FeatureChips items={POSTS.platforms} />
           </div>
@@ -177,7 +180,9 @@ export function PostsSection() {
         <div className="prop-ai-block" data-reveal>
           <div>
             <Badge>IA integrada</Badge>
-            <h3>A inteligência artificial trabalhando por você</h3>
+            <h3>
+              <Icon name="bot" className="icon prop-subhead__ico" /> A inteligência artificial trabalhando por você
+            </h3>
             <FeatureChips items={POSTS.ai} />
           </div>
           <PropImage src={POSTS.imageAi} alt="IA no Koruvision Posts" className="prop-ai-block__img" />
@@ -196,7 +201,7 @@ export function TrafficSection() {
   return (
     <section className="prop-section prop-section--alt" id="trafego">
       <div className="prop-wrap">
-        <SectionHead eyebrow="06 · Aquisição" title={TRAFFIC.title} subtitle={TRAFFIC.subtitle} />
+        <SectionHead icon="megaphone" eyebrow="06 · Aquisição" title={TRAFFIC.title} subtitle={TRAFFIC.subtitle} />
         <div className="prop-split">
           <FeatureChips items={TRAFFIC.services} />
           <div className="prop-media-wide" data-reveal>
@@ -220,7 +225,7 @@ export function BlingSection() {
   return (
     <section className="prop-section" id="bling">
       <div className="prop-wrap">
-        <SectionHead eyebrow="07 · Operação" title={BLING.title} subtitle={BLING.subtitle} />
+        <SectionHead icon="package" eyebrow="07 · Operação" title={BLING.title} subtitle={BLING.subtitle} />
         <div className="prop-split">
           <DeviceFrame type="laptop" data-reveal>
             <PropImage src={BLING.image} alt="Dashboard Bling" />
@@ -241,7 +246,7 @@ export function CrmSection() {
   return (
     <section className="prop-section prop-section--alt" id="crm">
       <div className="prop-wrap">
-        <SectionHead eyebrow="08 · Relacionamento" title={CRM.title} subtitle={CRM.subtitle} />
+        <SectionHead icon="chat" eyebrow="08 · Relacionamento" title={CRM.title} subtitle={CRM.subtitle} />
         <div className="prop-split">
           <DeviceFrame type="laptop" data-reveal>
             <PropImage src={CRM.image} alt="CRM Kanban" />
@@ -249,7 +254,9 @@ export function CrmSection() {
           <div className="prop-crm-groups" data-stagger>
             {CRM.features.map((g) => (
               <article key={g.group} className="prop-glass" data-reveal>
-                <h3>{g.group}</h3>
+                <h3>
+                  <Icon name={g.icon} className="icon prop-subhead__ico" /> {g.group}
+                </h3>
                 <ul>
                   {g.items.map((i) => (
                     <li key={i}>{i}</li>
@@ -271,9 +278,9 @@ export function CombosSection() {
   return (
     <section className="prop-section" id="combos">
       <div className="prop-wrap">
-        <SectionHead title={COMBOS.title} subtitle={COMBOS.subtitle} />
+        <SectionHead icon="gift" title={COMBOS.title} subtitle={COMBOS.subtitle} />
         <div className="prop-media-wide prop-media-wide--short" data-reveal>
-          <PropImage src="/assets/proposta/combos-visual.webp" alt="Combos Koruvision" />
+          <PropImage src="/assets/proposta/combos-visual.webp" alt="Combos Koruvision para D&G Modas" />
         </div>
         <HorizontalCarousel className="prop-carousel--combos">
           {COMBOS.items.map((item) => (
@@ -289,6 +296,9 @@ export function ClosingSection() {
   return (
     <section className="prop-section prop-closing" id="fechamento">
       <div className="prop-wrap prop-closing__inner">
+        <div data-reveal>
+          <BrandLogos size="lg" />
+        </div>
         <p className="prop-eyebrow" data-reveal>
           Próximo passo
         </p>
@@ -302,13 +312,14 @@ export function ClosingSection() {
         </p>
         <div className="prop-triggers" data-stagger>
           {CLOSING.triggers.map((t) => (
-            <span key={t} data-reveal>
-              {t}
+            <span key={t.label} data-reveal>
+              <Icon name={t.icon} className="icon prop-chip__ico" />
+              {t.label}
             </span>
           ))}
         </div>
         <a className="prop-btn prop-btn--wine prop-btn--lg" href={WA_LINK} target="_blank" rel="noreferrer" data-reveal>
-          {CLOSING.cta}
+          <Icon name="chat" className="icon" /> {CLOSING.cta}
         </a>
       </div>
     </section>

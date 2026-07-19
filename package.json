@@ -18,7 +18,8 @@
     "serve": "node ./node_modules/vite/bin/vite.js",
     "optimize-images": "node scripts/optimize-images.mjs",
     "generate-proposal": "node --use-system-ca scripts/generate-proposal-assets.mjs",
-    "generate-proposal-placeholders": "node scripts/generate-proposal-placeholders.mjs"
+    "generate-proposal-placeholders": "node scripts/generate-proposal-placeholders.mjs",
+    "compose-proposal": "node scripts/compose-proposal-visuals.mjs"
   },
   "dependencies": {
     "@fontsource/great-vibes": "^5.2.8",

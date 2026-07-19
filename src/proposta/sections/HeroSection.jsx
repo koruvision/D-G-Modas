@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { HERO } from "../data/proposalContent.js";
-import { PropImage } from "../components/ui.jsx";
+import { BrandLogos, PropImage } from "../components/ui.jsx";
 
 export function HeroSection({ onExplore }) {
   const canvasRef = useRef(null);
@@ -95,6 +95,9 @@ export function HeroSection({ onExplore }) {
         <canvas ref={canvasRef} />
       </div>
       <div className="prop-hero__content">
+        <div data-hero-el>
+          <BrandLogos size="lg" />
+        </div>
         <p className="prop-eyebrow" data-hero-el>
           {HERO.eyebrow}
         </p>
@@ -114,7 +117,7 @@ export function HeroSection({ onExplore }) {
         </div>
       </div>
       <div className="prop-hero__visual" data-hero-el>
-        <PropImage src="/assets/proposta/hero-ecosystem.webp" alt="Ecossistema Koruvision" />
+        <PropImage src="/assets/proposta/hero-ecosystem.webp" alt="D&G Modas · Ecossistema Koruvision" />
       </div>
     </section>
   );

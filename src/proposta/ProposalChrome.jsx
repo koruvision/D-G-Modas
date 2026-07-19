@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { SECTIONS } from "./data/proposalContent.js";
+import { assetUrl } from "../lib/utils.js";
 
 export function ProposalChrome({ activeId, onNavigate }) {
   const [open, setOpen] = useState(false);
@@ -31,10 +32,20 @@ export function ProposalChrome({ activeId, onNavigate }) {
       <header className="prop-chrome">
         <div className="prop-chrome__inner">
           <a className="prop-chrome__brand" href="#capa" onClick={(e) => { e.preventDefault(); go("capa"); }}>
-            <span className="prop-chrome__mark">KV</span>
+            <img
+              className="prop-chrome__logo"
+              src={assetUrl("assets/logo-header-sm.webp")}
+              alt="D&G Modas"
+              width="44"
+              height="44"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = assetUrl("assets/logo-dg-modas-sm.webp");
+              }}
+            />
             <span className="prop-chrome__names">
-              <strong>Koruvision</strong>
-              <em>× D&amp;G Modas</em>
+              <strong>D&amp;G Modas</strong>
+              <em>proposta · Koruvision</em>
             </span>
           </a>
 
