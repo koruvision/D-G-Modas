@@ -74,6 +74,8 @@ export function Footer() {
           <p>Compra assistida via WhatsApp</p>
           <p>Troca em até 7 dias</p>
           <p>Garantia de 90 dias</p>
+          <Link to="/privacidade">Privacidade</Link>
+          <Link to="/termos">Termos de Uso</Link>
           <a className="btn btn--gold btn--sm" href={wa} target="_blank" rel="noopener noreferrer">
             Falar com especialista
           </a>
@@ -100,7 +102,10 @@ export function Footer() {
         </ul>
       </div>
       <div className="footer__bottom">
-        <p>&copy; {year} DG Modas. Todos os direitos reservados.</p>
+        <p>
+          &copy; {year} DG Modas. Todos os direitos reservados. ·{" "}
+          <Link to="/privacidade">Privacidade</Link> · <Link to="/termos">Termos</Link>
+        </p>
       </div>
     </footer>
   );

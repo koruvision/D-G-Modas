@@ -4,6 +4,7 @@ import { Shell } from "./layout/Shell.jsx";
 import { ToastHost } from "./components/ToastHost.jsx";
 import { CartDrawer } from "./components/CartDrawer.jsx";
 import { SearchModal } from "./components/SearchModal.jsx";
+import { CookieConsent } from "./components/CookieConsent.jsx";
 import { CartProvider } from "./hooks/useCart.jsx";
 import { UiProvider } from "./hooks/useUi.jsx";
 
@@ -22,8 +23,11 @@ const CheckoutPage = lazy(() =>
 const FavoritesPage = lazy(() =>
   import("./pages/FavoritesPage.jsx").then((m) => ({ default: m.FavoritesPage }))
 );
-const ComparePage = lazy(() =>
-  import("./pages/ComparePage.jsx").then((m) => ({ default: m.ComparePage }))
+const PrivacyPage = lazy(() =>
+  import("./pages/PrivacyPage.jsx").then((m) => ({ default: m.PrivacyPage }))
+);
+const TermsPage = lazy(() =>
+  import("./pages/TermsPage.jsx").then((m) => ({ default: m.TermsPage }))
 );
 
 function ScrollToTop() {
@@ -64,11 +68,14 @@ export default function App() {
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/favoritos" element={<FavoritesPage />} />
               <Route path="/comparar" element={<ComparePage />} />
+              <Route path="/privacidade" element={<PrivacyPage />} />
+              <Route path="/termos" element={<TermsPage />} />
             </Routes>
           </Suspense>
         </Shell>
         <CartDrawer />
         <SearchModal />
+        <CookieConsent />
         <ToastHost />
       </CartProvider>
     </UiProvider>
