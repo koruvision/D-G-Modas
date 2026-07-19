@@ -260,44 +260,67 @@ h3 {
 .header__top {
   background: linear-gradient(90deg, var(--wine-deep), var(--wine) 40%, var(--gold-deep) 120%);
   color: #fff;
-  text-align: center;
   font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  padding: 0.4rem 1rem;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 0;
   min-height: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
-.header__top p,
-.header__top-msg {
-  margin: 0;
+.header__marquee {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+}
+.header__marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: header-marquee 56s linear infinite;
+}
+.header__marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.header__marquee-item {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.4rem;
-  flex-wrap: wrap;
-  animation: header-promo-in 0.45s var(--ease);
+  white-space: nowrap;
+  padding-left: 1.35rem;
 }
-.header__top-msg .icon {
+.header__marquee-item .icon {
   width: 0.95rem;
   height: 0.95rem;
   flex-shrink: 0;
 }
-@keyframes header-promo-in {
+.header__marquee-sep {
+  display: inline-block;
+  margin-left: 1.35rem;
+  opacity: 0.55;
+  font-weight: 600;
+}
+@keyframes header-marquee {
   from {
-    opacity: 0;
-    transform: translateY(6px);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(-25%, 0, 0);
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .header__top-msg {
+  .header__marquee-track {
     animation: none;
+    transform: none;
+  }
+  .header__marquee-group[aria-hidden="true"] {
+    display: none;
+  }
+  .header__marquee {
+    mask-image: none;
+    overflow-x: auto;
   }
 }
 
@@ -2524,11 +2547,8 @@ body.filters-open {
     padding-bottom: 5.5rem;
   }
 
-  .header__top-msg {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+  .header__marquee-track {
+    animation-duration: 42s;
   }
 
   .header__icon--desktop,

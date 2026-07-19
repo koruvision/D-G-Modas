@@ -13,7 +13,6 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const [isSolid, setIsSolid] = useState(false);
-  const [promoIndex, setPromoIndex] = useState(0);
 
   const promoMessages = useMemo(() => {
     const freeMin = cfg ? formatBRL(cfg.freeShippingMin) : "R$ 299,00";
@@ -47,7 +46,7 @@ export function Header() {
         icon: "card",
         node: (
           <>
-            Pix, cartão e boleto · até <strong>{installments}x</strong>
+            Pagamento via Pix, cartão e boleto · até <strong>{installments}x</strong> pelo WhatsApp
           </>
         ),
       },
@@ -66,14 +65,6 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    if (promoMessages.length < 2) return undefined;
-    const id = window.setInterval(() => {
-      setPromoIndex((i) => (i + 1) % promoMessages.length);
-    }, 4200);
-    return () => window.clearInterval(id);
-  }, [promoMessages.length]);
-
-  useEffect(() => {
     document.body.classList.toggle("menu-open", isOpen);
     if (!isOpen) setMegaOpen(false);
     return () => document.body.classList.remove("menu-open");
@@ -90,15 +81,32 @@ export function Header() {
 
   const closeMenu = () => setIsOpen(false);
   const wa = cfg ? `https://wa.me/${cfg.whatsapp}` : "#";
-  const currentPromo = promoMessages[promoIndex] || promoMessages[0];
+
+  const renderPromoGroup = (copyKey, hidden) => (
+    <div className="header__marquee-group" key={copyKey} aria-hidden={hidden || undefined}>
+      {promoMessages.map((msg, i) => (
+        <span className="header__marquee-item" key={`${copyKey}-${i}`}>
+          <Icon name={msg.icon} />
+          <span>{msg.node}</span>
+          <span className="header__marquee-sep" aria-hidden="true">
+            •
+          </span>
+        </span>
+      ))}
+    </div>
+  );
 
   return (
     <header className={`site-header ${isSolid ? "is-solid" : ""} ${isOpen ? "is-open" : ""}`.trim()}>
-      <div className="header__top" aria-live="polite">
-        <p key={promoIndex} className="header__top-msg">
-          <Icon name={currentPromo.icon} />
-          {currentPromo.node}
-        </p>
+      <div className="header__top">
+        <div className="header__marquee" role="region" aria-label="Benefícios e condições da loja">
+          <div className="header__marquee-track">
+            {renderPromoGroup("a", false)}
+            {renderPromoGroup("b", true)}
+            {renderPromoGroup("c", true)}
+            {renderPromoGroup("d", true)}
+          </div>
+        </div>
       </div>
       <div className="header__main">
         <div className="header__side header__side--left">
