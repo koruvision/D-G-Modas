@@ -472,7 +472,7 @@ export function HomePage() {
             <Link className="btn btn--gold" to="/catalogo">
               Ver catálogo completo
             </Link>
-            <a className="btn btn--outline-gold" href={wa} target="_blank" rel="noopener noreferrer">
+            <a className="btn btn--white" href={wa} target="_blank" rel="noopener noreferrer">
               <Icon name="chat" /> Falar no WhatsApp
             </a>
           </div>

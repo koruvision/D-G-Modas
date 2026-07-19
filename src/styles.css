@@ -1424,6 +1424,16 @@ h3 {
 .cta-band__actions .btn--gold {
   color: #fff;
 }
+.cta-band__actions .btn--white {
+  background: #fff;
+  border-color: #fff;
+  color: var(--wine-deep);
+}
+.cta-band__actions .btn--white:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: var(--wine);
+}
 
 /* Footer */
 .footer {
