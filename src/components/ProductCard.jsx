@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { Icon } from "./Icon.jsx";
 import { useUi } from "../hooks/useUi.jsx";
-import { formatBRL, installments, publicUrl } from "../lib/utils.js";
+import { formatBRL, installments, assetUrl } from "../lib/utils.js";
 
-export function ProductCard({ product }) {
+export function ProductCard({ product, priority = false }) {
   const ui = useUi();
   const price = product.salePrice ?? product.price;
-  const raw = product.variants[0]?.images?.[0] || "assets/logo-dg-modas.png";
-  const img = publicUrl(String(raw).replace(/^\//, ""));
+  const raw = product.variants[0]?.images?.[0] || "assets/logo-dg-modas.webp";
+  const img = assetUrl(raw);
+  const fallback = assetUrl("assets/logo-dg-modas.webp");
   const isFav = ui.hasFav(product.id);
   const isCmp = ui.hasCmp(product.id);
   const href = `/produto/${product.slug}`;
@@ -38,12 +39,14 @@ export function ProductCard({ product }) {
           <img
             src={img}
             alt={product.name}
-            loading="lazy"
+            loading={priority ? "eager" : "lazy"}
+            decoding="async"
+            fetchPriority={priority ? "high" : "low"}
             width="600"
             height="800"
             onError={(e) => {
               e.currentTarget.onerror = null;
-              e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
+              e.currentTarget.src = fallback;
             }}
           />
         </Link>

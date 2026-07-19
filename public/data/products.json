@@ -41,7 +41,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-conjunto-marrom.jpg"
+          "assets/fem-conjunto-marrom.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -60,9 +60,9 @@
         },
         "stockStatus": "made_to_order",
         "images": [
-          "assets/fem-conjunto-marrom-var-1.jpg"
+          "assets/fem-conjunto-marrom-var-1.webp"
         ],
-        "imageHint": "assets/fem-conjunto-marrom-var-1.jpg",
+        "imageHint": "assets/fem-conjunto-marrom-var-1.webp",
         "priceDelta": 5
       },
       {
@@ -79,9 +79,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-conjunto-marrom-var-2.jpg"
+          "assets/fem-conjunto-marrom-var-2.webp"
         ],
-        "imageHint": "assets/fem-conjunto-marrom-var-2.jpg",
+        "imageHint": "assets/fem-conjunto-marrom-var-2.webp",
         "priceDelta": 10
       }
     ],
@@ -175,7 +175,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-vestido-vermelho.jpg"
+          "assets/fem-vestido-vermelho.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -194,9 +194,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-vestido-vermelho-var-1.jpg"
+          "assets/fem-vestido-vermelho-var-1.webp"
         ],
-        "imageHint": "assets/fem-vestido-vermelho-var-1.jpg",
+        "imageHint": "assets/fem-vestido-vermelho-var-1.webp",
         "priceDelta": 5
       },
       {
@@ -213,9 +213,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-vestido-vermelho-var-2.jpg"
+          "assets/fem-vestido-vermelho-var-2.webp"
         ],
-        "imageHint": "assets/fem-vestido-vermelho-var-2.jpg",
+        "imageHint": "assets/fem-vestido-vermelho-var-2.webp",
         "priceDelta": 10
       }
     ],
@@ -309,7 +309,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-jaguar.jpg"
+          "assets/fem-jaguar.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -328,9 +328,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-jaguar-var-1.jpg"
+          "assets/fem-jaguar-var-1.webp"
         ],
-        "imageHint": "assets/fem-jaguar-var-1.jpg",
+        "imageHint": "assets/fem-jaguar-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -424,7 +424,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-vestido-folk.jpg"
+          "assets/fem-vestido-folk.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -443,9 +443,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-vestido-folk-var-1.jpg"
+          "assets/fem-vestido-folk-var-1.webp"
         ],
-        "imageHint": "assets/fem-vestido-folk-var-1.jpg",
+        "imageHint": "assets/fem-vestido-folk-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -539,7 +539,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-crop-azul.jpg"
+          "assets/fem-crop-azul.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -558,9 +558,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-crop-azul-var-1.jpg"
+          "assets/fem-crop-azul-var-1.webp"
         ],
-        "imageHint": "assets/fem-crop-azul-var-1.jpg",
+        "imageHint": "assets/fem-crop-azul-var-1.webp",
         "priceDelta": 5
       },
       {
@@ -577,9 +577,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-crop-azul-var-2.jpg"
+          "assets/fem-crop-azul-var-2.webp"
         ],
-        "imageHint": "assets/fem-crop-azul-var-2.jpg",
+        "imageHint": "assets/fem-crop-azul-var-2.webp",
         "priceDelta": 10
       }
     ],
@@ -673,7 +673,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-short-terracota.jpg"
+          "assets/fem-short-terracota.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -692,9 +692,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-short-terracota-var-1.jpg"
+          "assets/fem-short-terracota-var-1.webp"
         ],
-        "imageHint": "assets/fem-short-terracota-var-1.jpg",
+        "imageHint": "assets/fem-short-terracota-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -788,7 +788,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-deer-print.jpg"
+          "assets/fem-deer-print.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -807,9 +807,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-deer-print-var-1.jpg"
+          "assets/fem-deer-print-var-1.webp"
         ],
-        "imageHint": "assets/fem-deer-print-var-1.jpg",
+        "imageHint": "assets/fem-deer-print-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -903,7 +903,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-camisa-listra.jpg"
+          "assets/fem-camisa-listra.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -922,9 +922,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-camisa-listra-var-1.jpg"
+          "assets/fem-camisa-listra-var-1.webp"
         ],
-        "imageHint": "assets/fem-camisa-listra-var-1.jpg",
+        "imageHint": "assets/fem-camisa-listra-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -1018,7 +1018,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-top-menta.jpg"
+          "assets/fem-top-menta.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1037,9 +1037,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-top-menta-var-1.jpg"
+          "assets/fem-top-menta-var-1.webp"
         ],
-        "imageHint": "assets/fem-top-menta-var-1.jpg",
+        "imageHint": "assets/fem-top-menta-var-1.webp",
         "priceDelta": 5
       },
       {
@@ -1056,9 +1056,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-top-menta-var-2.jpg"
+          "assets/fem-top-menta-var-2.webp"
         ],
-        "imageHint": "assets/fem-top-menta-var-2.jpg",
+        "imageHint": "assets/fem-top-menta-var-2.webp",
         "priceDelta": 10
       }
     ],
@@ -1152,7 +1152,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-top-lilas.jpg"
+          "assets/fem-top-lilas.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1171,9 +1171,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-top-lilas-var-1.jpg"
+          "assets/fem-top-lilas-var-1.webp"
         ],
-        "imageHint": "assets/fem-top-lilas-var-1.jpg",
+        "imageHint": "assets/fem-top-lilas-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -1267,7 +1267,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-conjunto-azul.jpg"
+          "assets/fem-conjunto-azul.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1286,9 +1286,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-conjunto-azul-var-1.jpg"
+          "assets/fem-conjunto-azul-var-1.webp"
         ],
-        "imageHint": "assets/fem-conjunto-azul-var-1.jpg",
+        "imageHint": "assets/fem-conjunto-azul-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -1382,7 +1382,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-macaquinho-preto.jpg"
+          "assets/fem-macaquinho-preto.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1401,9 +1401,9 @@
         },
         "stockStatus": "made_to_order",
         "images": [
-          "assets/fem-macaquinho-preto-var-1.jpg"
+          "assets/fem-macaquinho-preto-var-1.webp"
         ],
-        "imageHint": "assets/fem-macaquinho-preto-var-1.jpg",
+        "imageHint": "assets/fem-macaquinho-preto-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -1497,7 +1497,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-vestido-floral.jpg"
+          "assets/fem-vestido-floral.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1516,9 +1516,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-vestido-floral-var-1.jpg"
+          "assets/fem-vestido-floral-var-1.webp"
         ],
-        "imageHint": "assets/fem-vestido-floral-var-1.jpg",
+        "imageHint": "assets/fem-vestido-floral-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -1612,7 +1612,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-macacao-bege.jpg"
+          "assets/fem-macacao-bege.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1631,9 +1631,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-macacao-bege-var-1.jpg"
+          "assets/fem-macacao-bege-var-1.webp"
         ],
-        "imageHint": "assets/fem-macacao-bege-var-1.jpg",
+        "imageHint": "assets/fem-macacao-bege-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -1727,7 +1727,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-jaguar-2.jpg"
+          "assets/fem-jaguar-2.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1746,9 +1746,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/fem-jaguar-2-var-1.jpg"
+          "assets/fem-jaguar-2-var-1.webp"
         ],
-        "imageHint": "assets/fem-jaguar-2-var-1.jpg",
+        "imageHint": "assets/fem-jaguar-2-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -1842,7 +1842,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-polo-bordo.jpg"
+          "assets/masc-polo-bordo.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1861,9 +1861,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-polo-bordo-var-1.jpg"
+          "assets/masc-polo-bordo-var-1.webp"
         ],
-        "imageHint": "assets/masc-polo-bordo-var-1.jpg",
+        "imageHint": "assets/masc-polo-bordo-var-1.webp",
         "priceDelta": 5
       },
       {
@@ -1880,9 +1880,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-polo-bordo-var-2.jpg"
+          "assets/masc-polo-bordo-var-2.webp"
         ],
-        "imageHint": "assets/masc-polo-bordo-var-2.jpg",
+        "imageHint": "assets/masc-polo-bordo-var-2.webp",
         "priceDelta": 10
       }
     ],
@@ -1976,7 +1976,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-polo-verde.jpg"
+          "assets/masc-polo-verde.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -1995,9 +1995,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-polo-verde-var-1.jpg"
+          "assets/masc-polo-verde-var-1.webp"
         ],
-        "imageHint": "assets/masc-polo-verde-var-1.jpg",
+        "imageHint": "assets/masc-polo-verde-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -2091,7 +2091,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-camisa-preta.jpg"
+          "assets/masc-camisa-preta.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -2110,9 +2110,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-camisa-preta-var-1.jpg"
+          "assets/masc-camisa-preta-var-1.webp"
         ],
-        "imageHint": "assets/masc-camisa-preta-var-1.jpg",
+        "imageHint": "assets/masc-camisa-preta-var-1.webp",
         "priceDelta": 5
       },
       {
@@ -2129,9 +2129,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-camisa-preta-var-2.jpg"
+          "assets/masc-camisa-preta-var-2.webp"
         ],
-        "imageHint": "assets/masc-camisa-preta-var-2.jpg",
+        "imageHint": "assets/masc-camisa-preta-var-2.webp",
         "priceDelta": 10
       }
     ],
@@ -2225,7 +2225,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-camisa-branca.jpg"
+          "assets/masc-camisa-branca.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -2244,9 +2244,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-camisa-branca-var-1.jpg"
+          "assets/masc-camisa-branca-var-1.webp"
         ],
-        "imageHint": "assets/masc-camisa-branca-var-1.jpg",
+        "imageHint": "assets/masc-camisa-branca-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -2340,7 +2340,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-camisa-verde.jpg"
+          "assets/masc-camisa-verde.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -2359,9 +2359,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-camisa-verde-var-1.jpg"
+          "assets/masc-camisa-verde-var-1.webp"
         ],
-        "imageHint": "assets/masc-camisa-verde-var-1.jpg",
+        "imageHint": "assets/masc-camisa-verde-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -2455,7 +2455,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-short-bege.jpg"
+          "assets/masc-short-bege.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -2474,9 +2474,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/masc-short-bege-var-1.jpg"
+          "assets/masc-short-bege-var-1.webp"
         ],
-        "imageHint": "assets/masc-short-bege-var-1.jpg",
+        "imageHint": "assets/masc-short-bege-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -2570,7 +2570,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-vestido-floral.jpg"
+          "assets/inf-vestido-floral.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -2589,9 +2589,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-vestido-floral-var-1.jpg"
+          "assets/inf-vestido-floral-var-1.webp"
         ],
-        "imageHint": "assets/inf-vestido-floral-var-1.jpg",
+        "imageHint": "assets/inf-vestido-floral-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -2685,7 +2685,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-polo-menino.jpg"
+          "assets/inf-polo-menino.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -2704,9 +2704,9 @@
         },
         "stockStatus": "made_to_order",
         "images": [
-          "assets/inf-polo-menino-var-1.jpg"
+          "assets/inf-polo-menino-var-1.webp"
         ],
-        "imageHint": "assets/inf-polo-menino-var-1.jpg",
+        "imageHint": "assets/inf-polo-menino-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -2800,7 +2800,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-conjunto-rosa.jpg"
+          "assets/inf-conjunto-rosa.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -2819,9 +2819,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-conjunto-rosa-var-1.jpg"
+          "assets/inf-conjunto-rosa-var-1.webp"
         ],
-        "imageHint": "assets/inf-conjunto-rosa-var-1.jpg",
+        "imageHint": "assets/inf-conjunto-rosa-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -2915,7 +2915,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-stylish-boy.jpg"
+          "assets/inf-stylish-boy.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -2934,9 +2934,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-stylish-boy-var-1.jpg"
+          "assets/inf-stylish-boy-var-1.webp"
         ],
-        "imageHint": "assets/inf-stylish-boy-var-1.jpg",
+        "imageHint": "assets/inf-stylish-boy-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -3030,7 +3030,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-sunshine.jpg"
+          "assets/inf-sunshine.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -3049,9 +3049,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-sunshine-var-1.jpg"
+          "assets/inf-sunshine-var-1.webp"
         ],
-        "imageHint": "assets/inf-sunshine-var-1.jpg",
+        "imageHint": "assets/inf-sunshine-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -3145,7 +3145,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-regata-vermelha.jpg"
+          "assets/inf-regata-vermelha.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -3164,9 +3164,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-regata-vermelha-var-1.jpg"
+          "assets/inf-regata-vermelha-var-1.webp"
         ],
-        "imageHint": "assets/inf-regata-vermelha-var-1.jpg",
+        "imageHint": "assets/inf-regata-vermelha-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -3260,7 +3260,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-camiseta-barbie.jpg"
+          "assets/inf-camiseta-barbie.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -3279,9 +3279,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-camiseta-barbie-var-1.jpg"
+          "assets/inf-camiseta-barbie-var-1.webp"
         ],
-        "imageHint": "assets/inf-camiseta-barbie-var-1.jpg",
+        "imageHint": "assets/inf-camiseta-barbie-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -3375,7 +3375,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-vestido-bebe.jpg"
+          "assets/inf-vestido-bebe.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -3394,9 +3394,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-vestido-bebe-var-1.jpg"
+          "assets/inf-vestido-bebe-var-1.webp"
         ],
-        "imageHint": "assets/inf-vestido-bebe-var-1.jpg",
+        "imageHint": "assets/inf-vestido-bebe-var-1.webp",
         "priceDelta": 5
       }
     ],
@@ -3490,7 +3490,7 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-camisa-menino.jpg"
+          "assets/inf-camisa-menino.webp"
         ],
         "imageHint": null,
         "priceDelta": 0
@@ -3509,9 +3509,9 @@
         },
         "stockStatus": "in_stock",
         "images": [
-          "assets/inf-camisa-menino-var-1.jpg"
+          "assets/inf-camisa-menino-var-1.webp"
         ],
-        "imageHint": "assets/inf-camisa-menino-var-1.jpg",
+        "imageHint": "assets/inf-camisa-menino-var-1.webp",
         "priceDelta": 5
       }
     ],

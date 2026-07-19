@@ -4,14 +4,21 @@ import { PageHero } from "../components/PageHero.jsx";
 import { Icon } from "../components/Icon.jsx";
 import { useProducts } from "../hooks/useProducts.js";
 import { useUi } from "../hooks/useUi.jsx";
-import { formatBRL, publicUrl } from "../lib/utils.js";
+import { formatBRL, assetUrl } from "../lib/utils.js";
 
 const ROWS = [
   {
     label: "Produto",
     fn: (p) => (
       <>
-        <img src={p.variants[0]?.images?.[0] ? publicUrl(String(p.variants[0].images[0]).replace(/^\//, "")) : publicUrl("assets/logo-dg-modas.png")} alt="" />
+        <img
+          src={assetUrl(p.variants[0]?.images?.[0] || "assets/logo-dg-modas.webp")}
+          alt=""
+          width="80"
+          height="100"
+          loading="lazy"
+          decoding="async"
+        />
         <strong>{p.name}</strong>
       </>
     ),

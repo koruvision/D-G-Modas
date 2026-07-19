@@ -5,7 +5,7 @@ import { useCart } from "../hooks/useCart.jsx";
 import { useUi } from "../hooks/useUi.jsx";
 import { loadShipping, loadConfig, findCoupon } from "../services/api.js";
 import { openWhatsAppOrder } from "../services/whatsapp.js";
-import { formatBRL, publicUrl } from "../lib/utils.js";
+import { formatBRL, assetUrl } from "../lib/utils.js";
 
 export function CartDrawer() {
   const ui = useUi();
@@ -71,7 +71,7 @@ export function CartDrawer() {
                   key={`${item.productId}|${item.variantId}|${item.size}`}
                   className="cart-item"
                 >
-                  <img src={publicUrl(String(item.image || "assets/logo-dg-modas.png").replace(/^\//, ""))} alt={item.name} width="72" height="96" />
+                  <img src={assetUrl(item.image || "assets/logo-dg-modas.webp")} alt={item.name} width="72" height="96" loading="lazy" decoding="async" />
                   <div className="cart-item__info">
                     <h4>{item.name}</h4>
                     <p>

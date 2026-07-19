@@ -4,8 +4,7 @@ import { Icon } from "../components/Icon.jsx";
 import { ProductCarousel } from "../components/ProductCarousel.jsx";
 import { useProducts } from "../hooks/useProducts.js";
 import { useConfig } from "../hooks/useConfig.js";
-import { formatBRL, publicUrl } from "../lib/utils.js";
-import { gsap } from "../lib/gsapSetup.js";
+import { formatBRL, assetUrl } from "../lib/utils.js";
 
 const HERO_SLIDES = [
   {
@@ -14,7 +13,7 @@ const HERO_SLIDES = [
     script: "traduz sua essência",
     price: null,
     offer: "Peças exclusivas em alfaiataria leve e caimento perfeito",
-    image: publicUrl("assets/banner-hero-1.png"),
+    image: assetUrl("assets/banner-hero-1.webp"),
     href: "/catalogo?categoria=feminino",
   },
   {
@@ -23,7 +22,7 @@ const HERO_SLIDES = [
     script: "veste confiança",
     price: null,
     offer: "Camisaria masculina premium com acabamento impecável",
-    image: publicUrl("assets/banner-hero-2.png"),
+    image: assetUrl("assets/banner-hero-2.webp"),
     href: "/catalogo?categoria=masculino",
   },
   {
@@ -32,7 +31,7 @@ const HERO_SLIDES = [
     script: "até 30% off",
     price: null,
     offer: "Aproveite peças selecionadas por tempo limitado",
-    image: publicUrl("assets/banner-hero-3.png"),
+    image: assetUrl("assets/banner-hero-3.webp"),
     href: "/catalogo?availability=sale",
   },
 ];
@@ -42,25 +41,25 @@ const FEATURES = [
     icon: "shield",
     title: "Compra Segura",
     text: "Atendimento assistido via WhatsApp do início ao fim, sem burocracia.",
-    bg: publicUrl("assets/trust-compra-segura.png"),
+    bg: assetUrl("assets/trust-compra-segura.webp"),
   },
   {
     icon: "truck",
     title: "Entrega Rápida",
     text: "Envio para todo o Brasil com prazos claros e rastreio completo.",
-    bg: publicUrl("assets/trust-entrega-rapida.png"),
+    bg: assetUrl("assets/trust-entrega-rapida.webp"),
   },
   {
     icon: "refresh",
     title: "Troca Facilitada",
     text: "Até 7 dias para trocar sem complicação, com etiquetas originais.",
-    bg: publicUrl("assets/trust-troca-facilitada.png"),
+    bg: assetUrl("assets/trust-troca-facilitada.webp"),
   },
   {
     icon: "chat",
     title: "Atendimento VIP",
     text: "Consultoria de estilo personalizada para cada cliente DG Modas.",
-    bg: publicUrl("assets/trust-atendimento-vip.png"),
+    bg: assetUrl("assets/trust-atendimento-vip.webp"),
   },
 ];
 
@@ -68,24 +67,24 @@ const TESTIMONIALS = [
   {
     name: "Ana Clara",
     text: "Peças impecáveis, tecido premium e caimento perfeito. Já é minha loja de confiança.",
-    avatar: publicUrl("assets/review-ana-clara.png"),
+    avatar: assetUrl("assets/review-ana-clara.webp"),
   },
   {
     name: "Mariana Lopes",
     text: "Atendimento pelo WhatsApp super atencioso, me ajudaram a escolher o tamanho ideal.",
-    avatar: publicUrl("assets/review-mariana-lopes.png"),
+    avatar: assetUrl("assets/review-mariana-lopes.webp"),
   },
   {
     name: "Rafael Souza",
     text: "Camisaria de altíssima qualidade e entrega rápida. Recomendo demais a DG Modas.",
-    avatar: publicUrl("assets/review-rafael-souza.png"),
+    avatar: assetUrl("assets/review-rafael-souza.webp"),
   },
 ];
 
 const CATEGORIES = [
-  { key: "feminino", title: "Feminino", desc: "Vestidos, conjuntos e alfaiataria leve", image: publicUrl("assets/fem-vestido-floral.jpg") },
-  { key: "masculino", title: "Masculino", desc: "Camisaria premium e polos exclusivas", image: publicUrl("assets/masc-camisa-branca.jpg") },
-  { key: "infantil", title: "Infantil", desc: "Conforto e estilo para os pequenos", image: publicUrl("assets/inf-vestido-floral.jpg") },
+  { key: "feminino", title: "Feminino", desc: "Vestidos, conjuntos e alfaiataria leve", image: assetUrl("assets/fem-vestido-floral.webp") },
+  { key: "masculino", title: "Masculino", desc: "Camisaria premium e polos exclusivas", image: assetUrl("assets/masc-camisa-branca.webp") },
+  { key: "infantil", title: "Infantil", desc: "Conforto e estilo para os pequenos", image: assetUrl("assets/inf-vestido-floral.webp") },
 ];
 
 function useHeroCarousel(length) {
@@ -167,11 +166,18 @@ export function HomePage() {
       return;
     }
     content.dataset.heroCycled = "1";
-    gsap.fromTo(
-      content.children,
-      { y: 28, autoAlpha: 0 },
-      { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.09, ease: "power3.out" }
-    );
+    let cancelled = false;
+    import("../lib/gsapSetup.js").then(({ gsap }) => {
+      if (cancelled) return;
+      gsap.fromTo(
+        content.children,
+        { y: 28, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.09, ease: "power3.out" }
+      );
+    });
+    return () => {
+      cancelled = true;
+    };
   }, [hero.index]);
 
   return (
@@ -181,16 +187,32 @@ export function HomePage() {
         <div className="hero-banners__track">
           {HERO_SLIDES.map((slide, i) => (
             <div key={slide.href} className={`hero-banner ${i === hero.index ? "is-active" : ""}`}>
-              <img src={slide.image} alt="" />
+              {(i === hero.index || i === 0) && (
+                <img
+                  src={slide.image}
+                  alt=""
+                  width="1600"
+                  height="900"
+                  decoding="async"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  fetchPriority={i === 0 ? "high" : "low"}
+                />
+              )}
               <div className="hero-banner__veil" />
               <div className="hero-banner__content">
                 <p className="hero-banner__eyebrow">
                   <Icon name="spark" className="icon icon--eyebrow" />
                   {slide.eyebrow}
                 </p>
-                <h1>
-                  {slide.title} <span className="script">{slide.script}</span>
-                </h1>
+                {i === 0 ? (
+                  <h1>
+                    {slide.title} <span className="script">{slide.script}</span>
+                  </h1>
+                ) : (
+                  <h2>
+                    {slide.title} <span className="script">{slide.script}</span>
+                  </h2>
+                )}
                 <p className="hero-banner__offer">{slide.offer}</p>
                 <div className="hero-banner__actions">
                   <Link className="btn btn--gold" to={slide.href}>
@@ -248,7 +270,7 @@ export function HomePage() {
           <div className="cat-grid reveal-stagger">
             {CATEGORIES.map((cat) => (
               <Link key={cat.key} to={`/catalogo?categoria=${cat.key}`} className="cat-card">
-                <img src={cat.image} alt={cat.title} />
+                <img src={cat.image} alt={cat.title} width="800" height="1000" loading="lazy" decoding="async" />
                 <div className="cat-card__body">
                   <h3>{cat.title}</h3>
                   <p>{cat.desc}</p>
@@ -317,7 +339,15 @@ export function HomePage() {
       {/* SOBRE */}
       <section className="section section--soft" id="sobre">
         <div className="container about-grid">
-          <img src={publicUrl("assets/sobre-loja.png")} alt="Ateliê DG Modas" className="reveal-lux" />
+          <img
+            src={assetUrl("assets/sobre-loja.webp")}
+            alt="Ateliê DG Modas"
+            className="reveal-lux"
+            width="900"
+            height="1100"
+            loading="lazy"
+            decoding="async"
+          />
           <div className="reveal-lux">
             <div className="section-label">
               <Icon name="info" /> Nossa história
@@ -413,7 +443,7 @@ export function HomePage() {
                 <div className="stars">★★★★★</div>
                 <p>“{t.text}”</p>
                 <div className="quote-card__author">
-                  <img src={t.avatar} alt={t.name} />
+                  <img src={t.avatar} alt={t.name} width="64" height="64" loading="lazy" decoding="async" />
                   <h3>{t.name}</h3>
                 </div>
               </article>
@@ -423,7 +453,7 @@ export function HomePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="cta-band" style={{ "--cta-bg": `url(${publicUrl("assets/hero-loja.png")})` }}>
+      <section className="cta-band" style={{ "--cta-bg": `url(${assetUrl("assets/hero-loja.webp")})` }}>
         <div className="cta-band__overlay" />
         <div className="container cta-band__content reveal-lux">
           <div className="section-label">

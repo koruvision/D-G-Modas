@@ -15,9 +15,12 @@
     "generate-variants-local": "py -3.13 scripts/generate_variants_local.py",
     "vary-backgrounds": "py -3.13 scripts/vary_backgrounds.py",
     "studio-bg": "py -3.13 scripts/studio_backgrounds.py",
-    "serve": "node ./node_modules/vite/bin/vite.js"
+    "serve": "node ./node_modules/vite/bin/vite.js",
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
+    "@fontsource/great-vibes": "^5.2.8",
+    "@fontsource/outfit": "^5.2.8",
     "gsap": "^3.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -25,6 +28,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.5.2",
+    "sharp": "^0.35.3",
     "vite": "^6.3.5"
   }
 }

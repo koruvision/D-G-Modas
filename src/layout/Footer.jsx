@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Icon } from "../components/Icon.jsx";
 import { useConfig } from "../hooks/useConfig.js";
-import { formatBRL, publicUrl } from "../lib/utils.js";
+import { formatBRL, assetUrl } from "../lib/utils.js";
 
 export function Footer() {
   const cfg = useConfig();
@@ -14,13 +14,15 @@ export function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <img
-            src={publicUrl("assets/logo-header.png")}
+            src={assetUrl("assets/logo-header.webp")}
             alt="DG Modas"
             width="120"
             height="120"
+            loading="lazy"
+            decoding="async"
             onError={(e) => {
               e.currentTarget.onerror = null;
-              e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
+              e.currentTarget.src = assetUrl("assets/logo-dg-modas.webp");
             }}
           />
           <p className="footer__tagline">

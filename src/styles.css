@@ -33,6 +33,24 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-fallback {
+  min-height: 40vh;
+}
+
+.product-card,
+.section,
+.feature-card,
+.quote-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 420px;
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -41,11 +59,6 @@ body {
   background: var(--cream);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
 
 a {
@@ -174,8 +187,10 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border: none;
   background: transparent;
   color: inherit;
@@ -517,13 +532,15 @@ h3 {
   display: inline-flex;
   align-items: center;
 }
-.hero-banner__content h1 {
+.hero-banner__content h1,
+.hero-banner__content h2 {
   margin: 0 0 0.85rem;
   font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 300;
   letter-spacing: 0.04em;
 }
-.hero-banner__content h1 .script {
+.hero-banner__content h1 .script,
+.hero-banner__content h2 .script {
   color: var(--gold-soft);
 }
 .hero-banner__price {
@@ -597,15 +614,29 @@ h3 {
   gap: 0.45rem;
 }
 .hero-banners__dots button {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+.hero-banners__dots button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.7);
   background: transparent;
-  padding: 0;
-  cursor: pointer;
+  transform: translate(-50%, -50%);
 }
-.hero-banners__dots button.is-active {
+.hero-banners__dots button.is-active::after {
   background: var(--gold-soft);
   border-color: var(--gold-soft);
 }
@@ -911,8 +942,10 @@ h3 {
   max-width: none;
 }
 .product-carousel__nav {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border: 1px solid var(--border);
   background: #fff;
   color: var(--text);

@@ -1,6 +1,5 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { gsap, ScrollTrigger } from "../lib/gsapSetup.js";
 
 /** Selectors animated on every page (entrada + scroll). */
 const AUTO_SELECTORS = [
@@ -46,74 +45,6 @@ function collectTargets(scope) {
   return { list, seen };
 }
 
-function revealElement(el, { immediate = false } = {}) {
-  const from = { y: 36, autoAlpha: 0, scale: 0.985 };
-  const to = {
-    y: 0,
-    autoAlpha: 1,
-    scale: 1,
-    duration: 0.85,
-    ease: "power3.out",
-    overwrite: "auto",
-  };
-
-  if (immediate) {
-    gsap.fromTo(el, from, { ...to, delay: 0.05 });
-    return;
-  }
-
-  gsap.fromTo(el, from, {
-    ...to,
-    scrollTrigger: {
-      trigger: el,
-      start: "top 92%",
-      once: true,
-      toggleActions: "play none none none",
-    },
-  });
-}
-
-function runScrollReveals() {
-  const { list, seen } = collectTargets(document);
-
-  document.querySelectorAll(".reveal-stagger").forEach((parent) => {
-    if (parent.dataset.gsapStagger === "1") return;
-    const kids = [...parent.children].filter((c) => c.dataset.gsapAnimated !== "1");
-    if (!kids.length) return;
-    parent.dataset.gsapStagger = "1";
-    kids.forEach((k) => {
-      seen.add(k);
-      k.dataset.gsapAnimated = "1";
-    });
-    gsap.fromTo(
-      kids,
-      { y: 32, autoAlpha: 0 },
-      {
-        y: 0,
-        autoAlpha: 1,
-        duration: 0.75,
-        stagger: 0.09,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: parent,
-          start: "top 90%",
-          once: true,
-        },
-      }
-    );
-  });
-
-  list.forEach((el) => {
-    if (el.dataset.gsapAnimated === "1") return;
-    el.dataset.gsapAnimated = "1";
-    const rect = el.getBoundingClientRect();
-    const inView = rect.top < window.innerHeight * 0.95 && rect.bottom > 0;
-    revealElement(el, { immediate: inView });
-  });
-
-  ScrollTrigger.refresh();
-}
-
 function clearAnimationMarks() {
   document.querySelectorAll("[data-gsap-animated], [data-gsap-stagger]").forEach((el) => {
     delete el.dataset.gsapAnimated;
@@ -122,83 +53,153 @@ function clearAnimationMarks() {
 }
 
 /**
- * Animações GSAP globais: entrada de página + reveals no scroll em todos os elementos.
+ * Animações GSAP globais: carregadas sob demanda após o first paint.
  */
 export function usePageAnimations(contentKey = 0) {
   const { pathname } = useLocation();
+  const gsapRef = useRef(null);
 
-  // Entrada da página (header, hero, float)
   useLayoutEffect(() => {
     if (prefersReducedMotion()) return undefined;
+    let cancelled = false;
+    let ctx = null;
+    let t1 = 0;
+    let t2 = 0;
 
-    const main = document.querySelector("main") || document.body;
-    const ctx = gsap.context(() => {
-      gsap.from(".site-header", {
-        y: -18,
-        autoAlpha: 0,
-        duration: 0.55,
-        ease: "power2.out",
-      });
+    const schedule =
+      window.requestIdleCallback || ((cb) => window.setTimeout(cb, 100));
+    const cancelSchedule =
+      window.cancelIdleCallback || ((id) => window.clearTimeout(id));
 
-      gsap.from(".header__top-msg", {
-        y: -8,
-        autoAlpha: 0,
-        duration: 0.45,
-        delay: 0.12,
-        ease: "power2.out",
-      });
+    const idleId = schedule(async () => {
+      const mod = await import("../lib/gsapSetup.js");
+      if (cancelled) return;
+      const { gsap, ScrollTrigger } = mod;
+      gsapRef.current = mod;
 
-      const heroContent = main.querySelector(".hero-banner.is-active .hero-banner__content");
-      if (heroContent) {
-        gsap.from(heroContent.children, {
-          y: 40,
-          autoAlpha: 0,
-          duration: 0.9,
-          stagger: 0.11,
-          delay: 0.18,
+      function revealElement(el, { immediate = false } = {}) {
+        const from = { y: 36, autoAlpha: 0, scale: 0.985 };
+        const to = {
+          y: 0,
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.85,
           ease: "power3.out",
+          overwrite: "auto",
+        };
+        if (immediate) {
+          gsap.fromTo(el, from, { ...to, delay: 0.05 });
+          return;
+        }
+        gsap.fromTo(el, from, {
+          ...to,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 92%",
+            once: true,
+            toggleActions: "play none none none",
+          },
         });
       }
 
-      gsap.from(".whatsapp-float", {
-        scale: 0.6,
-        autoAlpha: 0,
-        duration: 0.65,
-        delay: 0.7,
-        ease: "back.out(1.7)",
-      });
-    }, document.documentElement);
+      function runScrollReveals() {
+        const { list, seen } = collectTargets(document);
+        document.querySelectorAll(".reveal-stagger").forEach((parent) => {
+          if (parent.dataset.gsapStagger === "1") return;
+          const kids = [...parent.children].filter((c) => c.dataset.gsapAnimated !== "1");
+          if (!kids.length) return;
+          parent.dataset.gsapStagger = "1";
+          kids.forEach((k) => {
+            seen.add(k);
+            k.dataset.gsapAnimated = "1";
+          });
+          gsap.fromTo(
+            kids,
+            { y: 32, autoAlpha: 0 },
+            {
+              y: 0,
+              autoAlpha: 1,
+              duration: 0.75,
+              stagger: 0.09,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: parent,
+                start: "top 90%",
+                once: true,
+              },
+            }
+          );
+        });
 
-    return () => ctx.revert();
-  }, [pathname]);
+        list.forEach((el) => {
+          if (el.dataset.gsapAnimated === "1") return;
+          el.dataset.gsapAnimated = "1";
+          const rect = el.getBoundingClientRect();
+          const inView = rect.top < window.innerHeight * 0.95 && rect.bottom > 0;
+          revealElement(el, { immediate: inView });
+        });
+        ScrollTrigger.refresh();
+      }
 
-  // Reset + reveals ao trocar de rota
-  useLayoutEffect(() => {
-    if (prefersReducedMotion()) {
-      gsap.set(AUTO_SELECTORS.join(","), { clearProps: "all" });
-      return undefined;
-    }
+      gsapRef.current.runScrollReveals = runScrollReveals;
 
-    clearAnimationMarks();
-    const ctx = gsap.context(() => {
-      runScrollReveals();
-    }, document.documentElement);
+      const main = document.querySelector("main") || document.body;
+      clearAnimationMarks();
+      ctx = gsap.context(() => {
+        gsap.from(".site-header", {
+          y: -18,
+          autoAlpha: 0,
+          duration: 0.55,
+          ease: "power2.out",
+        });
+        gsap.from(".header__top-msg", {
+          y: -8,
+          autoAlpha: 0,
+          duration: 0.45,
+          delay: 0.12,
+          ease: "power2.out",
+        });
+        const heroContent = main.querySelector(".hero-banner.is-active .hero-banner__content");
+        if (heroContent) {
+          gsap.from(heroContent.children, {
+            y: 40,
+            autoAlpha: 0,
+            duration: 0.9,
+            stagger: 0.11,
+            delay: 0.18,
+            ease: "power3.out",
+          });
+        }
+        gsap.from(".whatsapp-float", {
+          scale: 0.6,
+          autoAlpha: 0,
+          duration: 0.65,
+          delay: 0.7,
+          ease: "back.out(1.7)",
+        });
+        runScrollReveals();
+      }, document.documentElement);
 
-    const t1 = window.setTimeout(() => runScrollReveals(), 150);
-    const t2 = window.setTimeout(() => runScrollReveals(), 600);
+      t1 = window.setTimeout(() => runScrollReveals(), 150);
+      t2 = window.setTimeout(() => runScrollReveals(), 600);
+    });
 
     return () => {
+      cancelled = true;
+      cancelSchedule(idleId);
       window.clearTimeout(t1);
       window.clearTimeout(t2);
       clearAnimationMarks();
-      ctx.revert();
+      ctx?.revert();
+      gsapRef.current = null;
     };
   }, [pathname]);
 
-  // Só anexa novos elementos quando o conteúdo assíncrono chega (sem resetar tudo)
   useLayoutEffect(() => {
     if (prefersReducedMotion() || !contentKey) return undefined;
-    const t = window.setTimeout(() => runScrollReveals(), 40);
+    const t = window.setTimeout(() => {
+      gsapRef.current?.runScrollReveals?.();
+    }, 40);
     return () => window.clearTimeout(t);
   }, [contentKey, pathname]);
 }

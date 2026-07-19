@@ -4,7 +4,7 @@ import { Icon } from "../components/Icon.jsx";
 import { useUi } from "../hooks/useUi.jsx";
 import { useCart } from "../hooks/useCart.jsx";
 import { useConfig } from "../hooks/useConfig.js";
-import { formatBRL, publicUrl } from "../lib/utils.js";
+import { formatBRL, assetUrl } from "../lib/utils.js";
 
 export function Header() {
   const cfg = useConfig();
@@ -96,13 +96,15 @@ export function Header() {
           </button>
           <Link className="header__brand" to="/" onClick={() => setIsOpen(false)}>
             <img
-              src={publicUrl("assets/logo-header.png")}
+              src={assetUrl("assets/logo-header.webp")}
               alt="DG Modas"
               width="128"
               height="128"
+              decoding="async"
+              fetchPriority="high"
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
+                e.currentTarget.src = assetUrl("assets/logo-dg-modas.webp");
               }}
             />
             <span className="header__brand-text">DG Modas</span>

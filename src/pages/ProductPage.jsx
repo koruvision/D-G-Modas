@@ -5,12 +5,7 @@ import { ProductCard } from "../components/ProductCard.jsx";
 import { useProducts } from "../hooks/useProducts.js";
 import { useCart } from "../hooks/useCart.jsx";
 import { useUi } from "../hooks/useUi.jsx";
-import { formatBRL, installments, stockIcon, stockLabel, totalStock, productPrice, starsText, publicUrl } from "../lib/utils.js";
-
-function assetUrl(src) {
-  if (!src) return publicUrl("assets/logo-dg-modas.png");
-  return publicUrl(String(src).replace(/^\//, ""));
-}
+import { formatBRL, installments, stockIcon, stockLabel, totalStock, productPrice, starsText, assetUrl } from "../lib/utils.js";
 
 export function ProductPage() {
   const { slug } = useParams();
@@ -112,10 +107,14 @@ export function ProductPage() {
             <img
               src={assetUrl(images[imgIdx])}
               alt={product.name}
+              width="800"
+              height="1000"
+              fetchPriority="high"
+              decoding="async"
               style={zoomStyle}
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
+                e.currentTarget.src = assetUrl("assets/logo-dg-modas.webp");
               }}
             />
           </div>
@@ -130,9 +129,13 @@ export function ProductPage() {
                 <img
                   src={assetUrl(src)}
                   alt=""
+                  width="120"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => {
                     e.currentTarget.onerror = null;
-                    e.currentTarget.src = publicUrl("assets/logo-dg-modas.png");
+                    e.currentTarget.src = assetUrl("assets/logo-dg-modas.webp");
                   }}
                 />
               </button>

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Icon } from "./Icon.jsx";
 import { ProductCard } from "./ProductCard.jsx";
 
@@ -7,14 +7,30 @@ export function ProductCarousel({ products = [] }) {
   const trackRef = useRef(null);
   const rootRef = useRef(null);
   const state = useRef({ index: 0, timer: null, locked: false });
+  const [inView, setInView] = useState(false);
 
-  const list = useMemo(() => products.slice(0, 12), [products]);
-  const doubled = useMemo(() => (list.length >= 4 ? [...list, ...list] : list), [list]);
+  const list = useMemo(() => products.slice(0, 8), [products]);
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return undefined;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+    io.observe(root);
+    return () => io.disconnect();
+  }, []);
 
   useEffect(() => {
     const track = trackRef.current;
     const root = rootRef.current;
-    if (!track || !root || list.length < 4) return;
+    if (!track || !root || !inView || list.length < 3) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const s = state.current;
@@ -29,31 +45,28 @@ export function ProductCarousel({ products = [] }) {
       return card.getBoundingClientRect().width + gap;
     };
 
-    const halfCount = () => Math.floor(track.children.length / 2);
+    const maxIndex = () => Math.max(0, track.children.length - 1);
 
     const goTo = (i, animate = true) => {
-      s.index = i;
+      const max = maxIndex();
+      s.index = ((i % (max + 1)) + (max + 1)) % (max + 1);
       track.style.transition = animate ? "transform 0.65s cubic-bezier(0.22, 1, 0.36, 1)" : "none";
-      track.style.transform = `translate3d(${-i * stepWidth()}px, 0, 0)`;
+      track.style.transform = `translate3d(${-s.index * stepWidth()}px, 0, 0)`;
     };
 
     const advance = (dir = 1) => {
       if (s.locked) return;
       s.locked = true;
       goTo(s.index + dir, true);
-    };
-
-    const onTransitionEnd = () => {
-      const half = halfCount();
-      if (s.index >= half) goTo(s.index - half, false);
-      else if (s.index < 0) goTo(s.index + half, false);
-      s.locked = false;
+      window.setTimeout(() => {
+        s.locked = false;
+      }, 700);
     };
 
     const start = () => {
       if (reduce) return;
       stop();
-      s.timer = setInterval(() => advance(1), 3200);
+      s.timer = setInterval(() => advance(1), 3600);
     };
     const stop = () => {
       if (s.timer) clearInterval(s.timer);
@@ -70,7 +83,6 @@ export function ProductCarousel({ products = [] }) {
     };
     const onResize = () => goTo(s.index, false);
 
-    track.addEventListener("transitionend", onTransitionEnd);
     const prevBtn = root.querySelector(".product-carousel__nav--prev");
     const nextBtn = root.querySelector(".product-carousel__nav--next");
     prevBtn?.addEventListener("click", onPrev);
@@ -86,7 +98,6 @@ export function ProductCarousel({ products = [] }) {
 
     return () => {
       stop();
-      track.removeEventListener("transitionend", onTransitionEnd);
       prevBtn?.removeEventListener("click", onPrev);
       nextBtn?.removeEventListener("click", onNext);
       root.removeEventListener("mouseenter", stop);
@@ -95,7 +106,7 @@ export function ProductCarousel({ products = [] }) {
       root.removeEventListener("focusout", start);
       window.removeEventListener("resize", onResize);
     };
-  }, [list]);
+  }, [list, inView]);
 
   if (!list.length) return null;
 
@@ -106,9 +117,9 @@ export function ProductCarousel({ products = [] }) {
       </button>
       <div className="product-carousel__viewport" ref={viewportRef}>
         <div className="product-carousel__track" ref={trackRef}>
-          {doubled.map((p, i) => (
-            <ProductCard key={`${p.id}-${i}`} product={p} />
-          ))}
+          {inView
+            ? list.map((p, i) => <ProductCard key={p.id} product={p} priority={i < 2} />)
+            : null}
         </div>
       </div>
       <button type="button" className="product-carousel__nav product-carousel__nav--next" aria-label="Próximo">

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://d-g-modas.vercel.app/sitemap.xml

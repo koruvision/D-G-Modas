@@ -8,6 +8,25 @@ export function publicUrl(path = "") {
   return `${base}${clean}`;
 }
 
+/**
+ * Resolve path de asset para WebP quando aplicável (mantém favicons PNG).
+ */
+export function assetUrl(src, fallback = "assets/logo-dg-modas.webp") {
+  if (!src) return publicUrl(fallback);
+  let clean = String(src).replace(/^\//, "");
+  if (!/\.(png|jpe?g|gif|webp)$/i.test(clean) && !clean.includes("/")) {
+    clean = `assets/${clean}`;
+  }
+  if (!/^assets\//i.test(clean) && !/^https?:/i.test(clean)) {
+    clean = clean.startsWith("assets/") ? clean : `assets/${clean}`;
+  }
+  if (/favicon|apple-touch-icon/i.test(clean)) {
+    return publicUrl(clean);
+  }
+  clean = clean.replace(/\.(jpe?g|png|gif)$/i, ".webp");
+  return publicUrl(clean);
+}
+
 export const debounce = (fn, ms = 220) => {
   let t;
   return (...args) => {
