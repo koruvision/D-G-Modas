@@ -13,18 +13,20 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer__grid">
         <div className="footer__brand">
-          <img
-            src={assetUrl("assets/logo-header-sm.webp")}
-            alt="DG Modas"
-            width="120"
-            height="52"
-            loading="lazy"
-            decoding="async"
-            onError={(e) => {
-              e.currentTarget.onerror = null;
-              e.currentTarget.src = assetUrl("assets/logo-dg-modas-sm.webp");
-            }}
-          />
+          <span className="brand-logo">
+            <img
+              src={assetUrl("assets/logo-header-sm.webp")}
+              alt="DG Modas"
+              width="88"
+              height="88"
+              loading="lazy"
+              decoding="async"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = assetUrl("assets/logo-dg-modas-sm.webp");
+              }}
+            />
+          </span>
           <p className="footer__tagline">
             Elegância que traduz sua essência. Moda feminina, masculina e infantil com acabamento premium e
             atendimento personalizado.

@@ -95,18 +95,20 @@ export function Header() {
             <Icon name="menu" />
           </button>
           <Link className="header__brand" to="/" onClick={() => setIsOpen(false)}>
-            <img
-              src={assetUrl("assets/logo-header-sm.webp")}
-              alt="DG Modas"
-              width="128"
-              height="56"
-              decoding="async"
-              fetchPriority="high"
-              onError={(e) => {
-                e.currentTarget.onerror = null;
-                e.currentTarget.src = assetUrl("assets/logo-dg-modas-sm.webp");
-              }}
-            />
+            <span className="brand-logo">
+              <img
+                src={assetUrl("assets/logo-header-sm.webp")}
+                alt="DG Modas"
+                width="52"
+                height="52"
+                decoding="async"
+                fetchPriority="high"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = assetUrl("assets/logo-dg-modas-sm.webp");
+                }}
+              />
+            </span>
             <span className="header__brand-text">DG Modas</span>
           </Link>
         </div>
