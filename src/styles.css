@@ -1551,6 +1551,13 @@ h3 {
   height: 1rem;
   color: var(--gold);
 }
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
 .footer__bottom a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: underline;

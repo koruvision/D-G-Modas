@@ -23,6 +23,9 @@ const CheckoutPage = lazy(() =>
 const FavoritesPage = lazy(() =>
   import("./pages/FavoritesPage.jsx").then((m) => ({ default: m.FavoritesPage }))
 );
+const ComparePage = lazy(() =>
+  import("./pages/ComparePage.jsx").then((m) => ({ default: m.ComparePage }))
+);
 const PrivacyPage = lazy(() =>
   import("./pages/PrivacyPage.jsx").then((m) => ({ default: m.PrivacyPage }))
 );
