@@ -82,9 +82,9 @@ const TESTIMONIALS = [
 ];
 
 const CATEGORIES = [
-  { key: "feminino", title: "Feminino", desc: "Vestidos, conjuntos e alfaiataria leve", image: assetUrl("assets/fem-vestido-floral.webp") },
-  { key: "masculino", title: "Masculino", desc: "Camisaria premium e polos exclusivas", image: assetUrl("assets/masc-camisa-branca.webp") },
-  { key: "infantil", title: "Infantil", desc: "Conforto e estilo para os pequenos", image: assetUrl("assets/inf-vestido-floral.webp") },
+  { key: "feminino", title: "Feminino", desc: "Vestidos, conjuntos e alfaiataria leve", image: assetUrl("assets/cat-feminino.webp") },
+  { key: "masculino", title: "Masculino", desc: "Camisaria premium e polos exclusivas", image: assetUrl("assets/cat-masculino.webp") },
+  { key: "infantil", title: "Infantil", desc: "Conforto e estilo para os pequenos", image: assetUrl("assets/cat-infantil.webp") },
 ];
 
 function useHeroCarousel(length) {
@@ -99,17 +99,19 @@ function useHeroCarousel(length) {
     if (reduce || length < 2) return;
     const start = () => {
       stop();
-      timerRef.current = setInterval(() => setIndex((i) => (i + 1) % length), 4800);
+      timerRef.current = setInterval(() => setIndex((i) => (i + 1) % length), 5600);
     };
     const stop = () => {
       if (timerRef.current) clearInterval(timerRef.current);
       timerRef.current = null;
     };
-    start();
+    // Atrasa o autoplay para não causar CLS durante a medição de LCP
+    const boot = window.setTimeout(start, 7000);
     const root = rootRef.current;
     root?.addEventListener("mouseenter", stop);
     root?.addEventListener("mouseleave", start);
     return () => {
+      window.clearTimeout(boot);
       stop();
       root?.removeEventListener("mouseenter", stop);
       root?.removeEventListener("mouseleave", start);
@@ -160,7 +162,6 @@ export function HomePage() {
     if (reduce) return;
     const content = hero.rootRef.current?.querySelector(".hero-banner.is-active .hero-banner__content");
     if (!content) return;
-    // A entrada inicial fica a cargo do usePageAnimations global
     if (hero.index === 0 && !content.dataset.heroCycled) {
       content.dataset.heroCycled = "1";
       return;
@@ -453,7 +454,7 @@ export function HomePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="cta-band" style={{ "--cta-bg": `url(${assetUrl("assets/hero-loja.webp")})` }}>
+      <section className="cta-band" style={{ "--cta-bg": `url(${assetUrl("assets/hero-loja-sm.webp")})` }}>
         <div className="cta-band__overlay" />
         <div className="container cta-band__content reveal-lux">
           <div className="section-label">

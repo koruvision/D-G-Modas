@@ -14,15 +14,15 @@ export function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <img
-            src={assetUrl("assets/logo-header.webp")}
+            src={assetUrl("assets/logo-header-sm.webp")}
             alt="DG Modas"
             width="120"
-            height="120"
+            height="52"
             loading="lazy"
             decoding="async"
             onError={(e) => {
               e.currentTarget.onerror = null;
-              e.currentTarget.src = assetUrl("assets/logo-dg-modas.webp");
+              e.currentTarget.src = assetUrl("assets/logo-dg-modas-sm.webp");
             }}
           />
           <p className="footer__tagline">

@@ -53,11 +53,11 @@ function clearAnimationMarks() {
 }
 
 /**
- * Animações GSAP globais: carregadas sob demanda após o first paint.
+ * Animações GSAP: só após scroll ou idle longo — fora do caminho crítico do LCP.
  */
 export function usePageAnimations(contentKey = 0) {
   const { pathname } = useLocation();
-  const gsapRef = useRef(null);
+  const apiRef = useRef(null);
 
   useLayoutEffect(() => {
     if (prefersReducedMotion()) return undefined;
@@ -65,17 +65,13 @@ export function usePageAnimations(contentKey = 0) {
     let ctx = null;
     let t1 = 0;
     let t2 = 0;
+    let started = false;
 
-    const schedule =
-      window.requestIdleCallback || ((cb) => window.setTimeout(cb, 100));
-    const cancelSchedule =
-      window.cancelIdleCallback || ((id) => window.clearTimeout(id));
-
-    const idleId = schedule(async () => {
-      const mod = await import("../lib/gsapSetup.js");
+    const boot = async () => {
+      if (cancelled || started) return;
+      started = true;
+      const { gsap, ScrollTrigger } = await import("../lib/gsapSetup.js");
       if (cancelled) return;
-      const { gsap, ScrollTrigger } = mod;
-      gsapRef.current = mod;
 
       function revealElement(el, { immediate = false } = {}) {
         const from = { y: 36, autoAlpha: 0, scale: 0.985 };
@@ -141,40 +137,15 @@ export function usePageAnimations(contentKey = 0) {
         ScrollTrigger.refresh();
       }
 
-      gsapRef.current.runScrollReveals = runScrollReveals;
+      apiRef.current = { gsap, ScrollTrigger, runScrollReveals };
 
-      const main = document.querySelector("main") || document.body;
       clearAnimationMarks();
       ctx = gsap.context(() => {
-        gsap.from(".site-header", {
-          y: -18,
-          autoAlpha: 0,
-          duration: 0.55,
-          ease: "power2.out",
-        });
-        gsap.from(".header__top-msg", {
-          y: -8,
-          autoAlpha: 0,
-          duration: 0.45,
-          delay: 0.12,
-          ease: "power2.out",
-        });
-        const heroContent = main.querySelector(".hero-banner.is-active .hero-banner__content");
-        if (heroContent) {
-          gsap.from(heroContent.children, {
-            y: 40,
-            autoAlpha: 0,
-            duration: 0.9,
-            stagger: 0.11,
-            delay: 0.18,
-            ease: "power3.out",
-          });
-        }
         gsap.from(".whatsapp-float", {
           scale: 0.6,
           autoAlpha: 0,
           duration: 0.65,
-          delay: 0.7,
+          delay: 0.2,
           ease: "back.out(1.7)",
         });
         runScrollReveals();
@@ -182,23 +153,31 @@ export function usePageAnimations(contentKey = 0) {
 
       t1 = window.setTimeout(() => runScrollReveals(), 150);
       t2 = window.setTimeout(() => runScrollReveals(), 600);
-    });
+    };
+
+    const onScroll = () => {
+      window.removeEventListener("scroll", onScroll);
+      boot();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true, once: true });
+    const fallback = window.setTimeout(boot, 4500);
 
     return () => {
       cancelled = true;
-      cancelSchedule(idleId);
+      window.removeEventListener("scroll", onScroll);
+      window.clearTimeout(fallback);
       window.clearTimeout(t1);
       window.clearTimeout(t2);
       clearAnimationMarks();
       ctx?.revert();
-      gsapRef.current = null;
+      apiRef.current = null;
     };
   }, [pathname]);
 
   useLayoutEffect(() => {
     if (prefersReducedMotion() || !contentKey) return undefined;
     const t = window.setTimeout(() => {
-      gsapRef.current?.runScrollReveals?.();
+      apiRef.current?.runScrollReveals?.();
     }, 40);
     return () => window.clearTimeout(t);
   }, [contentKey, pathname]);

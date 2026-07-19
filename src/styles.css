@@ -565,6 +565,7 @@ h3 {
   margin: 0 0 1.35rem;
   opacity: 0.9;
   letter-spacing: 0.04em;
+  min-height: 3.2em;
 }
 .hero-banner__actions {
   display: flex;
