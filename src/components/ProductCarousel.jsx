@@ -2,34 +2,53 @@ import { useEffect, useMemo, useRef } from "react";
 import { Icon } from "./Icon.jsx";
 import { ProductCard } from "./ProductCard.jsx";
 
+/** Monta um bloco base com itens suficientes para cobrir a viewport (sem buraco). */
+function buildUnit(products) {
+  const base = products.filter(Boolean).slice(0, 12);
+  if (!base.length) return [];
+  const unit = [...base];
+  // Garante pelo menos 6 slides no bloco (preenche 4 colunas + overflow)
+  while (unit.length < 6) {
+    unit.push(...base);
+  }
+  return unit;
+}
+
 export function ProductCarousel({ products = [] }) {
   const viewportRef = useRef(null);
   const trackRef = useRef(null);
   const rootRef = useRef(null);
-  const state = useRef({ index: 0, timer: null, locked: false });
+  const state = useRef({
+    index: 0,
+    unitLen: 0,
+    timer: null,
+    locked: false,
+    step: 280,
+  });
 
-  const list = useMemo(() => products.slice(0, 8), [products]);
+  const unit = useMemo(() => buildUnit(products), [products]);
+  const unitLen = unit.length;
+
+  // Três cópias coladas: [...A][...A][...A] — o meio é a faixa “real”
+  const slides = useMemo(() => {
+    if (!unitLen) return [];
+    return [...unit, ...unit, ...unit];
+  }, [unit, unitLen]);
 
   useEffect(() => {
     const track = trackRef.current;
     const root = rootRef.current;
     const viewport = viewportRef.current;
-    if (!track || !root || !viewport || list.length < 2) return;
+    if (!track || !root || !viewport || unitLen < 1) return undefined;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const isTouchCarousel = () => window.matchMedia("(max-width: 800px)").matches;
     const s = state.current;
-    s.index = 0;
+    s.unitLen = unitLen;
     s.locked = false;
+    // Começa no bloco do meio
+    s.index = unitLen;
 
-    // Mobile: scroll-snap nativo — sem transform JS
-    if (isTouchCarousel()) {
-      track.style.transform = "";
-      track.style.transition = "";
-      return undefined;
-    }
-
-    const stepWidth = () => {
+    const measure = () => {
       const card = track.querySelector(".product-card");
       if (!card) return 280;
       const styles = getComputedStyle(track);
@@ -37,31 +56,41 @@ export function ProductCarousel({ products = [] }) {
       return card.getBoundingClientRect().width + gap;
     };
 
-    const maxIndex = () => Math.max(0, track.children.length - 1);
-
-    const goTo = (i, animate = true) => {
-      const max = maxIndex();
-      s.index = ((i % (max + 1)) + (max + 1)) % (max + 1);
+    const apply = (animate) => {
+      s.step = measure();
       track.style.transition = animate ? "transform 0.65s cubic-bezier(0.22, 1, 0.36, 1)" : "none";
-      track.style.transform = `translate3d(${-s.index * stepWidth()}px, 0, 0)`;
+      track.style.transform = `translate3d(${-s.index * s.step}px, 0, 0)`;
+    };
+
+    const normalize = () => {
+      // Se saiu do bloco do meio, salta sem animação para o equivalente
+      if (s.index >= s.unitLen * 2) {
+        s.index -= s.unitLen;
+        apply(false);
+      } else if (s.index < s.unitLen) {
+        s.index += s.unitLen;
+        apply(false);
+      }
     };
 
     const advance = (dir = 1) => {
       if (s.locked) return;
       s.locked = true;
-      goTo(s.index + dir, true);
+      s.index += dir;
+      apply(true);
       window.setTimeout(() => {
+        normalize();
         s.locked = false;
-      }, 700);
+      }, 680);
     };
 
     const start = () => {
       if (reduce) return;
       stop();
-      s.timer = setInterval(() => advance(1), 3600);
+      s.timer = window.setInterval(() => advance(1), 3200);
     };
     const stop = () => {
-      if (s.timer) clearInterval(s.timer);
+      if (s.timer) window.clearInterval(s.timer);
       s.timer = null;
     };
 
@@ -73,14 +102,7 @@ export function ProductCarousel({ products = [] }) {
       advance(1);
       start();
     };
-    const onResize = () => {
-      if (isTouchCarousel()) {
-        stop();
-        track.style.transform = "";
-        return;
-      }
-      goTo(s.index, false);
-    };
+    const onResize = () => apply(false);
 
     const prevBtn = root.querySelector(".product-carousel__nav--prev");
     const nextBtn = root.querySelector(".product-carousel__nav--next");
@@ -92,10 +114,13 @@ export function ProductCarousel({ products = [] }) {
     root.addEventListener("focusout", start);
     window.addEventListener("resize", onResize, { passive: true });
 
-    goTo(0, false);
+    // Recalcula após layout (imagens/fontes)
+    apply(false);
+    const raf = requestAnimationFrame(() => apply(false));
     start();
 
     return () => {
+      cancelAnimationFrame(raf);
       stop();
       prevBtn?.removeEventListener("click", onPrev);
       nextBtn?.removeEventListener("click", onNext);
@@ -104,10 +129,12 @@ export function ProductCarousel({ products = [] }) {
       root.removeEventListener("focusin", stop);
       root.removeEventListener("focusout", start);
       window.removeEventListener("resize", onResize);
+      track.style.transform = "";
+      track.style.transition = "";
     };
-  }, [list]);
+  }, [unitLen, slides.length]);
 
-  if (!list.length) return null;
+  if (!unitLen) return null;
 
   return (
     <div className="product-carousel" ref={rootRef}>
@@ -116,8 +143,8 @@ export function ProductCarousel({ products = [] }) {
       </button>
       <div className="product-carousel__viewport" ref={viewportRef}>
         <div className="product-carousel__track" ref={trackRef}>
-          {list.map((p, i) => (
-            <ProductCard key={p.id} product={p} priority={i < 2} />
+          {slides.map((p, i) => (
+            <ProductCard key={`${p.id}-${i}`} product={p} priority={i >= unitLen && i < unitLen + 2} />
           ))}
         </div>
       </div>
