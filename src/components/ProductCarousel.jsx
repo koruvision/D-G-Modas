@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { Icon } from "./Icon.jsx";
 import { ProductCard } from "./ProductCard.jsx";
 
@@ -7,30 +7,13 @@ export function ProductCarousel({ products = [] }) {
   const trackRef = useRef(null);
   const rootRef = useRef(null);
   const state = useRef({ index: 0, timer: null, locked: false });
-  const [inView, setInView] = useState(false);
 
   const list = useMemo(() => products.slice(0, 8), [products]);
 
   useEffect(() => {
-    const root = rootRef.current;
-    if (!root) return undefined;
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin: "200px 0px" }
-    );
-    io.observe(root);
-    return () => io.disconnect();
-  }, []);
-
-  useEffect(() => {
     const track = trackRef.current;
     const root = rootRef.current;
-    if (!track || !root || !inView || list.length < 3) return;
+    if (!track || !root || list.length < 3) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const s = state.current;
@@ -106,7 +89,7 @@ export function ProductCarousel({ products = [] }) {
       root.removeEventListener("focusout", start);
       window.removeEventListener("resize", onResize);
     };
-  }, [list, inView]);
+  }, [list]);
 
   if (!list.length) return null;
 
@@ -117,9 +100,9 @@ export function ProductCarousel({ products = [] }) {
       </button>
       <div className="product-carousel__viewport" ref={viewportRef}>
         <div className="product-carousel__track" ref={trackRef}>
-          {inView
-            ? list.map((p, i) => <ProductCard key={p.id} product={p} priority={i < 2} />)
-            : null}
+          {list.map((p, i) => (
+            <ProductCard key={p.id} product={p} priority={i < 2} />
+          ))}
         </div>
       </div>
       <button type="button" className="product-carousel__nav product-carousel__nav--next" aria-label="Próximo">
