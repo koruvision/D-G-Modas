@@ -1040,6 +1040,12 @@ body.prop-body--deck {
   flex: 1 1 auto;
   min-height: 0;
   overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prop-slide__card.prop-glass-liquid {
   touch-action: pan-y;
 }
 
@@ -1480,7 +1486,7 @@ body.prop-body--deck {
 .prop-deck__controls {
   position: absolute;
   left: 50%;
-  bottom: 1rem;
+  bottom: max(0.85rem, env(safe-area-inset-bottom));
   transform: translateX(-50%);
   z-index: 30;
   display: flex;
@@ -1496,16 +1502,38 @@ body.prop-body--deck {
 }
 
 .prop-deck__nav {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  min-height: 46px;
   border-radius: 999px;
   border: 1px solid rgba(26, 26, 26, 0.1);
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   color: var(--text);
   display: grid;
   place-items: center;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+@media (max-width: 860px) {
+  .prop-deck__controls {
+    gap: 1rem;
+    padding: 0.55rem 0.8rem;
+  }
+
+  .prop-deck__nav {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+  }
+
+  .prop-deck__counter {
+    font-size: 0.82rem;
+  }
 }
 
 .prop-deck__nav:hover:not(:disabled) {
