@@ -17,6 +17,8 @@ import {
 } from "../proposta/sections/index.jsx";
 import { SECTIONS } from "../proposta/data/proposalContent.js";
 import { useProposalDeck } from "../proposta/useProposalDeck.js";
+import { useSlideInteractions } from "../proposta/useSlideInteractions.js";
+import { SlideDecor } from "../proposta/components/SlideDecor.jsx";
 import { assetUrl } from "../lib/utils.js";
 import { Icon } from "../components/Icon.jsx";
 import "../proposta/proposta.css";
@@ -61,18 +63,22 @@ export function ProposalPage() {
     []
   );
 
-  const goTo = useCallback((next) => {
-    setIndex((current) => {
-      if (typeof next === "string") {
-        const i = SECTIONS.findIndex((s) => s.id === next);
-        return i >= 0 ? i : current;
-      }
-      const max = slides.length - 1;
-      return Math.max(0, Math.min(max, next));
-    });
-  }, [slides.length]);
+  const goTo = useCallback(
+    (next) => {
+      setIndex((current) => {
+        if (typeof next === "string") {
+          const i = SECTIONS.findIndex((s) => s.id === next);
+          return i >= 0 ? i : current;
+        }
+        const max = slides.length - 1;
+        return Math.max(0, Math.min(max, next));
+      });
+    },
+    [slides.length]
+  );
 
   useProposalDeck({ index, setIndex, trackRef, total: slides.length });
+  useSlideInteractions(index);
 
   useEffect(() => {
     const prev = document.title;
@@ -121,7 +127,11 @@ export function ProposalPage() {
                   aria-hidden="true"
                 />
                 <div className="prop-slide__veil" aria-hidden="true" />
-                <div className="prop-slide__card prop-glass-liquid">{slide.node}</div>
+                <SlideDecor variant={i} />
+                <div className="prop-slide__card prop-glass-liquid">
+                  <span className="prop-glass-liquid__shine" aria-hidden="true" />
+                  {slide.node}
+                </div>
               </article>
             );
           })}

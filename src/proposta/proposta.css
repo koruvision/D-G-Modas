@@ -1062,6 +1062,7 @@ body.prop-body--deck {
   padding: 1rem 1rem 4.5rem;
   box-sizing: border-box;
   overflow: hidden;
+  perspective: 1200px;
 }
 
 .prop-slide__bg {
@@ -1117,23 +1118,316 @@ body.prop-body--deck {
     inset 0 1px 0 rgba(255, 255, 255, 0.65),
     inset 0 -1px 0 rgba(255, 255, 255, 0.12),
     inset 1px 0 0 rgba(255, 255, 255, 0.2);
+  transform-style: preserve-3d;
+  transition: box-shadow 0.35s ease;
 }
 
-.prop-glass-liquid::before {
-  content: "";
+.prop-glass-liquid__shine {
   position: absolute;
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.28) 18%,
-    transparent 38%,
-    transparent 100%
-  );
+  z-index: 1;
+  background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.35), transparent 42%);
+  background-size: 140% 140%;
+  background-position: 50% 50%;
   mix-blend-mode: soft-light;
-  opacity: 0.85;
+  opacity: 0.75;
+}
+
+.prop-glass-liquid > *:not(.prop-glass-liquid__shine) {
+  position: relative;
+  z-index: 2;
+}
+
+.prop-glass-liquid:hover {
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    0 0 0 1px rgba(201, 167, 106, 0.25);
+}
+
+/* Decor gráfico animado */
+.prop-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.prop-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.55), var(--orb, #c41e2a) 55%, transparent 72%);
+  filter: blur(2px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+.prop-orb--lg {
+  width: min(280px, 42vw);
+  height: min(280px, 42vw);
+  top: 8%;
+  right: 6%;
+}
+
+.prop-orb--md {
+  width: min(160px, 28vw);
+  height: min(160px, 28vw);
+  bottom: 18%;
+  left: 8%;
+}
+
+.prop-orb--sm {
+  width: 72px;
+  height: 72px;
+  top: 42%;
+  left: 18%;
+}
+
+.prop-ring {
+  position: absolute;
+  border: 1.5px solid rgba(201, 167, 106, 0.45);
+  border-radius: 50%;
+  animation: prop-spin 18s linear infinite;
+}
+
+.prop-ring--a {
+  width: 220px;
+  height: 220px;
+  top: 12%;
+  left: 4%;
+  animation-duration: 22s;
+}
+
+.prop-ring--b {
+  width: 140px;
+  height: 140px;
+  bottom: 14%;
+  right: 10%;
+  border-color: rgba(196, 30, 42, 0.35);
+  animation-direction: reverse;
+  animation-duration: 16s;
+}
+
+.prop-spark {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #fff, #c9a76a);
+  box-shadow: 0 0 16px rgba(201, 167, 106, 0.8);
+  animation: prop-twinkle 2.8s ease-in-out infinite;
+}
+
+.prop-spark--1 {
+  top: 22%;
+  right: 22%;
+}
+
+.prop-spark--2 {
+  bottom: 28%;
+  left: 30%;
+  animation-delay: 0.7s;
+}
+
+.prop-spark--3 {
+  top: 58%;
+  right: 14%;
+  animation-delay: 1.3s;
+}
+
+.prop-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  opacity: 0.35;
+}
+
+.prop-line--h {
+  height: 1px;
+  width: 42%;
+  top: 30%;
+  left: 28%;
+  animation: prop-line-pulse 4s ease-in-out infinite;
+}
+
+.prop-line--v {
+  width: 1px;
+  height: 36%;
+  top: 40%;
+  right: 24%;
+  background: linear-gradient(180deg, transparent, rgba(201, 167, 106, 0.55), transparent);
+  animation: prop-line-pulse 5s ease-in-out infinite reverse;
+}
+
+@keyframes prop-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prop-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25) rotate(20deg);
+  }
+}
+
+@keyframes prop-line-pulse {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scaleX(0.85);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scaleX(1);
+  }
+}
+
+/* Hovers ricos nas seções */
+.prop-page--deck .prop-plan,
+.prop-page--deck .prop-pillar,
+.prop-page--deck .prop-glass,
+.prop-page--deck .prop-chips li,
+.prop-page--deck .prop-btn,
+.prop-page--deck .prop-triggers span {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.35s ease,
+    color 0.25s ease;
+}
+
+.prop-page--deck .prop-plan:hover,
+.prop-page--deck .prop-pillar:hover,
+.prop-page--deck .prop-glass:hover {
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(201, 167, 106, 0.65);
+  box-shadow:
+    0 18px 40px rgba(138, 16, 24, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.prop-page--deck .prop-chips li:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(201, 167, 106, 0.35));
+  border-color: rgba(196, 30, 42, 0.35);
+  color: var(--wine-deep);
+  box-shadow: 0 10px 24px rgba(196, 30, 42, 0.15);
+}
+
+.prop-page--deck .prop-chips li:hover .prop-chip__ico {
+  color: var(--wine);
+  filter: drop-shadow(0 0 6px rgba(196, 30, 42, 0.35));
+}
+
+.prop-page--deck .prop-plan.is-featured:hover,
+.prop-page--deck .prop-plan.is-accent:hover {
+  box-shadow:
+    0 22px 50px rgba(138, 16, 24, 0.28),
+    0 0 0 1px rgba(201, 167, 106, 0.45);
+}
+
+.prop-page--deck .prop-icon-wrap {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.prop-page--deck .prop-glass:hover .prop-icon-wrap,
+.prop-page--deck .prop-pillar:hover .prop-icon-wrap {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 10px 22px rgba(196, 30, 42, 0.2);
+  background: linear-gradient(145deg, rgba(201, 167, 106, 0.45), rgba(196, 30, 42, 0.2));
+}
+
+.prop-page--deck .prop-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.prop-page--deck .prop-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.45), transparent 70%);
+  transform: translateX(-130%);
+  transition: transform 0.55s ease;
+}
+
+.prop-page--deck .prop-btn:hover::after {
+  transform: translateX(130%);
+}
+
+.prop-page--deck .prop-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(196, 30, 42, 0.35);
+}
+
+.prop-page--deck .prop-device {
+  transition: filter 0.35s ease;
+}
+
+.prop-page--deck .prop-device:hover {
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.35));
+}
+
+.prop-page--deck .prop-device:hover .prop-device__screen img {
+  transform: scale(1.05);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.prop-page--deck .prop-device__screen img {
+  transition: transform 0.6s ease;
+}
+
+.prop-page--deck .prop-logos__dg,
+.prop-page--deck .prop-logos__kv {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.prop-page--deck .prop-logos:hover .prop-logos__dg {
+  transform: rotate(-4deg) scale(1.06);
+}
+
+.prop-page--deck .prop-logos:hover .prop-logos__kv {
+  transform: rotate(5deg) scale(1.06);
+}
+
+.prop-page--deck .prop-triggers span:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(196, 30, 42, 0.35);
+  color: var(--wine-deep);
+  transform: translateY(-3px);
+}
+
+.prop-page--deck .prop-badge:hover {
+  transform: scale(1.06);
+}
+
+.prop-page--deck .prop-deck__nav:not(:disabled):hover {
+  background: linear-gradient(135deg, var(--wine), var(--gold));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 10px 24px rgba(196, 30, 42, 0.3);
+}
+
+.prop-page--deck .prop-carousel {
+  cursor: grab;
+}
+
+.prop-page--deck .prop-carousel.is-dragging {
+  cursor: grabbing;
+}
+
+.prop-page--deck .prop-plan:hover .prop-badge::after {
+  animation-duration: 1.2s;
 }
 
 .prop-page--deck .prop-section {
@@ -1256,5 +1550,19 @@ body.prop-body--deck {
 @media (prefers-reduced-motion: reduce) {
   .prop-slide.is-active .prop-slide__bg {
     animation: none;
+  }
+
+  .prop-ring,
+  .prop-spark,
+  .prop-line,
+  .prop-orb {
+    animation: none !important;
+  }
+
+  .prop-page--deck .prop-btn:hover,
+  .prop-page--deck .prop-triggers span:hover,
+  .prop-page--deck .prop-logos:hover .prop-logos__dg,
+  .prop-page--deck .prop-logos:hover .prop-logos__kv {
+    transform: none;
   }
 }
