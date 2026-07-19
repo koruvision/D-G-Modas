@@ -7,8 +7,8 @@ function buildUnit(products) {
   const base = products.filter(Boolean).slice(0, 12);
   if (!base.length) return [];
   const unit = [...base];
-  // Garante pelo menos 6 slides no bloco (preenche 4 colunas + overflow)
-  while (unit.length < 6) {
+  // Garante cobertura para até 5 colunas + overflow do loop
+  while (unit.length < 8) {
     unit.push(...base);
   }
   return unit;
@@ -114,6 +114,12 @@ export function ProductCarousel({ products = [] }) {
     root.addEventListener("focusout", start);
     window.addEventListener("resize", onResize, { passive: true });
 
+    let ro;
+    if (typeof ResizeObserver !== "undefined") {
+      ro = new ResizeObserver(() => apply(false));
+      ro.observe(viewport);
+    }
+
     // Recalcula após layout (imagens/fontes)
     apply(false);
     const raf = requestAnimationFrame(() => apply(false));
@@ -122,6 +128,7 @@ export function ProductCarousel({ products = [] }) {
     return () => {
       cancelAnimationFrame(raf);
       stop();
+      ro?.disconnect();
       prevBtn?.removeEventListener("click", onPrev);
       nextBtn?.removeEventListener("click", onNext);
       root.removeEventListener("mouseenter", stop);

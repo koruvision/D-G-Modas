@@ -237,7 +237,7 @@ export function HomePage() {
                   <Link className="btn btn--gold" to={slide.href}>
                     Ver coleção
                   </Link>
-                  <a className="btn btn--outline-gold" href={wa} target="_blank" rel="noopener noreferrer">
+                  <a className="btn btn--wine" href={wa} target="_blank" rel="noopener noreferrer">
                     Falar no WhatsApp
                   </a>
                 </div>

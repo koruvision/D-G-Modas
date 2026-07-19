@@ -144,65 +144,81 @@ export function Header() {
             if (e.target === e.currentTarget) closeMenu();
           }}
         >
-          <nav className="header__nav" aria-label="Principal">
-            <NavLink className="nav-item" to="/" onClick={closeMenu} end>
-              <Icon name="home" />
-              <span>Home</span>
-            </NavLink>
-            <div className={`nav-item nav-item--mega ${megaOpen ? "is-open" : ""}`}>
-              <button
-                type="button"
-                className="nav-item__btn"
-                aria-expanded={megaOpen}
-                onClick={() => setMegaOpen((v) => !v)}
-              >
-                <Icon name="grid" />
-                <span>Coleção</span>
-              </button>
-              <div className="mega-menu">
-                <Link to="/catalogo?categoria=feminino" onClick={closeMenu}>
-                  <Icon name="dress" />
-                  <span>Feminino</span>
-                </Link>
-                <Link to="/catalogo?categoria=masculino" onClick={closeMenu}>
-                  <Icon name="shirt" />
-                  <span>Masculino</span>
-                </Link>
-                <Link to="/catalogo?categoria=infantil" onClick={closeMenu}>
-                  <Icon name="child" />
-                  <span>Infantil</span>
-                </Link>
-                <Link to="/catalogo" onClick={closeMenu}>
-                  <Icon name="spark" />
-                  <span>Ver tudo</span>
-                </Link>
+          <div className="header__nav-panel" role="dialog" aria-modal="true" aria-label="Menu">
+            <button
+              type="button"
+              className="icon-btn header__nav-close"
+              aria-label="Fechar menu"
+              onClick={closeMenu}
+            >
+              <Icon name="close" />
+            </button>
+            <nav className="header__nav" aria-label="Principal">
+              <NavLink className="nav-item" to="/" onClick={closeMenu} end>
+                <Icon name="home" />
+                <span>Home</span>
+              </NavLink>
+              <div className={`nav-item nav-item--mega ${megaOpen ? "is-open" : ""}`}>
+                <button
+                  type="button"
+                  className="nav-item__btn"
+                  aria-expanded={megaOpen}
+                  onClick={() => setMegaOpen((v) => !v)}
+                >
+                  <Icon name="grid" />
+                  <span>Coleção</span>
+                </button>
+                <div className="mega-menu">
+                  <Link to="/catalogo?categoria=feminino" onClick={closeMenu}>
+                    <Icon name="dress" />
+                    <span>Feminino</span>
+                  </Link>
+                  <Link to="/catalogo?categoria=masculino" onClick={closeMenu}>
+                    <Icon name="shirt" />
+                    <span>Masculino</span>
+                  </Link>
+                  <Link to="/catalogo?categoria=infantil" onClick={closeMenu}>
+                    <Icon name="child" />
+                    <span>Infantil</span>
+                  </Link>
+                  <Link to="/catalogo" onClick={closeMenu}>
+                    <Icon name="spark" />
+                    <span>Ver tudo</span>
+                  </Link>
+                </div>
               </div>
-            </div>
-            <Link className="nav-item" to="/catalogo?availability=new" onClick={closeMenu}>
-              <Icon name="spark" />
-              <span>Novidades</span>
-            </Link>
-            <Link className="nav-item nav-item--desktop-only" to="/catalogo?categoria=feminino" onClick={closeMenu}>
-              <Icon name="dress" />
-              <span>Vestidos</span>
-            </Link>
-            <Link className="nav-item" to="/favoritos" onClick={closeMenu}>
-              <Icon name="heart" />
-              <span>Favoritos</span>
-            </Link>
-            <Link className="nav-item" to="/comparar" onClick={closeMenu}>
-              <Icon name="compare" />
-              <span>Comparar</span>
-            </Link>
-            <Link className="nav-item" to="/#sobre" onClick={closeMenu}>
-              <Icon name="info" />
-              <span>Sobre</span>
-            </Link>
-            <a className="nav-item" href={wa} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-              <Icon name="chat" />
-              <span>Contato</span>
-            </a>
-          </nav>
+              <Link className="nav-item" to="/catalogo?availability=new" onClick={closeMenu}>
+                <Icon name="spark" />
+                <span>Novidades</span>
+              </Link>
+              <Link className="nav-item nav-item--desktop-only" to="/catalogo?categoria=feminino" onClick={closeMenu}>
+                <Icon name="dress" />
+                <span>Vestidos</span>
+              </Link>
+              <Link className="nav-item nav-item--menu-essential" to="/favoritos" onClick={closeMenu}>
+                <Icon name="heart" />
+                <span>Favoritos</span>
+                <span className="nav-item__count" hidden={ui.favCount === 0}>
+                  {ui.favCount}
+                </span>
+              </Link>
+              <Link className="nav-item nav-item--menu-essential" to="/comparar" onClick={closeMenu}>
+                <Icon name="compare" />
+                <span>Comparar</span>
+                <span className="nav-item__count" hidden={ui.cmpCount === 0}>
+                  {ui.cmpCount}
+                </span>
+              </Link>
+              <Link className="nav-item" to="/#sobre" onClick={closeMenu}>
+                <Icon name="info" />
+                <span>Sobre</span>
+              </Link>
+              <a className="nav-item" href={wa} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                <Icon name="chat" />
+                <span>Contato</span>
+              </a>
+            </nav>
+          </div>
         </div>
 
         <div className="header__side header__side--right">

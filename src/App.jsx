@@ -32,6 +32,9 @@ const PrivacyPage = lazy(() =>
 const TermsPage = lazy(() =>
   import("./pages/TermsPage.jsx").then((m) => ({ default: m.TermsPage }))
 );
+const ProposalPage = lazy(() =>
+  import("./pages/ProposalPage.jsx").then((m) => ({ default: m.ProposalPage }))
+);
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -57,13 +60,32 @@ function PageFallback() {
   return <div className="page-fallback" aria-hidden="true" />;
 }
 
+function StoreChrome({ children }) {
+  return (
+    <CartProvider>
+      <Shell>{children}</Shell>
+      <CartDrawer />
+      <SearchModal />
+      <CookieConsent />
+      <ToastHost />
+    </CartProvider>
+  );
+}
+
 export default function App() {
+  const { pathname } = useLocation();
+  const isProposal = pathname.startsWith("/proposta");
+
   return (
     <UiProvider>
-      <CartProvider>
-        <ScrollToTop />
-        <Shell>
-          <Suspense fallback={<PageFallback />}>
+      <ScrollToTop />
+      <Suspense fallback={<PageFallback />}>
+        {isProposal ? (
+          <Routes>
+            <Route path="/proposta" element={<ProposalPage />} />
+          </Routes>
+        ) : (
+          <StoreChrome>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/catalogo" element={<CatalogPage />} />
@@ -74,13 +96,9 @@ export default function App() {
               <Route path="/privacidade" element={<PrivacyPage />} />
               <Route path="/termos" element={<TermsPage />} />
             </Routes>
-          </Suspense>
-        </Shell>
-        <CartDrawer />
-        <SearchModal />
-        <CookieConsent />
-        <ToastHost />
-      </CartProvider>
+          </StoreChrome>
+        )}
+      </Suspense>
     </UiProvider>
   );
 }
