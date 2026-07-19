@@ -1258,9 +1258,10 @@ h3 {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  background: rgba(201, 167, 106, 0.16);
-  border: 1px solid rgba(201, 167, 106, 0.45);
-  color: var(--gold);
+  background: linear-gradient(165deg, #ffffff 0%, var(--off-white) 55%, #f3eee8 100%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: var(--wine);
+  box-shadow: 0 4px 14px rgba(26, 26, 26, 0.12);
   margin-bottom: 0.15rem;
 }
 .stat__icon .icon {
