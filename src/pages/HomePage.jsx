@@ -275,7 +275,7 @@ export function HomePage() {
       </div>
 
       {/* CATEGORIES */}
-      <section className="section section--mesh">
+      <section className="section section--off-white">
         <div className="container">
           <div className="section-head reveal-lux">
             <div className="section-label">
