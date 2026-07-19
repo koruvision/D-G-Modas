@@ -1008,3 +1008,253 @@
     transform: none;
   }
 }
+
+/* ========== DECK HORIZONTAL · VIDRO LÍQUIDO ========== */
+html.prop-root--deck,
+body.prop-body--deck {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.prop-page--deck {
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #1a0c0e;
+}
+
+.prop-page--deck .prop-chrome {
+  position: relative;
+  flex: 0 0 auto;
+  background: rgba(250, 247, 244, 0.72);
+  backdrop-filter: blur(18px) saturate(1.35);
+  -webkit-backdrop-filter: blur(18px) saturate(1.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.prop-deck {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.prop-deck__track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  will-change: transform;
+}
+
+.prop-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1rem 1rem 4.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.prop-slide__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.04);
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.prop-slide.is-active .prop-slide__bg {
+  animation: prop-bg-drift 14s ease-in-out infinite alternate;
+}
+
+@keyframes prop-bg-drift {
+  from {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+.prop-slide__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(250, 247, 244, 0.18), transparent 70%),
+    linear-gradient(160deg, rgba(26, 12, 14, 0.55), rgba(138, 16, 24, 0.35) 45%, rgba(26, 12, 14, 0.62));
+  pointer-events: none;
+}
+
+.prop-glass-liquid {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, 100%);
+  max-height: calc(100dvh - 9.5rem);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  border-radius: 28px;
+  padding: clamp(1rem, 2.2vw, 1.85rem);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.12) 42%, rgba(250, 247, 244, 0.22)),
+    linear-gradient(320deg, rgba(201, 167, 106, 0.14), transparent 55%);
+  backdrop-filter: blur(28px) saturate(1.55);
+  -webkit-backdrop-filter: blur(28px) saturate(1.55);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12),
+    inset 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+.prop-glass-liquid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 18%,
+    transparent 38%,
+    transparent 100%
+  );
+  mix-blend-mode: soft-light;
+  opacity: 0.85;
+}
+
+.prop-page--deck .prop-section {
+  padding: 0;
+  min-height: 0;
+  background: transparent;
+}
+
+.prop-page--deck .prop-section--alt {
+  background: transparent;
+}
+
+.prop-page--deck .prop-hero {
+  min-height: 0;
+  padding: 0;
+  max-width: none;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1.25rem;
+}
+
+.prop-page--deck .prop-hero__3d {
+  opacity: 0.22;
+}
+
+.prop-page--deck .prop-wrap {
+  padding: 0;
+  max-width: none;
+}
+
+.prop-page--deck .prop-section__head {
+  margin-bottom: 1.25rem;
+}
+
+.prop-page--deck .prop-glass {
+  background: rgba(255, 255, 255, 0.38);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.prop-page--deck .prop-plan,
+.prop-page--deck .prop-pillar,
+.prop-page--deck .prop-chips li {
+  background: rgba(255, 255, 255, 0.42);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.prop-page--deck .prop-footer {
+  display: none;
+}
+
+.prop-deck__controls {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(250, 247, 244, 0.55);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.prop-deck__nav {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.prop-deck__nav:hover:not(:disabled) {
+  transform: scale(1.05);
+  background: #fff;
+}
+
+.prop-deck__nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.prop-deck__nav--prev .icon {
+  transform: rotate(180deg);
+}
+
+.prop-deck__counter {
+  margin: 0;
+  min-width: 4.5rem;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--wine-deep);
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+  .prop-page--deck .prop-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .prop-slide {
+    padding: 0.75rem 0.75rem 4.25rem;
+  }
+
+  .prop-glass-liquid {
+    border-radius: 22px;
+    max-height: calc(100dvh - 8.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prop-slide.is-active .prop-slide__bg {
+    animation: none;
+  }
+}

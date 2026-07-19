@@ -7,21 +7,14 @@ export function ProposalChrome({ activeId, onNavigate }) {
   const progressRef = useRef(null);
 
   useEffect(() => {
-    const onScroll = () => {
-      const el = document.documentElement;
-      const max = el.scrollHeight - el.clientHeight;
-      const p = max > 0 ? el.scrollTop / max : 0;
-      if (progressRef.current) progressRef.current.style.transform = `scaleX(${p})`;
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const i = Math.max(0, SECTIONS.findIndex((s) => s.id === activeId));
+    const p = SECTIONS.length > 1 ? i / (SECTIONS.length - 1) : 0;
+    if (progressRef.current) progressRef.current.style.transform = `scaleX(${p})`;
+  }, [activeId]);
 
   const go = (id) => {
     setOpen(false);
     onNavigate?.(id);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -31,7 +24,14 @@ export function ProposalChrome({ activeId, onNavigate }) {
       </div>
       <header className="prop-chrome">
         <div className="prop-chrome__inner">
-          <a className="prop-chrome__brand" href="#capa" onClick={(e) => { e.preventDefault(); go("capa"); }}>
+          <a
+            className="prop-chrome__brand"
+            href="#capa"
+            onClick={(e) => {
+              e.preventDefault();
+              go("capa");
+            }}
+          >
             <img
               className="prop-chrome__logo"
               src={assetUrl("assets/logo-header-sm.webp")}
