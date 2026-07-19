@@ -13,12 +13,21 @@ export function ProductCarousel({ products = [] }) {
   useEffect(() => {
     const track = trackRef.current;
     const root = rootRef.current;
-    if (!track || !root || list.length < 3) return;
+    const viewport = viewportRef.current;
+    if (!track || !root || !viewport || list.length < 2) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isTouchCarousel = () => window.matchMedia("(max-width: 800px)").matches;
     const s = state.current;
     s.index = 0;
     s.locked = false;
+
+    // Mobile: scroll-snap nativo — sem transform JS
+    if (isTouchCarousel()) {
+      track.style.transform = "";
+      track.style.transition = "";
+      return undefined;
+    }
 
     const stepWidth = () => {
       const card = track.querySelector(".product-card");
@@ -64,7 +73,14 @@ export function ProductCarousel({ products = [] }) {
       advance(1);
       start();
     };
-    const onResize = () => goTo(s.index, false);
+    const onResize = () => {
+      if (isTouchCarousel()) {
+        stop();
+        track.style.transform = "";
+        return;
+      }
+      goTo(s.index, false);
+    };
 
     const prevBtn = root.querySelector(".product-carousel__nav--prev");
     const nextBtn = root.querySelector(".product-carousel__nav--next");

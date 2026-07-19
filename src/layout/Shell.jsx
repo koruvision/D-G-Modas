@@ -4,13 +4,16 @@ import { Header } from "./Header.jsx";
 import { Footer } from "./Footer.jsx";
 import { useConfig } from "../hooks/useConfig.js";
 import { usePageAnimations } from "../hooks/usePageAnimations.js";
+import { useUi } from "../hooks/useUi.jsx";
 
 export function Shell({ children }) {
   const location = useLocation();
   const cfg = useConfig();
+  const ui = useUi();
   const isHome = location.pathname === "/";
   const wa = cfg ? `https://wa.me/${cfg.whatsapp}` : "#";
   const [contentKey, setContentKey] = useState(0);
+  const hideFloat = ui.cartOpen || ui.searchOpen;
 
   usePageAnimations(contentKey);
 
@@ -36,7 +39,14 @@ export function Shell({ children }) {
       <Header />
       <main key={location.pathname}>{children}</main>
       <Footer />
-      <a className="whatsapp-float" href={wa} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <a
+        className={`whatsapp-float ${hideFloat ? "is-hidden" : ""}`}
+        href={wa}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+        hidden={hideFloat}
+      >
         <svg viewBox="0 0 24 24">
           <path
             fill="currentColor"

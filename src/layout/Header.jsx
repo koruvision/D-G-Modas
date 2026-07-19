@@ -11,6 +11,7 @@ export function Header() {
   const ui = useUi();
   const { count } = useCart();
   const [isOpen, setIsOpen] = useState(false);
+  const [megaOpen, setMegaOpen] = useState(false);
   const [isSolid, setIsSolid] = useState(false);
   const [promoIndex, setPromoIndex] = useState(0);
 
@@ -30,7 +31,7 @@ export function Header() {
         icon: "gift",
         node: (
           <>
-            Frete grátis na <strong>primeira compra</strong> · Cupom <strong>PRIMEIRACOMPRA</strong>
+            Frete grátis na <strong>primeira compra</strong>
           </>
         ),
       },
@@ -38,7 +39,7 @@ export function Header() {
         icon: "tag",
         node: (
           <>
-            Cupons de desconto · <strong>BEMVINDA5</strong> · DESCONTO10 · CLIENTEVIP · FRETEGRATIS
+            Cupons · <strong>BEMVINDA5</strong> · DESCONTO10
           </>
         ),
       },
@@ -46,13 +47,13 @@ export function Header() {
         icon: "card",
         node: (
           <>
-            Pagamento via Pix, cartão e boleto · até <strong>{installments}x</strong> pelo WhatsApp
+            Pix, cartão e boleto · até <strong>{installments}x</strong>
           </>
         ),
       },
       {
         icon: "refresh",
-        node: <>Troca facilitada em até 7 dias · Etiquetas originais</>,
+        node: <>Troca em até 7 dias</>,
       },
     ];
   }, [cfg]);
@@ -72,6 +73,22 @@ export function Header() {
     return () => window.clearInterval(id);
   }, [promoMessages.length]);
 
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", isOpen);
+    if (!isOpen) setMegaOpen(false);
+    return () => document.body.classList.remove("menu-open");
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen]);
+
+  const closeMenu = () => setIsOpen(false);
   const wa = cfg ? `https://wa.me/${cfg.whatsapp}` : "#";
   const currentPromo = promoMessages[promoIndex] || promoMessages[0];
 
@@ -88,13 +105,13 @@ export function Header() {
           <button
             type="button"
             className="icon-btn header__mobile-toggle"
-            aria-label="Menu"
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((v) => !v)}
           >
-            <Icon name="menu" />
+            <Icon name={isOpen ? "close" : "menu"} />
           </button>
-          <Link className="header__brand" to="/" onClick={() => setIsOpen(false)}>
+          <Link className="header__brand" to="/" onClick={closeMenu}>
             <span className="brand-logo">
               <img
                 src={assetUrl("assets/logo-header-sm.webp")}
@@ -113,68 +130,84 @@ export function Header() {
           </Link>
         </div>
 
-        <nav className="header__nav" aria-label="Principal">
-          <NavLink className="nav-item" to="/" onClick={() => setIsOpen(false)} end>
-            <Icon name="home" />
-            <span>Home</span>
-          </NavLink>
-          <div className="nav-item nav-item--mega">
-            <button type="button" className="nav-item__btn">
-              <Icon name="grid" />
-              <span>Coleção</span>
-            </button>
-            <div className="mega-menu">
-              <Link to="/catalogo?categoria=feminino" onClick={() => setIsOpen(false)}>
-                <Icon name="dress" />
-                <span>Feminino</span>
-              </Link>
-              <Link to="/catalogo?categoria=masculino" onClick={() => setIsOpen(false)}>
-                <Icon name="shirt" />
-                <span>Masculino</span>
-              </Link>
-              <Link to="/catalogo?categoria=infantil" onClick={() => setIsOpen(false)}>
-                <Icon name="child" />
-                <span>Infantil</span>
-              </Link>
-              <Link to="/catalogo" onClick={() => setIsOpen(false)}>
-                <Icon name="spark" />
-                <span>Ver tudo</span>
-              </Link>
+        <div
+          className={`header__nav-shell ${isOpen ? "is-open" : ""}`}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) closeMenu();
+          }}
+        >
+          <nav className="header__nav" aria-label="Principal">
+            <NavLink className="nav-item" to="/" onClick={closeMenu} end>
+              <Icon name="home" />
+              <span>Home</span>
+            </NavLink>
+            <div className={`nav-item nav-item--mega ${megaOpen ? "is-open" : ""}`}>
+              <button
+                type="button"
+                className="nav-item__btn"
+                aria-expanded={megaOpen}
+                onClick={() => setMegaOpen((v) => !v)}
+              >
+                <Icon name="grid" />
+                <span>Coleção</span>
+              </button>
+              <div className="mega-menu">
+                <Link to="/catalogo?categoria=feminino" onClick={closeMenu}>
+                  <Icon name="dress" />
+                  <span>Feminino</span>
+                </Link>
+                <Link to="/catalogo?categoria=masculino" onClick={closeMenu}>
+                  <Icon name="shirt" />
+                  <span>Masculino</span>
+                </Link>
+                <Link to="/catalogo?categoria=infantil" onClick={closeMenu}>
+                  <Icon name="child" />
+                  <span>Infantil</span>
+                </Link>
+                <Link to="/catalogo" onClick={closeMenu}>
+                  <Icon name="spark" />
+                  <span>Ver tudo</span>
+                </Link>
+              </div>
             </div>
-          </div>
-          <Link className="nav-item" to="/catalogo?availability=new" onClick={() => setIsOpen(false)}>
-            <Icon name="spark" />
-            <span>Novidades</span>
-          </Link>
-          <Link className="nav-item" to="/catalogo?categoria=feminino" onClick={() => setIsOpen(false)}>
-            <Icon name="dress" />
-            <span>Vestidos</span>
-          </Link>
-          <Link className="nav-item" to="/catalogo?categoria=masculino" onClick={() => setIsOpen(false)}>
-            <Icon name="shirt" />
-            <span>Masculino</span>
-          </Link>
-          <Link className="nav-item" to="/#sobre" onClick={() => setIsOpen(false)}>
-            <Icon name="info" />
-            <span>Sobre</span>
-          </Link>
-          <a className="nav-item" href={wa} target="_blank" rel="noopener noreferrer">
-            <Icon name="chat" />
-            <span>Contato</span>
-          </a>
-        </nav>
+            <Link className="nav-item" to="/catalogo?availability=new" onClick={closeMenu}>
+              <Icon name="spark" />
+              <span>Novidades</span>
+            </Link>
+            <Link className="nav-item nav-item--desktop-only" to="/catalogo?categoria=feminino" onClick={closeMenu}>
+              <Icon name="dress" />
+              <span>Vestidos</span>
+            </Link>
+            <Link className="nav-item" to="/favoritos" onClick={closeMenu}>
+              <Icon name="heart" />
+              <span>Favoritos</span>
+            </Link>
+            <Link className="nav-item" to="/comparar" onClick={closeMenu}>
+              <Icon name="compare" />
+              <span>Comparar</span>
+            </Link>
+            <Link className="nav-item" to="/#sobre" onClick={closeMenu}>
+              <Icon name="info" />
+              <span>Sobre</span>
+            </Link>
+            <a className="nav-item" href={wa} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+              <Icon name="chat" />
+              <span>Contato</span>
+            </a>
+          </nav>
+        </div>
 
         <div className="header__side header__side--right">
           <button type="button" className="icon-btn" aria-label="Buscar" onClick={ui.openSearch}>
             <Icon name="search" />
           </button>
-          <Link className="icon-btn" to="/favoritos" aria-label="Favoritos">
+          <Link className="icon-btn header__icon--desktop" to="/favoritos" aria-label="Favoritos">
             <Icon name="heart" />
             <span className="badge-count" hidden={ui.favCount === 0}>
               {ui.favCount}
             </span>
           </Link>
-          <Link className="icon-btn" to="/comparar" aria-label="Comparar">
+          <Link className="icon-btn header__icon--desktop" to="/comparar" aria-label="Comparar">
             <Icon name="compare" />
             <span className="badge-count" hidden={ui.cmpCount === 0}>
               {ui.cmpCount}
