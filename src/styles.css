@@ -365,8 +365,8 @@ h3 {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: radial-gradient(circle at 32% 28%, #f03a48 0%, #c41e2a 52%, #8a1018 100%);
-  box-shadow: 0 4px 14px rgba(138, 16, 24, 0.35);
+  background: radial-gradient(circle at 32% 28%, #c41e2a 0%, #8a1018 52%, #5a0c12 100%);
+  box-shadow: 0 4px 14px rgba(90, 12, 18, 0.4);
   overflow: hidden;
   flex-shrink: 0;
 }

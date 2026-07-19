@@ -15,9 +15,9 @@ function gradientSvg(size) {
   return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
   <defs>
     <radialGradient id="g" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="#f03a48"/>
-      <stop offset="55%" stop-color="#c41e2a"/>
-      <stop offset="100%" stop-color="#8a1018"/>
+      <stop offset="0%" stop-color="#c41e2a"/>
+      <stop offset="55%" stop-color="#8a1018"/>
+      <stop offset="100%" stop-color="#5a0c12"/>
     </radialGradient>
   </defs>
   <circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="url(#g)"/>
