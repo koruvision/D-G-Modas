@@ -1,10 +1,23 @@
 import { Link } from "react-router-dom";
 import { Icon } from "./Icon.jsx";
 import { useUi } from "../hooks/useUi.jsx";
+import { useCart } from "../hooks/useCart.jsx";
 import { formatBRL, installments, assetUrl } from "../lib/utils.js";
+
+function firstAvailable(product) {
+  for (const variant of product.variants || []) {
+    const size = Object.keys(variant.sizes || {}).find((s) => variant.sizes[s] > 0);
+    if (size) return { variant, size };
+  }
+  const variant = product.variants?.[0];
+  if (!variant) return null;
+  const size = Object.keys(variant.sizes || {})[0];
+  return size ? { variant, size } : null;
+}
 
 export function ProductCard({ product, priority = false }) {
   const ui = useUi();
+  const { add } = useCart();
   const price = product.salePrice ?? product.price;
   const raw = product.variants[0]?.images?.[0] || "assets/logo-dg-modas.webp";
   const img = assetUrl(raw);
@@ -12,6 +25,8 @@ export function ProductCard({ product, priority = false }) {
   const isFav = ui.hasFav(product.id);
   const isCmp = ui.hasCmp(product.id);
   const href = `/produto/${product.slug}`;
+  const pick = firstAvailable(product);
+  const canAdd = Boolean(pick);
 
   const badge =
     product.badge === "sale" ? (
@@ -31,6 +46,29 @@ export function ProductCard({ product, priority = false }) {
         <Icon name="zap" className="icon icon--badge" /> Promoção
       </span>
     ) : null;
+
+  const onAddCart = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!pick) {
+      ui.toast("Produto indisponível", "error");
+      return;
+    }
+    const { variant, size } = pick;
+    add({
+      productId: product.id,
+      variantId: variant.id,
+      name: product.name,
+      color: variant.color,
+      size,
+      sku: variant.sku,
+      price,
+      image: variant.images?.[0],
+      qty: 1,
+    });
+    ui.toast("Adicionado ao carrinho", "success");
+    ui.openCart();
+  };
 
   return (
     <article className="product-card reveal-lux">
@@ -87,9 +125,9 @@ export function ProductCard({ product, priority = false }) {
             <span key={v.id} className="swatch" style={{ "--swatch": v.hex }} title={v.color} />
           ))}
         </div>
-        <Link className="btn btn--wine btn--sm" to={href}>
-          Quero este produto
-        </Link>
+        <button type="button" className="btn btn--wine btn--sm" disabled={!canAdd} onClick={onAddCart}>
+          <Icon name="bag" /> Adicionar ao carrinho
+        </button>
       </div>
     </article>
   );
