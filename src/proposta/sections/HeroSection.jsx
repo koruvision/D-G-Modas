@@ -1,104 +1,79 @@
 import { useEffect, useRef } from "react";
 import { HERO } from "../data/proposalContent.js";
-import { BrandLogos, PropImage } from "../components/ui.jsx";
+import { BrandLogos } from "../components/ui.jsx";
+import { HeroGraphic } from "../components/HeroGraphic.jsx";
+import { AmbientField } from "../components/AmbientField.jsx";
+import { MockShell } from "../visuals/MockShell.jsx";
 
 export function HeroSection({ onExplore }) {
-  const canvasRef = useRef(null);
-  const reduced =
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const titleRef = useRef(null);
+  const eyebrowRef = useRef(null);
 
   useEffect(() => {
-    if (reduced || !canvasRef.current) return;
-    let disposed = false;
-    let renderer;
-    let animId;
-    let cleanupResize;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    let cancelled = false;
+    const cleanups = [];
 
     (async () => {
-      const THREE = await import("three");
-      if (disposed || !canvasRef.current) return;
+      const { animate, createTimeline, stagger, splitText, scrambleText } = await import("animejs");
+      if (cancelled) return;
 
-      const canvas = canvasRef.current;
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-      camera.position.z = 4.2;
+      if (eyebrowRef.current) {
+        try {
+          const scramble = animate(eyebrowRef.current, {
+            text: scrambleText({ text: HERO.eyebrow, chars: "░▒▓█·+×" }),
+            duration: 1400,
+            ease: "out(3)",
+          });
+          cleanups.push(() => scramble.revert?.() || scramble.pause?.());
+        } catch {
+          /* scramble opcional */
+        }
+      }
 
-      renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-      const resize = () => {
-        const parent = canvas.parentElement;
-        if (!parent) return;
-        const w = parent.clientWidth;
-        const h = parent.clientHeight;
-        renderer.setSize(w, h, false);
-        camera.aspect = w / Math.max(h, 1);
-        camera.updateProjectionMatrix();
-      };
-      resize();
-      cleanupResize = () => window.removeEventListener("resize", resize);
-      window.addEventListener("resize", resize);
-
-      const geo = new THREE.IcosahedronGeometry(1.35, 1);
-      const mat = new THREE.MeshStandardMaterial({
-        color: new THREE.Color("#c41e2a"),
-        metalness: 0.55,
-        roughness: 0.35,
-        flatShading: true,
-        transparent: true,
-        opacity: 0.88,
-      });
-      const mesh = new THREE.Mesh(geo, mat);
-      scene.add(mesh);
-
-      const wire = new THREE.Mesh(
-        new THREE.IcosahedronGeometry(1.55, 1),
-        new THREE.MeshBasicMaterial({
-          color: new THREE.Color("#c9a76a"),
-          wireframe: true,
-          transparent: true,
-          opacity: 0.35,
-        })
-      );
-      scene.add(wire);
-
-      const light = new THREE.DirectionalLight(0xfff5ea, 1.4);
-      light.position.set(2, 3, 4);
-      scene.add(light);
-      scene.add(new THREE.AmbientLight(0xc9a76a, 0.55));
-
-      const tick = () => {
-        if (disposed) return;
-        mesh.rotation.x += 0.003;
-        mesh.rotation.y += 0.005;
-        wire.rotation.x -= 0.002;
-        wire.rotation.y += 0.003;
-        renderer.render(scene, camera);
-        animId = requestAnimationFrame(tick);
-      };
-      tick();
+      if (titleRef.current) {
+        try {
+          const split = splitText(titleRef.current, { chars: true });
+          const tl = createTimeline({ defaults: { ease: "out(4)" } }).add(split.chars, {
+            y: ["0.6em", "0em"],
+            opacity: [0, 1],
+            rotate: [8, 0],
+            duration: 720,
+            delay: stagger(22),
+          });
+          cleanups.push(() => {
+            tl.revert?.() || tl.pause?.();
+            split.revert?.();
+          });
+        } catch {
+          /* split opcional */
+        }
+      }
     })();
 
     return () => {
-      disposed = true;
-      if (animId) cancelAnimationFrame(animId);
-      cleanupResize?.();
-      renderer?.dispose?.();
+      cancelled = true;
+      cleanups.forEach((fn) => {
+        try {
+          fn();
+        } catch {
+          /* noop */
+        }
+      });
     };
-  }, [reduced]);
+  }, []);
 
   return (
     <section className="prop-section prop-hero" id="capa">
       <div className="prop-hero__glow" aria-hidden="true" />
-      <div className="prop-hero__3d" aria-hidden="true">
-        <canvas ref={canvasRef} />
+      <div className="prop-hero__ambient" aria-hidden="true">
+        <AmbientField count={36} />
       </div>
       <div className="prop-hero__content">
         <div data-hero-el>
           <BrandLogos size="lg" />
         </div>
-        <p className="prop-eyebrow" data-hero-el>
+        <p className="prop-eyebrow" data-hero-el ref={eyebrowRef}>
           {HERO.eyebrow}
         </p>
         <p className="prop-hero__pair" data-hero-el>
@@ -106,7 +81,9 @@ export function HeroSection({ onExplore }) {
           <span>×</span>
           <em className="script">{HERO.partner}</em>
         </p>
-        <h1 data-hero-el>{HERO.title}</h1>
+        <h1 data-hero-el ref={titleRef}>
+          {HERO.title}
+        </h1>
         <p className="prop-lead" data-hero-el>
           {HERO.subtitle}
         </p>
@@ -116,8 +93,12 @@ export function HeroSection({ onExplore }) {
           </button>
         </div>
       </div>
-      <div className="prop-hero__visual" data-hero-el>
-        <PropImage src="/assets/proposta/hero-ecosystem.webp" alt="D&G Modas · Ecossistema Koruvision" />
+      <div className="prop-hero__visual prop-hero__visual--graphic" data-hero-el>
+        <div className="prop-hero__mock">
+          <MockShell type="dashboard" title="ecossistema.koruvision">
+            <HeroGraphic />
+          </MockShell>
+        </div>
       </div>
     </section>
   );
