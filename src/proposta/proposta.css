@@ -11,11 +11,11 @@
   --wine-mid: #e02332;
   --gold: #c9a76a;
   --gold-soft: #d4bc8a;
-  --gold-deep: #a8894f;
+  --gold-deep: #8f7340;
   --cream: #faf7f4;
   --off-white: #f6f2ee;
-  --text: #1a1a1a;
-  --muted: #6f6f6f;
+  --text: #141414;
+  --muted: #4a4a4a;
   --white: #ffffff;
   --border: rgba(26, 26, 26, 0.08);
   --shadow: 0 18px 50px rgba(26, 26, 26, 0.1);
@@ -30,6 +30,9 @@
     var(--cream);
   color: var(--text);
   font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
   overflow-x: clip;
 }
 
@@ -337,20 +340,20 @@
 
 .prop-eyebrow {
   margin: 0 0 0.75rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold-deep);
-  font-weight: 500;
+  color: var(--wine-deep);
+  font-weight: 600;
 }
 
 .prop-section__head h2,
 .prop-closing h2,
 .prop-hero h1 {
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.12;
+  line-height: 1.15;
   color: var(--text);
 }
 
@@ -361,13 +364,14 @@
 .prop-lead {
   margin: 1rem 0 0;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.08rem;
+  line-height: 1.65;
   max-width: 54ch;
+  font-weight: 400;
 }
 
 .prop-accent {
-  color: var(--wine);
+  color: var(--wine-deep);
   font-size: 1.15em;
 }
 
@@ -517,16 +521,17 @@
 
 .prop-glass h3 {
   margin: 0 0 0.45rem;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 600;
+  color: var(--text);
 }
 
 .prop-glass p,
 .prop-glass ul {
   margin: 0;
   color: var(--muted);
-  line-height: 1.55;
-  font-size: 0.95rem;
+  line-height: 1.6;
+  font-size: 0.98rem;
 }
 
 .prop-glass ul {
@@ -581,13 +586,16 @@
 
 .prop-pillar strong {
   display: block;
-  font-size: 0.95rem;
-  margin-bottom: 0.2rem;
+  font-size: 0.98rem;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+  font-weight: 600;
 }
 
 .prop-pillar span {
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .prop-split {
@@ -614,10 +622,11 @@
 .prop-chips li {
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--border);
-  font-size: 0.86rem;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  font-size: 0.9rem;
   color: var(--text);
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -626,12 +635,13 @@
 .prop-note {
   margin: 0 0 1rem;
   color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.55;
+  font-size: 0.96rem;
+  line-height: 1.6;
 }
 
 .prop-note--soft {
-  opacity: 0.9;
+  opacity: 1;
+  color: #555;
 }
 
 .prop-price-inline {
@@ -654,8 +664,9 @@
 
 .prop-subhead {
   margin: 1.25rem 0 0.75rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
+  color: var(--text);
 }
 
 .prop-media-wide {
@@ -722,15 +733,16 @@
 
 .prop-plan h3 {
   margin: 0.85rem 0 0.35rem;
-  font-size: 1.25rem;
+  font-size: 1.28rem;
   font-weight: 600;
+  color: var(--text);
 }
 
 .prop-plan__desc {
   margin: 0 0 0.85rem;
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.45;
+  font-size: 0.94rem;
+  line-height: 1.5;
   min-height: 2.6em;
 }
 
@@ -749,7 +761,8 @@
 
 .prop-plan__price span {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
+  font-weight: 500;
 }
 
 .prop-plan ul {
@@ -757,10 +770,10 @@
   padding-left: 0;
   list-style: none;
   display: grid;
-  gap: 0.4rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.4;
+  gap: 0.45rem;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .prop-plan li {
@@ -1113,19 +1126,107 @@ body.prop-body--deck {
   overscroll-behavior: contain;
   border-radius: 28px;
   padding: clamp(1rem, 2.2vw, 1.85rem);
+  color: var(--text);
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.12) 42%, rgba(250, 247, 244, 0.22)),
-    linear-gradient(320deg, rgba(201, 167, 106, 0.14), transparent 55%);
-  backdrop-filter: blur(28px) saturate(1.55);
-  -webkit-backdrop-filter: blur(28px) saturate(1.55);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(250, 247, 244, 0.88) 48%, rgba(255, 255, 255, 0.9)),
+    linear-gradient(320deg, rgba(201, 167, 106, 0.12), transparent 55%);
+  backdrop-filter: blur(22px) saturate(1.35);
+  -webkit-backdrop-filter: blur(22px) saturate(1.35);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.65),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.12),
-    inset 1px 0 0 rgba(255, 255, 255, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
   transform-style: preserve-3d;
   transition: box-shadow 0.35s ease;
+}
+
+/* Tipografia legível no deck (sobre foto de fundo) */
+.prop-page--deck {
+  --text: #121212;
+  --muted: #3d3d3d;
+  --gold-deep: #7a6234;
+}
+
+.prop-page--deck .prop-slide__card,
+.prop-page--deck .prop-slide__card h1,
+.prop-page--deck .prop-slide__card h2,
+.prop-page--deck .prop-slide__card h3,
+.prop-page--deck .prop-slide__card p,
+.prop-page--deck .prop-slide__card li,
+.prop-page--deck .prop-slide__card span,
+.prop-page--deck .prop-slide__card strong {
+  text-shadow: none;
+}
+
+.prop-page--deck .prop-section__head h2,
+.prop-page--deck .prop-hero h1,
+.prop-page--deck .prop-closing h2 {
+  color: #101010;
+  font-weight: 650;
+  font-weight: 600;
+}
+
+.prop-page--deck .prop-lead,
+.prop-page--deck .prop-note,
+.prop-page--deck .prop-plan__desc,
+.prop-page--deck .prop-pillar span,
+.prop-page--deck .prop-glass p,
+.prop-page--deck .prop-glass ul {
+  color: #3a3a3a;
+}
+
+.prop-page--deck .prop-eyebrow {
+  color: #8a1018;
+  font-weight: 600;
+}
+
+.prop-page--deck .prop-accent,
+.prop-page--deck .prop-hero__pair em {
+  color: #8a1018;
+}
+
+.prop-page--deck .prop-chips li,
+.prop-page--deck .prop-plan,
+.prop-page--deck .prop-pillar,
+.prop-page--deck .prop-glass,
+.prop-page--deck .prop-triggers span {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(26, 26, 26, 0.1);
+  color: #141414;
+}
+
+.prop-page--deck .prop-plan ul,
+.prop-page--deck .prop-plan li {
+  color: #2a2a2a;
+}
+
+.prop-page--deck .prop-plan__price span,
+.prop-page--deck .prop-price-inline span {
+  color: #555;
+}
+
+.prop-page--deck .prop-chrome__names strong {
+  color: #141414;
+}
+
+.prop-page--deck .prop-chrome__names em {
+  color: #5a5a5a;
+}
+
+.prop-page--deck .prop-triggers span {
+  color: #5a4018;
+  font-weight: 500;
+}
+
+.prop-page--deck .prop-subhead {
+  color: #141414;
+}
+
+.prop-page--deck .prop-hero__pair strong {
+  color: #141414;
+  font-weight: 650;
+  font-weight: 600;
 }
 
 .prop-glass-liquid__shine {
@@ -1468,15 +1569,17 @@ body.prop-body--deck {
 }
 
 .prop-page--deck .prop-glass {
-  background: rgba(255, 255, 255, 0.38);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(26, 26, 26, 0.1);
+  color: #141414;
 }
 
 .prop-page--deck .prop-plan,
 .prop-page--deck .prop-pillar,
 .prop-page--deck .prop-chips li {
-  background: rgba(255, 255, 255, 0.42);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(26, 26, 26, 0.12);
+  color: #141414;
 }
 
 .prop-page--deck .prop-footer {
